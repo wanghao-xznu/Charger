@@ -80,9 +80,10 @@ int timeout =0 ;
 void main(void)
 {
 	system_initial();		//系统初始化
-	time_tcc_pro();			//64ms
+	time_tcc_pro();			//8ms
 	set_all_bit_ram();
 	io_init();
+	ad_init();
 	while(1)
 	{
 		_asm{eni}

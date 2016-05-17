@@ -201,7 +201,7 @@ Size#1=0
 Size#2=0
 [ICEVOLTAGE SETTING]
 Voltage=1
-[$\user_comon_head.h]
-Rectangle=0000 0000 0599 0261
+[$\user_ad.h]
+Rectangle=0026 0026 1021 0494
 Iconized=0
 Maximized=0

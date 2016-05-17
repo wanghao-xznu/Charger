@@ -4,7 +4,7 @@ _SIMPLE_RSR_ EQU 1
 .include "sysdefii.inc"
 ccounter equ pr1
 .stabs "icc_compiled.",60,0,0,0
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\B16AD.c",100,0,3,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c",100,0,3,0
 .stabs "int:t1=r1;-128;127;",128,0,0,0
 .stabs "char:t2=r2;-128;127;",128,0,0,0
 .stabs "double:t3=r1;3;0;",128,0,0,0
@@ -39,7 +39,7 @@ mov a,ecx+3
 mov ad_init_bp-1,a
 .stabn 192,0,0,L2
 L2:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_ad.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h",132,0,0,0
 L3:
 .stabn 68,0,11,L4
 L4:
@@ -234,7 +234,7 @@ mov a,ecx+3
 mov system_initial_bp-1,a
 .stabn 192,0,0,L36
 L36:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_system_initial.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h",132,0,0,0
 L37:
 .stabn 68,0,5,L38
 L38:
@@ -295,17 +295,17 @@ mov a,ecx+3
 mov time_tcc_pro_bp-1,a
 .stabn 192,0,0,L49
 L49:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_tcc.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h",132,0,0,0
 L50:
 .stabn 68,0,7,L51
 L51:
 .stabn 68,0,8,L52
 L52:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_tcc.h(8):"
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h(8):"
 mov a,@0b00001110
 .stabn 68,0,9,L53
 L53:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_tcc.h(9):"
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h(9):"
 contw
 .stabn 68,0,11,L54
 L54:
@@ -356,7 +356,7 @@ mov a,ecx+3
 mov set_all_bit_ram_bp-1,a
 .stabn 192,0,0,L61
 L61:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_bit.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\user_bit.h",132,0,0,0
 L62:
 .stabn 68,0,19,L63
 L63:
@@ -428,7 +428,7 @@ mov a,ecx+3
 mov out_put_pro_bp-1,a
 .stabn 192,0,0,L82
 L82:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\user_output.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\user_output.h",132,0,0,0
 L83:
 .stabn 68,0,8,L84
 L84:
@@ -548,7 +548,7 @@ mov a,ecx+3
 mov timeout_handle_bp-1,a
 .stabn 192,0,0,L114
 L114:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\interrupt_vector.h",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h",132,0,0,0
 L115:
 .stabn 68,0,14,L116
 L116:
@@ -687,7 +687,7 @@ L153:
 L154:
 .stabn 68,0,62,L155
 L155:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\interrupt_vector.h(62):"
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h(62):"
 MOV A,0x2
 .stabn 68,0,62,L156
 L156:
@@ -711,7 +711,7 @@ L160:
 L161:
 .stabn 68,0,67,L162
 L162:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\interrupt_vector.h(67):"
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h(67):"
 MOV A,0x2
 .stabn 68,0,67,L163
 L163:
@@ -739,7 +739,7 @@ _main:
 .SYMDEF "_main" 
 .stabn 192,0,0,L175
 L175:
-.stabs "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\B16AD.c",132,0,0,0
+.stabs "D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c",132,0,0,0
 L176:
 .stabn 68,0,81,L177
 L177:
@@ -752,68 +752,74 @@ call _time_tcc_pro
 .stabn 68,0,84,L180
 L180:
 call _set_all_bit_ram
-jmp @L$168
-L$167:
-.stabn 192,0,1,L181
+.stabn 68,0,85,L181
 L181:
+call _io_init
 .stabn 68,0,86,L182
 L182:
-.stabn 68,0,87,L183
+call _ad_init
+jmp @L$168
+L$167:
+.stabn 192,0,1,L183
 L183:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\B16AD.c(87):"
-eni
 .stabn 68,0,88,L184
 L184:
-.cfile "C:\Users\Administrator\Desktop\新建文件夹 (4)\301\B16AD.c(88):"
+.stabn 68,0,89,L185
+L185:
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c(89):"
+eni
+.stabn 68,0,90,L186
+L186:
+.cfile "D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c(90):"
 wdtc
 jmp @L$171
 L$170:
-.stabn 192,0,2,L185
-L185:
-.stabn 68,0,90,L186
-L186:
-.stabn 68,0,91,L187
+.stabn 192,0,2,L187
 L187:
-call _b16ad_init
 .stabn 68,0,92,L188
 L188:
+.stabn 68,0,93,L189
+L189:
+call _b16ad_init
+.stabn 68,0,94,L190
+L190:
 LDA _adc_value,0,0
 mov ecx,a
 ULTRIB ecx,0xa4
 jbs STATUS, cf
 EXTJMP L$173
-.stabn 192,0,3,L189
-L189:
-.stabn 68,0,93,L190
-L190:
-.stabn 68,0,94,L191
+.stabn 192,0,3,L191
 L191:
-call _Charger
 .stabn 68,0,95,L192
 L192:
-.stabn 224,0,3,L193
+.stabn 68,0,96,L193
 L193:
-L$173:
-.stabn 68,0,96,L194
+call _Charger
+.stabn 68,0,97,L194
 L194:
-.stabn 224,0,2,L195
+.stabn 224,0,3,L195
 L195:
-L$171:
-.stabn 68,0,89,L196
+L$173:
+.stabn 68,0,98,L196
 L196:
-jmp @L$170
-.stabn 68,0,97,L197
+.stabn 224,0,2,L197
 L197:
-.stabn 224,0,1,L198
+L$171:
+.stabn 68,0,91,L198
 L198:
-L$168:
-.stabn 68,0,85,L199
+jmp @L$170
+.stabn 68,0,99,L199
 L199:
-jmp @L$167
-.stabn 68,0,98,L200
+.stabn 224,0,1,L200
 L200:
-.stabn 224,0,0,L201
+L$168:
+.stabn 68,0,87,L201
 L201:
+jmp @L$167
+.stabn 68,0,100,L202
+L202:
+.stabn 224,0,0,L203
+L203:
 L$166:
 ret
 .STACK main_bp,local,0
@@ -832,15 +838,55 @@ mov a,ecx+2
 mov b16ad_init_bp-2,a
 mov a,ecx+3
 mov b16ad_init_bp-1,a
-.stabn 192,0,0,L203
-L203:
-.stabn 68,0,102,L204
-L204:
-.stabn 68,0,105,L205
+.stabn 192,0,0,L205
 L205:
-.stabn 224,0,0,L206
+.stabn 68,0,104,L206
 L206:
-L$202:
+.stabn 68,0,107,L207
+L207:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@2
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,108,L208
+L208:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,109,L209
+L209:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@4
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,110,L210
+L210:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,111,L211
+L211:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@6
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,113,L212
+L212:
+.stabn 224,0,0,L213
+L213:
+L$204:
 mov a,b16ad_init_bp-4
 mov ecx,a
 mov a,b16ad_init_bp-3
@@ -866,12 +912,12 @@ mov a,ecx+2
 mov Charger_bp-2,a
 mov a,ecx+3
 mov Charger_bp-1,a
-.stabn 192,0,0,L214
-L214:
-.stabn 68,0,111,L215
-L215:
-.stabn 68,0,112,L216
-L216:
+.stabn 192,0,0,L221
+L221:
+.stabn 68,0,119,L222
+L222:
+.stabn 68,0,120,L223
+L223:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -882,22 +928,22 @@ mov a,@0xff
 mov ecx+1,a
 IGTRIW ecx,0x8199
 jbs STATUS, cf
-EXTJMP L$208
-.stabn 192,0,1,L217
-L217:
-.stabn 68,0,113,L218
-L218:
-.stabn 68,0,114,L219
-L219:
+EXTJMP L$215
+.stabn 192,0,1,L224
+L224:
+.stabn 68,0,121,L225
+L225:
+.stabn 68,0,122,L226
+L226:
 call _charger_half_hour_last
-.stabn 68,0,115,L220
-L220:
-.stabn 224,0,1,L221
-L221:
-jmp @L$209
-L$208:
-.stabn 68,0,116,L222
-L222:
+.stabn 68,0,123,L227
+L227:
+.stabn 224,0,1,L228
+L228:
+jmp @L$216
+L$215:
+.stabn 68,0,124,L229
+L229:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -908,22 +954,22 @@ mov a,@0xff
 mov ecx+1,a
 IGTRIW ecx,0x8266
 jbs STATUS, cf
-EXTJMP L$210
-.stabn 192,0,1,L223
-L223:
-.stabn 68,0,117,L224
-L224:
-.stabn 68,0,119,L225
-L225:
+EXTJMP L$217
+.stabn 192,0,1,L230
+L230:
+.stabn 68,0,125,L231
+L231:
+.stabn 68,0,127,L232
+L232:
 call _charger_half_hour
-.stabn 68,0,120,L226
-L226:
-.stabn 224,0,1,L227
-L227:
-jmp @L$211
-L$210:
-.stabn 68,0,121,L228
-L228:
+.stabn 68,0,128,L233
+L233:
+.stabn 224,0,1,L234
+L234:
+jmp @L$218
+L$217:
+.stabn 68,0,129,L235
+L235:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -934,39 +980,39 @@ mov a,@0xff
 mov ecx+1,a
 IGTRIW ecx,0x8332
 jbs STATUS, cf
-EXTJMP L$212
-.stabn 192,0,1,L229
-L229:
-.stabn 68,0,122,L230
-L230:
-.stabn 68,0,124,L231
-L231:
-call _charger_half_hour
-.stabn 68,0,125,L232
-L232:
-.stabn 224,0,1,L233
-L233:
-jmp @L$213
-L$212:
-.stabn 192,0,1,L234
-L234:
-.stabn 68,0,127,L235
-L235:
-.stabn 68,0,129,L236
+EXTJMP L$219
+.stabn 192,0,1,L236
 L236:
-call _charger_eight_hours
 .stabn 68,0,130,L237
 L237:
-.stabn 224,0,1,L238
+.stabn 68,0,132,L238
 L238:
-L$213:
-L$211:
-L$209:
-.stabn 68,0,131,L239
+call _charger_half_hour
+.stabn 68,0,133,L239
 L239:
-.stabn 224,0,0,L240
+.stabn 224,0,1,L240
 L240:
-L$207:
+jmp @L$220
+L$219:
+.stabn 192,0,1,L241
+L241:
+.stabn 68,0,135,L242
+L242:
+.stabn 68,0,137,L243
+L243:
+call _charger_eight_hours
+.stabn 68,0,138,L244
+L244:
+.stabn 224,0,1,L245
+L245:
+L$220:
+L$218:
+L$216:
+.stabn 68,0,139,L246
+L246:
+.stabn 224,0,0,L247
+L247:
+L$214:
 mov a,Charger_bp-4
 mov ecx,a
 mov a,Charger_bp-3
@@ -993,24 +1039,24 @@ mov charger_an_hour_bp-2,a
 mov a,ecx+3
 mov charger_an_hour_bp-1,a
 .stabs "exit_this:2",128,0,0,charger_an_hour_bp-5
-.stabn 192,0,0,L249
-L249:
-.stabn 68,0,135,L250
-L250:
-.stabn 68,0,138,L251
-L251:
+.stabn 192,0,0,L256
+L256:
+.stabn 68,0,143,L257
+L257:
+.stabn 68,0,146,L258
+L258:
 clr charger_an_hour_bp-5
-.stabn 68,0,139,L252
-L252:
+.stabn 68,0,147,L259
+L259:
 clr _timeout
-jmp @L$243
-L$242:
-.stabn 192,0,1,L253
-L253:
-.stabn 68,0,141,L254
-L254:
-.stabn 68,0,142,L255
-L255:
+jmp @L$250
+L$249:
+.stabn 192,0,1,L260
+L260:
+.stabn 68,0,149,L261
+L261:
+.stabn 68,0,150,L262
+L262:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -1021,25 +1067,25 @@ mov a,@0xff
 mov ecx+1,a
 ILTRIW ecx,0x8266
 jbc STATUS, cf
-EXTJMP L$245
-.stabn 192,0,2,L256
-L256:
-.stabn 68,0,143,L257
-L257:
-.stabn 68,0,145,L258
-L258:
+EXTJMP L$252
+.stabn 192,0,2,L263
+L263:
+.stabn 68,0,151,L264
+L264:
+.stabn 68,0,153,L265
+L265:
 mov a,@1
 STA charger_an_hour_bp-5,0,0
-.stabn 68,0,146,L259
-L259:
-jmp @L$244
-.stabn 68,0,147,L260
-L260:
-.stabn 224,0,2,L261
-L261:
-L$245:
-.stabn 68,0,148,L262
-L262:
+.stabn 68,0,154,L266
+L266:
+jmp @L$251
+.stabn 68,0,155,L267
+L267:
+.stabn 224,0,2,L268
+L268:
+L$252:
+.stabn 68,0,156,L269
+L269:
 LDA _timeout,0,0
 mov ecx,a
 mov a,ecx
@@ -1048,36 +1094,68 @@ clra
 jbc ecx,7
 mov a,@0xff
 mov ecx+1,a
-NEPRIW ecx,3600,@L$247
-.stabn 192,0,2,L263
-L263:
-.stabn 68,0,149,L264
-L264:
-.stabn 68,0,150,L265
-L265:
-call _charger_floating_an_hour
-.stabn 68,0,151,L266
-L266:
-.stabn 224,0,2,L267
-L267:
-L$247:
-.stabn 68,0,153,L268
-L268:
-.stabn 224,0,1,L269
-L269:
-L$243:
-.stabn 68,0,140,L270
+NEPRIW ecx,3600,@L$254
+.stabn 192,0,2,L270
 L270:
-jmp @L$242
-L$244:
-.stabn 68,0,154,L271
+.stabn 68,0,157,L271
 L271:
-call _charger_half_hour
-.stabn 68,0,155,L272
+.stabn 68,0,158,L272
 L272:
-.stabn 224,0,0,L273
+call _charger_floating_an_hour
+.stabn 68,0,159,L273
 L273:
-L$241:
+.stabn 224,0,2,L274
+L274:
+L$254:
+.stabn 68,0,161,L275
+L275:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@2
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,162,L276
+L276:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,163,L277
+L277:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@4
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,164,L278
+L278:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,165,L279
+L279:
+.stabn 224,0,1,L280
+L280:
+L$250:
+.stabn 68,0,148,L281
+L281:
+jmp @L$249
+L$251:
+.stabn 68,0,166,L282
+L282:
+call _charger_half_hour
+.stabn 68,0,167,L283
+L283:
+.stabn 224,0,0,L284
+L284:
+L$248:
 mov a,charger_an_hour_bp-4
 mov ecx,a
 mov a,charger_an_hour_bp-3
@@ -1104,24 +1182,24 @@ mov charger_half_hour_bp-2,a
 mov a,ecx+3
 mov charger_half_hour_bp-1,a
 .stabs "exit_this:2",128,0,0,charger_half_hour_bp-5
-.stabn 192,0,0,L282
-L282:
-.stabn 68,0,158,L283
-L283:
-.stabn 68,0,161,L284
-L284:
+.stabn 192,0,0,L293
+L293:
+.stabn 68,0,170,L294
+L294:
+.stabn 68,0,173,L295
+L295:
 clr charger_half_hour_bp-5
-.stabn 68,0,162,L285
-L285:
+.stabn 68,0,174,L296
+L296:
 clr _timeout
-jmp @L$276
-L$275:
-.stabn 192,0,1,L286
-L286:
-.stabn 68,0,164,L287
-L287:
-.stabn 68,0,165,L288
-L288:
+jmp @L$287
+L$286:
+.stabn 192,0,1,L297
+L297:
+.stabn 68,0,176,L298
+L298:
+.stabn 68,0,177,L299
+L299:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -1132,22 +1210,22 @@ mov a,@0xff
 mov ecx+1,a
 ILTRIW ecx,0x8199
 jbc STATUS, cf
-EXTJMP L$278
-.stabn 192,0,2,L289
-L289:
-.stabn 68,0,166,L290
-L290:
-.stabn 68,0,168,L291
-L291:
+EXTJMP L$289
+.stabn 192,0,2,L300
+L300:
+.stabn 68,0,178,L301
+L301:
+.stabn 68,0,180,L302
+L302:
 mov a,@1
 STA charger_half_hour_bp-5,0,0
-.stabn 68,0,169,L292
-L292:
-.stabn 224,0,2,L293
-L293:
-L$278:
-.stabn 68,0,170,L294
-L294:
+.stabn 68,0,181,L303
+L303:
+.stabn 224,0,2,L304
+L304:
+L$289:
+.stabn 68,0,182,L305
+L305:
 LDA _timeout,0,0
 mov ecx,a
 mov a,ecx
@@ -1156,35 +1234,67 @@ clra
 jbc ecx,7
 mov a,@0xff
 mov ecx+1,a
-NEPRIW ecx,1800,@L$280
-.stabn 192,0,2,L295
-L295:
-.stabn 68,0,171,L296
-L296:
-.stabn 68,0,172,L297
-L297:
+NEPRIW ecx,1800,@L$291
+.stabn 192,0,2,L306
+L306:
+.stabn 68,0,183,L307
+L307:
+.stabn 68,0,184,L308
+L308:
 call _charger_floating_an_hour
-.stabn 68,0,173,L298
-L298:
-.stabn 224,0,2,L299
-L299:
-L$280:
-.stabn 68,0,175,L300
-L300:
-.stabn 224,0,1,L301
-L301:
-L$276:
-.stabn 68,0,163,L302
-L302:
-jmp @L$275
-.stabn 68,0,176,L303
-L303:
+.stabn 68,0,185,L309
+L309:
+.stabn 224,0,2,L310
+L310:
+L$291:
+.stabn 68,0,187,L311
+L311:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@2
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,188,L312
+L312:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,189,L313
+L313:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@4
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,190,L314
+L314:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,191,L315
+L315:
+.stabn 224,0,1,L316
+L316:
+L$287:
+.stabn 68,0,175,L317
+L317:
+jmp @L$286
+.stabn 68,0,192,L318
+L318:
 call _charger_half_hour_last
-.stabn 68,0,177,L304
-L304:
-.stabn 224,0,0,L305
-L305:
-L$274:
+.stabn 68,0,193,L319
+L319:
+.stabn 224,0,0,L320
+L320:
+L$285:
 mov a,charger_half_hour_bp-4
 mov ecx,a
 mov a,charger_half_hour_bp-3
@@ -1211,24 +1321,24 @@ mov charger_half_hour_last_bp-2,a
 mov a,ecx+3
 mov charger_half_hour_last_bp-1,a
 .stabs "exit_this:2",128,0,0,charger_half_hour_last_bp-5
-.stabn 192,0,0,L312
-L312:
-.stabn 68,0,180,L313
-L313:
-.stabn 68,0,183,L314
-L314:
+.stabn 192,0,0,L327
+L327:
+.stabn 68,0,196,L328
+L328:
+.stabn 68,0,199,L329
+L329:
 clr charger_half_hour_last_bp-5
-.stabn 68,0,184,L315
-L315:
+.stabn 68,0,200,L330
+L330:
 clr _timeout
-jmp @L$308
-L$307:
-.stabn 192,0,1,L316
-L316:
-.stabn 68,0,186,L317
-L317:
-.stabn 68,0,187,L318
-L318:
+jmp @L$323
+L$322:
+.stabn 192,0,1,L331
+L331:
+.stabn 68,0,202,L332
+L332:
+.stabn 68,0,203,L333
+L333:
 LDA _timeout,0,0
 mov ecx,a
 mov a,ecx
@@ -1237,36 +1347,68 @@ clra
 jbc ecx,7
 mov a,@0xff
 mov ecx+1,a
-NEPRIW ecx,1800,@L$310
-.stabn 192,0,2,L319
-L319:
-.stabn 68,0,188,L320
-L320:
-.stabn 68,0,189,L321
-L321:
+NEPRIW ecx,1800,@L$325
+.stabn 192,0,2,L334
+L334:
+.stabn 68,0,204,L335
+L335:
+.stabn 68,0,205,L336
+L336:
 call _charger_floating_an_hour
-.stabn 68,0,190,L322
-L322:
-jmp @L$309
-.stabn 68,0,191,L323
-L323:
-.stabn 224,0,2,L324
-L324:
-L$310:
-.stabn 68,0,193,L325
-L325:
-.stabn 224,0,1,L326
-L326:
-L$308:
-.stabn 68,0,185,L327
-L327:
-jmp @L$307
-L$309:
-.stabn 68,0,195,L328
-L328:
-.stabn 224,0,0,L329
-L329:
-L$306:
+.stabn 68,0,206,L337
+L337:
+jmp @L$324
+.stabn 68,0,207,L338
+L338:
+.stabn 224,0,2,L339
+L339:
+L$325:
+.stabn 68,0,209,L340
+L340:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@2
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,210,L341
+L341:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,211,L342
+L342:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@4
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,212,L343
+L343:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,213,L344
+L344:
+.stabn 224,0,1,L345
+L345:
+L$323:
+.stabn 68,0,201,L346
+L346:
+jmp @L$322
+L$324:
+.stabn 68,0,215,L347
+L347:
+.stabn 224,0,0,L348
+L348:
+L$321:
 mov a,charger_half_hour_last_bp-4
 mov ecx,a
 mov a,charger_half_hour_last_bp-3
@@ -1293,24 +1435,24 @@ mov charger_eight_hours_bp-2,a
 mov a,ecx+3
 mov charger_eight_hours_bp-1,a
 .stabs "exit_this:2",128,0,0,charger_eight_hours_bp-5
-.stabn 192,0,0,L338
-L338:
-.stabn 68,0,198,L339
-L339:
-.stabn 68,0,201,L340
-L340:
+.stabn 192,0,0,L357
+L357:
+.stabn 68,0,218,L358
+L358:
+.stabn 68,0,221,L359
+L359:
 clr charger_eight_hours_bp-5
-.stabn 68,0,202,L341
-L341:
+.stabn 68,0,222,L360
+L360:
 clr _timeout
-jmp @L$332
-L$331:
-.stabn 192,0,1,L342
-L342:
-.stabn 68,0,204,L343
-L343:
-.stabn 68,0,205,L344
-L344:
+jmp @L$351
+L$350:
+.stabn 192,0,1,L361
+L361:
+.stabn 68,0,224,L362
+L362:
+.stabn 68,0,225,L363
+L363:
 LDA _adc_value,0,0
 mov ecx,a
 mov a,ecx
@@ -1321,28 +1463,28 @@ mov a,@0xff
 mov ecx+1,a
 ILTRIW ecx,0x8332
 jbc STATUS, cf
-EXTJMP L$334
-.stabn 192,0,2,L345
-L345:
-.stabn 68,0,206,L346
-L346:
-.stabn 68,0,208,L347
-L347:
+EXTJMP L$353
+.stabn 192,0,2,L364
+L364:
+.stabn 68,0,226,L365
+L365:
+.stabn 68,0,228,L366
+L366:
 mov a,@1
 STA charger_eight_hours_bp-5,0,0
-.stabn 68,0,209,L348
-L348:
+.stabn 68,0,229,L367
+L367:
 call _charger_half_hour
-.stabn 68,0,210,L349
-L349:
-jmp @L$333
-.stabn 68,0,211,L350
-L350:
-.stabn 224,0,2,L351
-L351:
-L$334:
-.stabn 68,0,212,L352
-L352:
+.stabn 68,0,230,L368
+L368:
+jmp @L$352
+.stabn 68,0,231,L369
+L369:
+.stabn 224,0,2,L370
+L370:
+L$353:
+.stabn 68,0,232,L371
+L371:
 LDA _timeout,0,0
 mov ecx,a
 mov a,ecx
@@ -1351,33 +1493,65 @@ clra
 jbc ecx,7
 mov a,@0xff
 mov ecx+1,a
-NEPRIW ecx,28800,@L$336
-.stabn 192,0,2,L353
-L353:
-.stabn 68,0,213,L354
-L354:
-.stabn 68,0,214,L355
-L355:
+NEPRIW ecx,28800,@L$355
+.stabn 192,0,2,L372
+L372:
+.stabn 68,0,233,L373
+L373:
+.stabn 68,0,234,L374
+L374:
 call _charger_floating_an_hour
-.stabn 68,0,215,L356
-L356:
-.stabn 224,0,2,L357
-L357:
-L$336:
-.stabn 68,0,217,L358
-L358:
-.stabn 224,0,1,L359
-L359:
-L$332:
-.stabn 68,0,203,L360
-L360:
-jmp @L$331
-L$333:
-.stabn 68,0,219,L361
-L361:
-.stabn 224,0,0,L362
-L362:
-L$330:
+.stabn 68,0,235,L375
+L375:
+.stabn 224,0,2,L376
+L376:
+L$355:
+.stabn 68,0,237,L377
+L377:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@2
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,238,L378
+L378:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,239,L379
+L379:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@4
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,240,L380
+L380:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,241,L381
+L381:
+.stabn 224,0,1,L382
+L382:
+L$351:
+.stabn 68,0,223,L383
+L383:
+jmp @L$350
+L$352:
+.stabn 68,0,243,L384
+L384:
+.stabn 224,0,0,L385
+L385:
+L$349:
 mov a,charger_eight_hours_bp-4
 mov ecx,a
 mov a,charger_eight_hours_bp-3
@@ -1403,26 +1577,74 @@ mov a,ecx+2
 mov charger_floating_an_hour_bp-2,a
 mov a,ecx+3
 mov charger_floating_an_hour_bp-1,a
-.stabn 192,0,0,L369
-L369:
-.stabn 68,0,222,L370
-L370:
-.stabn 68,0,223,L371
-L371:
+.stabn 192,0,0,L396
+L396:
+.stabn 68,0,246,L397
+L397:
+.stabn 68,0,247,L398
+L398:
 clr _timeout
-L$364:
-.stabn 68,0,224,L372
-L372:
-L$365:
-.stabn 68,0,224,L373
-L373:
-jmp @L$364
-.stabn 192,0,1,L374
-L374:
-.stabn 68,0,225,L375
-L375:
-.stabn 68,0,227,L376
-L376:
+L$387:
+.stabn 68,0,248,L399
+L399:
+L$388:
+.stabn 68,0,248,L400
+L400:
+jmp @L$387
+.stabn 192,0,1,L401
+L401:
+.stabn 68,0,249,L402
+L402:
+.stabn 68,0,251,L403
+L403:
+LDA _adc_value,0,0
+mov ecx,a
+UGTRIB ecx,0xa4
+jbc STATUS, cf
+EXTJMP L$390
+.stabn 192,0,2,L404
+L404:
+.stabn 68,0,252,L405
+L405:
+.stabn 68,0,253,L406
+L406:
+mov a,@1
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,254,L407
+L407:
+.stabn 224,0,2,L408
+L408:
+L$390:
+.stabn 68,0,255,L409
+L409:
+LDA _adc_value,0,0
+mov ecx,a
+UGTRIB ecx,0xa4
+jbs STATUS, cf
+EXTJMP L$392
+.stabn 192,0,2,L410
+L410:
+.stabn 68,0,256,L411
+L411:
+.stabn 68,0,257,L412
+L412:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@5
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,258,L413
+L413:
+.stabn 224,0,2,L414
+L414:
+L$392:
+.stabn 68,0,260,L415
+L415:
 LDA _timeout,0,0
 mov ecx,a
 mov a,ecx
@@ -1433,25 +1655,33 @@ mov a,@0xff
 mov ecx+1,a
 ILTRIW ecx,0x8e10
 jbs STATUS, cf
-EXTJMP L$367
-.stabn 192,0,2,L377
-L377:
-.stabn 68,0,228,L378
-L378:
-.stabn 68,0,231,L379
-L379:
-.stabn 224,0,2,L380
-L380:
-L$367:
-.stabn 68,0,232,L381
-L381:
-.stabn 224,0,1,L382
-L382:
-.stabn 68,0,233,L383
-L383:
-.stabn 224,0,0,L384
-L384:
-L$363:
+EXTJMP L$394
+.stabn 192,0,2,L416
+L416:
+.stabn 68,0,261,L417
+L417:
+.stabn 68,0,263,L418
+L418:
+mov a,@0
+mov IO_H_L_bp+1,a
+mov a,@3
+mov IO_H_L_bp+0,a
+.STACK IO_H_L_bp,parameter,2
+call _IO_H_L
+.stabn 68,0,265,L419
+L419:
+.stabn 224,0,2,L420
+L420:
+L$394:
+.stabn 68,0,266,L421
+L421:
+.stabn 224,0,1,L422
+L422:
+.stabn 68,0,267,L423
+L423:
+.stabn 224,0,0,L424
+L424:
+L$386:
 mov a,charger_floating_an_hour_bp-4
 mov ecx,a
 mov a,charger_floating_an_hour_bp-3
@@ -1477,40 +1707,40 @@ mov a,ecx+2
 mov io_init_bp-2,a
 mov a,ecx+3
 mov io_init_bp-1,a
-.stabn 192,0,0,L386
-L386:
-.stabn 68,0,242,L387
-L387:
-.stabn 68,0,255,L388
-L388:
+.stabn 192,0,0,L426
+L426:
+.stabn 68,0,276,L427
+L427:
+.stabn 68,0,289,L428
+L428:
 mov a,@111
 STA _SYS_CON,0,0
-.stabn 68,0,256,L389
-L389:
+.stabn 68,0,290,L429
+L429:
 mov a,@1
 STA _IOC50,0,2
-.stabn 68,0,257,L390
-L390:
+.stabn 68,0,291,L430
+L430:
 clr _PORT5
-.stabn 68,0,258,L391
-L391:
+.stabn 68,0,292,L431
+L431:
 mov a,@0
 STA _IOC60,0,2
-.stabn 68,0,259,L392
-L392:
+.stabn 68,0,293,L432
+L432:
 clr _PORT6
-.stabn 68,0,260,L393
-L393:
+.stabn 68,0,294,L433
+L433:
 mov a,@0
 STA _IOC70,0,2
-.stabn 68,0,261,L394
-L394:
+.stabn 68,0,295,L434
+L434:
 clr _PORT7
-.stabn 68,0,263,L395
-L395:
-.stabn 224,0,0,L396
-L396:
-L$385:
+.stabn 68,0,297,L435
+L435:
+.stabn 224,0,0,L436
+L436:
+L$425:
 mov a,io_init_bp-4
 mov ecx,a
 mov a,io_init_bp-3
@@ -1538,130 +1768,130 @@ mov a,ecx+3
 mov IO_H_L_bp-1,a
 .stabs "ch:2",160,0,0,IO_H_L_bp+0
 .stabs "status:2",160,0,0,IO_H_L_bp+1
-.stabn 192,0,0,L415
-L415:
-.stabn 68,0,268,L416
-L416:
-.stabn 68,0,270,L417
-L417:
+.stabn 192,0,0,L455
+L455:
+.stabn 68,0,302,L456
+L456:
+.stabn 68,0,304,L457
+L457:
 LDA IO_H_L_bp+0,0,0
 mov ecx,a
 EQNEPRIB ecx,2
 jbc STATUS,zf
-EXTJMP @L$400
+EXTJMP @L$440
 EQNEPRIB ecx,3
 jbc STATUS,zf
-EXTJMP @L$403
+EXTJMP @L$443
 EQNEPRIB ecx,4
 jbc STATUS,zf
-EXTJMP @L$406
+EXTJMP @L$446
 EQNEPRIB ecx,5
 jbc STATUS,zf
-EXTJMP @L$409
+EXTJMP @L$449
 EQNEPRIB ecx,6
 jbc STATUS,zf
-EXTJMP @L$412
-jmp @L$399
-.stabn 192,0,1,L418
-L418:
-.stabn 68,0,271,L419
-L419:
-L$400:
-.stabn 68,0,272,L420
-L420:
+EXTJMP @L$452
+jmp @L$439
+.stabn 192,0,1,L458
+L458:
+.stabn 68,0,305,L459
+L459:
+L$440:
+.stabn 68,0,306,L460
+L460:
 EQNEPRIB IO_H_L_bp+1,1
 jbs STATUS,zf
-EXTJMP @L$401
-.stabn 68,0,272,L421
-L421:
+EXTJMP @L$441
+.stabn 68,0,306,L461
+L461:
 bs _P55,5
-jmp @L$399
-L$401:
-.stabn 68,0,273,L422
-L422:
+jmp @L$439
+L$441:
+.stabn 68,0,307,L462
+L462:
 bc _P55,5
-.stabn 68,0,274,L423
-L423:
-jmp @L$399
-L$403:
-.stabn 68,0,276,L424
-L424:
+.stabn 68,0,308,L463
+L463:
+jmp @L$439
+L$443:
+.stabn 68,0,310,L464
+L464:
 EQNEPRIB IO_H_L_bp+1,1
 jbs STATUS,zf
-EXTJMP @L$404
-.stabn 68,0,276,L425
-L425:
+EXTJMP @L$444
+.stabn 68,0,310,L465
+L465:
 bs _P70,0
-jmp @L$399
-L$404:
-.stabn 68,0,277,L426
-L426:
+jmp @L$439
+L$444:
+.stabn 68,0,311,L466
+L466:
 bc _P70,0
-.stabn 68,0,278,L427
-L427:
-jmp @L$399
-L$406:
-.stabn 68,0,279,L428
-L428:
+.stabn 68,0,312,L467
+L467:
+jmp @L$439
+L$446:
+.stabn 68,0,313,L468
+L468:
 EQNEPRIB IO_H_L_bp+1,1
 jbs STATUS,zf
-EXTJMP @L$407
-.stabn 68,0,279,L429
-L429:
+EXTJMP @L$447
+.stabn 68,0,313,L469
+L469:
 bs _P71,1
-jmp @L$399
-L$407:
-.stabn 68,0,280,L430
-L430:
+jmp @L$439
+L$447:
+.stabn 68,0,314,L470
+L470:
 bc _P71,1
-.stabn 68,0,281,L431
-L431:
-jmp @L$399
-L$409:
-.stabn 68,0,283,L432
-L432:
+.stabn 68,0,315,L471
+L471:
+jmp @L$439
+L$449:
+.stabn 68,0,317,L472
+L472:
 EQNEPRIB IO_H_L_bp+1,1
 jbs STATUS,zf
-EXTJMP @L$410
-.stabn 68,0,283,L433
-L433:
+EXTJMP @L$450
+.stabn 68,0,317,L473
+L473:
 bs _P67,7
-jmp @L$399
-L$410:
-.stabn 68,0,284,L434
-L434:
+jmp @L$439
+L$450:
+.stabn 68,0,318,L474
+L474:
 bc _P67,7
-.stabn 68,0,285,L435
-L435:
-jmp @L$399
-L$412:
-.stabn 68,0,286,L436
-L436:
+.stabn 68,0,319,L475
+L475:
+jmp @L$439
+L$452:
+.stabn 68,0,320,L476
+L476:
 EQNEPRIB IO_H_L_bp+1,1
 jbs STATUS,zf
-EXTJMP @L$413
-.stabn 68,0,286,L437
-L437:
+EXTJMP @L$453
+.stabn 68,0,320,L477
+L477:
 bs _P51,1
-jmp @L$399
-L$413:
-.stabn 68,0,287,L438
-L438:
+jmp @L$439
+L$453:
+.stabn 68,0,321,L478
+L478:
 bc _P51,1
-.stabn 68,0,288,L439
-L439:
-.stabn 68,0,289,L440
-L440:
-.stabn 68,0,291,L441
-L441:
-.stabn 224,0,1,L442
-L442:
-L$399:
-.stabn 68,0,294,L443
-L443:
-.stabn 224,0,0,L444
-L444:
-L$397:
+.stabn 68,0,322,L479
+L479:
+.stabn 68,0,323,L480
+L480:
+.stabn 68,0,325,L481
+L481:
+.stabn 224,0,1,L482
+L482:
+L$439:
+.stabn 68,0,328,L483
+L483:
+.stabn 224,0,0,L484
+L484:
+L$437:
 mov a,IO_H_L_bp-4
 mov ecx,a
 mov a,IO_H_L_bp-3

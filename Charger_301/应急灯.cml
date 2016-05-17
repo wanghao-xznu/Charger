@@ -43,14 +43,14 @@ BackupA=0x0
 SpecialBackUpID=0
 
 [Files]
-ObjFiles=C:\Users\Administrator\Desktop\新建文件夹 (4)\301\B16AD.o
+ObjFiles=D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.o
 LibraryFiles=C:\Program Files (x86)\ELAN\eUIDE\Bin\EM78P301N\EM78P301NII.lib
 LibraryFiles=C:\Program Files (x86)\ELAN\eUIDE\Bin\libc13.lib
 LibraryFiles=C:\Program Files (x86)\ELAN\eUIDE\Bin\libm13.lib
-OutFile=C:\Users\Administrator\Desktop\新建文件夹 (4)\301\应急灯.cds
+OutFile=D:\外接项目\义隆单片机\Charger\Charger_301\应急灯.cds
 MapFile=
-DisassemblyFile=C:\Users\Administrator\Desktop\新建文件夹 (4)\301\应急灯.lst
-DebugFile=C:\Users\Administrator\Desktop\新建文件夹 (4)\301\应急灯.dbg
+DisassemblyFile=D:\外接项目\义隆单片机\Charger\Charger_301\应急灯.lst
+DebugFile=D:\外接项目\义隆单片机\Charger\Charger_301\应急灯.dbg
 CDSTailFile=
 [Instructions]
 OPCode=0x0000,0x0001
