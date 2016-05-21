@@ -54,12 +54,7 @@
 #define   TCCB_EDGE_FALL           0X10
 /****************************************************/
 
-/******************define by howie************************/
-#define   ADC_004V              164   //根据参考电压设置，参考电压1V
-#define   ADC_010V              409   //根据参考电压设置，参考电压1V	
-#define   ADC_015V              614   //根据参考电压设置，参考电压1V
-#define   ADC_020V              818   //根据参考电压设置，参考电压1V
-/******************define by howie************************/
+
 
 void Charger(void);
 void io_init(void);
@@ -72,6 +67,23 @@ void charger_half_hour_last(void);
 void charger_eight_hours(void);
 void charger_floating_an_hour(void);
 
+void pwm2_init(void)//第六脚
+{
+	PWMCON=0B01100000;
+	PRD2=0B00001100;
+	DT2=0B00000010;
+	TMRCON=0X88;
+	//CMPCON=0X03;
+	
+}
+void pwm2_increase(void)
+{
+}
+void pwm2_devrease(void)
+{
+
+}
+
 int adc_value;
 int timeout =0 ;
 
@@ -81,13 +93,13 @@ void main(void)
 {
 	system_initial();		//系统初始化
 	time_tcc_pro();			//8ms
-	set_all_bit_ram();
-	io_init();
-	ad_init();
+	set_all_bit_ram();      //初始化的一段ram 0x20~0x3f 我觉得没有必要写字这里
+	io_init(); //董海亮提供，未确认是否正确
+	ad_init(); // adc init by howie.
 	while(1)
 	{
-		_asm{eni}
-		_asm{wdtc}
+		_asm{eni}  // enable global interrupt by howie
+		_asm{wdtc} //watch dog interrupt clear by howie，clear watch dog in while
 		while(1)
 		{
 			b16ad_init();
@@ -131,7 +143,7 @@ void Charger(void)//应该有个task一直在检测adc值
 		//恒流充电1小时
 		charger_half_hour();
 	}
-	else //= 0.2v
+	else //>= 0.2v
 	{
 		//恒流充电8小时
 		charger_eight_hours();
@@ -143,7 +155,7 @@ void charger_an_hour(void)
 {
 	//start timer,开始计时
 	
-	char exit_this = 0;
+	char exit_this = 0;//网上说义隆不适合使用局部变量，可能需要修改，实际情况定
 	timeout = 0;//一小时等于3600秒
 	while(1)
 	{

@@ -10,7 +10,7 @@ void	time_tcc_pro()
 		}
 		TCC=0;
 		RF=RF&0B11111110;		//清除TCC中断标志
-						//TCC time 32*(1/4)*250*1 = 8ms
+								//TCC time 32*(1/4)*250*1 = 8ms
 		IOCF0|=0B00000001;		//允许TCC中断
 		TCC=6;
 }

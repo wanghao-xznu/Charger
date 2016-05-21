@@ -3,7 +3,7 @@
 
 void	system_initial()
 {
-	SYS_CON=0B01101111;		//选择主频模式运行
+	SYS_CON=0B01101111;		//选择主频模式运行  clock = 4MHz
 	IOC50=0B00000001;
 	PORT5=0B00000000;
 	IOC60=0B00000000;
