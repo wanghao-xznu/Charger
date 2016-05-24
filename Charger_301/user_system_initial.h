@@ -12,4 +12,25 @@ void	system_initial()
 	PORT7=0B00000000;
 }
 
+//********************************************************
+//*******************ÇåRAM×Ó³ÌÐò**************************
+//********************************************************
+void clear_all_ram()
+{
+	_asm
+		{
+			MOV   	A,@0X10
+     		MOV   	RSR,A
+	S_CLRLOOP: 	   
+     		CLR   	R0   
+     		INC   	RSR
+     		JBC   	RSR,6
+     		BS    	RSR,5 
+     		MOV		A,RSR
+     		AND    	A,@0X7F
+     		JBS		STATUS,2        
+     		JMP   	S_CLRLOOP      
+		}
+}
+
 #endif

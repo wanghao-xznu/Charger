@@ -10,9 +10,8 @@ void	ad_enable();
 void	ad_init(void)
 {
 	AISR=0B00000100;		//enable p52 ad
-	ADCON=0B00001000;		//使能AD 非省电模式 by howie
+	ADCON=0B00001010;		//使能AD 非省电模式 by howie
 	ADOC=0B00000110;		//参考电压2V
-	RE=0B10001000;			//bit7禁止低电压功能，使能AD唤醒
 	RF=0B00000000;			//清除所有中断标志位
 	ADRUN=1;                //bit4 ADC开始转换
 	IOCE0|=0B00100000;		//允许AD中断
@@ -28,7 +27,7 @@ unsigned int ad_read(void)		//AD处理程序
 
 void ad_enable(void)
 {
-	ADCON |=BIT4;		//使能AD
+	ADRUN=1; 
 }
 
 void ad_disable(void)

@@ -40,9 +40,7 @@ void _intcall ALLInt(void) @ int
     break;
 
     case 0xD:
-    //bit_ad_interrupt=1;
     adc_value = ad_read();
-    //ad_disable();//类似Bee1 的one shot mode ,不需要关闭中断
     RE &=~BIT5;		//清除AD中断标志
     break;
     

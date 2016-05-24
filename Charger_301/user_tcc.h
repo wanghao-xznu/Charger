@@ -5,7 +5,7 @@
 
 void	time_tcc_pro()
 {
-	_asm{mov a,@0b00001110
+	_asm{mov a,@0b00001100
 		contw					//tcc ·ÖÆµÆ÷£¬·ÖÆµ128
 		}
 		TCC=0;

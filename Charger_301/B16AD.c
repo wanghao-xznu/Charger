@@ -4,58 +4,6 @@
 
 
 
-#define sei()  _asm{eni}
-#define cli()  _asm{disi}
-#define wdtc() _asm{wdtc}
-#define nop()  _asm{nop}
-
-#define TRUE    1
-#define FALSE   0
-#define ENABLE  1
-#define DISABLE 0
-#define ON      1
-#define OFF     0
-
-/*****************************************************
-*             TCCC CONTROL REGISTER                  *
-*****************************************************/
-#define   TCCC_ENABLE              0X04
-#define   TCCC_DISABLE             0X00
-#define   TCCC_SRC_INT             0X00
-#define   TCCC_SRC_EXT             0X02
-#define   TCCC_EDGE_RISE           0X00
-#define   TCCC_EDGE_FALL           0X01
-/****************************************************/
-#define   TCCC_1_1                 0X00          /*   TCCC PRESCALE 1:1 (DEFAULT)       */      
-#define   TCCC_1_2                 0X80          /*   TCCC PRESCALE 1:2                 */
-#define   TCCC_1_4                 0X90          /*   TCCC PRESCALE 1:4                 */
-#define   TCCC_1_8                 0XA0          /*   TCCC PRESCALE 1:8                 */
-#define   TCCC_1_16                0XB0          /*   TCCC PRESCALE 1:16                */
-#define   TCCC_1_32                0XC0          /*   TCCC PRESCALE 1:32                */
-#define   TCCC_1_64                0XD0          /*   TCCC PRESCALE 1:64                */
-#define   TCCC_1_128               0XE0          /*   TCCC PRESCALE 1:128               */
-#define   TCCC_1_256               0XF0          /*   TCCC PRESCALE 1:256               */
-/****************************************************/
-
-/*   1/FOSC*SCALE*(256 – IOC81)*1(CLK=2)    
-     1/FOSC*SCALE*(256 – IOC81)*2(CLK=4)   */
-
-
-/*****************************************************
-*             TCCB CONTROL REGISTER                  *
-*****************************************************/
-#define   TCCB_16BIT               0X80
-#define   TCCB_8BIT                0X00
-#define   TCCB_ENABLE              0X40
-#define   TCCB_DISABLE             0X00
-#define   TCCB_SRC_INT             0X00
-#define   TCCB_SRC_EXT             0X20
-#define   TCCB_EDGE_RISE           0X00
-#define   TCCB_EDGE_FALL           0X10
-/****************************************************/
-
-
-
 void Charger(void);
 void io_init(void);
 
@@ -91,17 +39,18 @@ int timeout =0 ;
 
 void main(void)
 {
-	system_initial();		//系统初始化
+	clear_all_ram();		//clear ram
+	system_initial();		//system init
 	time_tcc_pro();			//8ms
-	set_all_bit_ram();      //初始化的一段ram 0x20~0x3f 我觉得没有必要写字这里
-	io_init(); //董海亮提供，未确认是否正确
-	ad_init(); // adc init by howie.
+	io_init(); 				//seems ok
+	ad_init(); 				// adc init by howie.
 	while(1)
 	{
 		_asm{eni}  // enable global interrupt by howie
 		_asm{wdtc} //watch dog interrupt clear by howie，clear watch dog in while
 		while(1)
 		{
+			PORT7=0B00000010;//setting P71 floating
 			b16ad_init();
 			if(adc_value >= ADC_004V)
 			{
