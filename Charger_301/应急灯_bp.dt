@@ -7,27 +7,27 @@
   ADD   A, @0xFF        ;'0x000006'
   ADD   A, @0xFF        ;'0x000007'
   ADD   A, @0xFF        ;'0x000008'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 64)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 85)
 ;_asm{MOV A,0x2};
   MOV   A, 0x02         ;'0x000009'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 65)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 86)
 ;}
   JMP   0x00E           ;'0x00000A'
   ADD   A, @0xFF        ;'0x00000B'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 69)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 90)
 ;_asm{MOV A,0x2};
   MOV   A, 0x02         ;'0x00000C'
   JMP   0x00E           ;'0x00000D'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 32)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 53)
 ;switch(IntVecIdx)
   MOV   0x10, A         ;'0x00000E'
   BANK  @0x1            ;'0x00000F'
   MOV   A, 0x12         ;'0x000010'
-  MOV   0x2A, A         ;'0x000011'
+  MOV   0x2F, A         ;'0x000011'
   MOV   A, 0x13         ;'0x000012'
-  MOV   0x2B, A         ;'0x000013'
+  MOV   0x30, A         ;'0x000013'
   MOV   A, 0x16         ;'0x000014'
-  MOV   0x2C, A         ;'0x000015'
+  MOV   0x31, A         ;'0x000015'
   MOV   A, 0x10         ;'0x000016'
   MOV   0x12, A         ;'0x000017'
   MOV   A, 0x12         ;'0x000018'
@@ -39,950 +39,991 @@
   JBC   0x03, 2         ;'0x00001E'
   JMP   0x02A           ;'0x00001F'
   JMP   0x031           ;'0x000020'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 36)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 57)
 ;second_count++;
-  BANK  @0x0            ;'0x000021'
-  INC   0x3A            ;'0x000022'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 37)
+  BANK  @0x1            ;'0x000021'
+  INC   0x21            ;'0x000022'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 58)
 ;timeout_handle();
   CALL  0x053           ;'0x000023'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 38)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 59)
 ;RF &=~BIT0;		//清除TCC中断标志
   MOV   A, @0xFE        ;'0x000024'
   BC    0x04, 7         ;'0x000025'
   AND   0x0F, A         ;'0x000026'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 39)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 60)
 ;TCC=6;
   MOV   A, @0x06        ;'0x000027'
   MOV   0x01, A         ;'0x000028'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 40)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 61)
 ;break;
   JMP   0x031           ;'0x000029'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 43)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 64)
 ;adc_value = ad_read();
-  CALL  0x092           ;'0x00002A'
+  CALL  0x10F           ;'0x00002A'
   MOV   A, 0x11         ;'0x00002B'
-  BANK  @0x0            ;'0x00002C'
-  MOV   0x3C, A         ;'0x00002D'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 44)
+  BANK  @0x1            ;'0x00002C'
+  MOV   0x24, A         ;'0x00002D'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 65)
 ;RE &=~BIT5;		//清除AD中断标志
   MOV   A, @0xDF        ;'0x00002E'
   BC    0x04, 7         ;'0x00002F'
   AND   0x0E, A         ;'0x000030'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 50)
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 71)
 ;}
   BANK  @0x1            ;'0x000031'
-  MOV   A, 0x2A         ;'0x000032'
+  MOV   A, 0x2F         ;'0x000032'
   MOV   0x12, A         ;'0x000033'
-  MOV   A, 0x2B         ;'0x000034'
+  MOV   A, 0x30         ;'0x000034'
   MOV   0x13, A         ;'0x000035'
-  MOV   A, 0x2C         ;'0x000036'
+  MOV   A, 0x31         ;'0x000036'
   MOV   0x16, A         ;'0x000037'
   RETI                  ;'0x000038'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 42)
 ;clear_all_ram();		//clear ram
   BANK  @0x0            ;'0x000039'
   MOV   A, @0x00        ;'0x00003A'
-  MOV   0x3A, A         ;'0x00003B'
-  MOV   0x3B, A         ;'0x00003C'
-  CALL  0x0B0           ;'0x00003D'
+  MOV   0x21, A         ;'0x00003B'
+  BANK  @0x1            ;'0x00003C'
+  MOV   0x21, A         ;'0x00003D'
+  MOV   0x22, A         ;'0x00003E'
+  MOV   0x23, A         ;'0x00003F'
+  CALL  0x127           ;'0x000040'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 43)
 ;system_initial();		//system init
-  CALL  0x0BB           ;'0x00003E'
+  CALL  0x132           ;'0x000041'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 44)
 ;time_tcc_pro();			//8ms
-  CALL  0x0CA           ;'0x00003F'
+  CALL  0x141           ;'0x000042'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 45)
 ;io_init(); 				//seems ok
-  CALL  0x0D7           ;'0x000040'
+  CALL  0x14E           ;'0x000043'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 46)
-;ad_init(); 				// adc init by howie.
-  CALL  0x0E6           ;'0x000041'
-  JMP   0x051           ;'0x000042'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 49)
 ;_asm{eni}  // enable global interrupt by howie
-  ENI                   ;'0x000043'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 50)
+  ENI                   ;'0x000044'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 47)
 ;_asm{wdtc} //watch dog interrupt clear by howie，clear watch dog in while
-  WDTC                  ;'0x000044'
-  JMP   0x050           ;'0x000045'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 53)
-;PORT7=0B00000010;//setting P71 floating
-  MOV   A, @0x02        ;'0x000046'
-  BC    0x04, 7         ;'0x000047'
-  MOV   0x07, A         ;'0x000048'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 54)
+  WDTC                  ;'0x000045'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 48)
 ;b16ad_init();
-  CALL  0x0F4           ;'0x000049'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 55)
+  CALL  0x15D           ;'0x000046'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 50)
+;ad_init(); 				// adc init by howie.
+  CALL  0x17C           ;'0x000047'
+  JMP   0x051           ;'0x000048'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 56)
+;b16ad_init();
+  CALL  0x15D           ;'0x000049'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 57)
 ;if(adc_value >= ADC_004V)
   MOV   A, @0x48        ;'0x00004A'
-  BANK  @0x0            ;'0x00004B'
-  SUB   A, 0x3C         ;'0x00004C'
+  BANK  @0x1            ;'0x00004B'
+  SUB   A, 0x24         ;'0x00004C'
   JBS   0x03, 0         ;'0x00004D'
   JMP   0x050           ;'0x00004E'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 57)
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 59)
 ;Charger();
-  CALL  0x167           ;'0x00004F'
+  CALL  0x189           ;'0x00004F'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 53)
+;while(1)
+  JMP   0x049           ;'0x000050'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 51)
 ;while(1)
-  JMP   0x046           ;'0x000050'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 47)
-;while(1)
-  JMP   0x043           ;'0x000051'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 61)
+  JMP   0x050           ;'0x000051'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 63)
 ;}
   RET                   ;'0x000052'
   MOV   A, 0x12         ;'0x000053'
   BANK  @0x0            ;'0x000054'
-  MOV   0x22, A         ;'0x000055'
+  MOV   0x29, A         ;'0x000055'
   MOV   A, 0x13         ;'0x000056'
-  MOV   0x23, A         ;'0x000057'
+  MOV   0x2A, A         ;'0x000057'
   MOV   A, 0x14         ;'0x000058'
-  MOV   0x24, A         ;'0x000059'
+  MOV   0x2B, A         ;'0x000059'
   MOV   A, 0x15         ;'0x00005A'
-  MOV   0x25, A         ;'0x00005B'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 16)
+  MOV   0x2C, A         ;'0x00005B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 39)
 ;if(second_count >= 125)
   MOV   A, @0x80        ;'0x00005C'
-  XOR   A, 0x3A         ;'0x00005D'
-  MOV   0x16, A         ;'0x00005E'
-  MOV   A, @0xFD        ;'0x00005F'
-  SUB   A, 0x16         ;'0x000060'
-  JBS   0x03, 0         ;'0x000061'
-  JMP   0x074           ;'0x000062'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 18)
+  BANK  @0x1            ;'0x00005D'
+  XOR   A, 0x21         ;'0x00005E'
+  MOV   0x16, A         ;'0x00005F'
+  MOV   A, @0xFD        ;'0x000060'
+  SUB   A, 0x16         ;'0x000061'
+  JBS   0x03, 0         ;'0x000062'
+  JMP   0x068           ;'0x000063'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 41)
 ;second_count = 0;
-  CLR   0x3A            ;'0x000063'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 19)
+  CLR   0x21            ;'0x000064'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 42)
 ;timeout++;
-  INC   0x3B            ;'0x000064'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 21)
+  INC   0x23            ;'0x000065'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 44)
 ;ad_enable();
-  CALL  0x07E           ;'0x000065'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 22)
-;if(adc_value > ADC_020V)//整个过程中大于0,2V PWM嵌位于0.2 PWM是6脚
-  BANK  @0x0            ;'0x000066'
-  MOV   A, 0x3C         ;'0x000067'
-  MOV   0x12, A         ;'0x000068'
-  CLRA                  ;'0x000069'
-  JBC   0x12, 7         ;'0x00006A'
-  MOV   A, @0xFF        ;'0x00006B'
-  XOR   A, @0x80        ;'0x00006C'
-  SUB   A, @0x86        ;'0x00006D'
-  JBS   0x03, 2         ;'0x00006E'
-  JMP   0x072           ;'0x00006F'
-  MOV   A, 0x12         ;'0x000070'
-  SUB   A, @0x64        ;'0x000071'
-  JBC   0x03, 0         ;'0x000072'
-  JMP   0x074           ;'0x000073'
-;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 27)
+  CALL  0x072           ;'0x000066'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 45)
+;testcode_2();
+  CALL  0x086           ;'0x000067'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 48)
 ;}
-  BANK  @0x0            ;'0x000074'
-  MOV   A, 0x22         ;'0x000075'
-  MOV   0x12, A         ;'0x000076'
-  MOV   A, 0x23         ;'0x000077'
-  MOV   0x13, A         ;'0x000078'
-  MOV   A, 0x24         ;'0x000079'
-  MOV   0x14, A         ;'0x00007A'
-  MOV   A, 0x25         ;'0x00007B'
-  MOV   0x15, A         ;'0x00007C'
-  RET                   ;'0x00007D'
-  MOV   A, 0x12         ;'0x00007E'
-  BANK  @0x0            ;'0x00007F'
-  MOV   0x27, A         ;'0x000080'
-  MOV   A, 0x13         ;'0x000081'
-  MOV   0x28, A         ;'0x000082'
-  MOV   A, 0x14         ;'0x000083'
-  MOV   0x29, A         ;'0x000084'
-  MOV   A, 0x15         ;'0x000085'
-  MOV   0x2A, A         ;'0x000086'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 30)
+  BANK  @0x0            ;'0x000068'
+  MOV   A, 0x29         ;'0x000069'
+  MOV   0x12, A         ;'0x00006A'
+  MOV   A, 0x2A         ;'0x00006B'
+  MOV   0x13, A         ;'0x00006C'
+  MOV   A, 0x2B         ;'0x00006D'
+  MOV   0x14, A         ;'0x00006E'
+  MOV   A, 0x2C         ;'0x00006F'
+  MOV   0x15, A         ;'0x000070'
+  RET                   ;'0x000071'
+  MOV   A, 0x12         ;'0x000072'
+  BANK  @0x0            ;'0x000073'
+  MOV   0x2E, A         ;'0x000074'
+  MOV   A, 0x13         ;'0x000075'
+  MOV   0x2F, A         ;'0x000076'
+  MOV   A, 0x14         ;'0x000077'
+  MOV   0x30, A         ;'0x000078'
+  MOV   A, 0x15         ;'0x000079'
+  MOV   0x31, A         ;'0x00007A'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 49)
 ;ADRUN=1;
-  BC    0x04, 7         ;'0x000087'
-  BS    0x09, 4         ;'0x000088'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 31)
+  BC    0x04, 7         ;'0x00007B'
+  BS    0x09, 4         ;'0x00007C'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 50)
 ;}
-  MOV   A, 0x27         ;'0x000089'
-  MOV   0x12, A         ;'0x00008A'
-  MOV   A, 0x28         ;'0x00008B'
-  MOV   0x13, A         ;'0x00008C'
-  MOV   A, 0x29         ;'0x00008D'
-  MOV   0x14, A         ;'0x00008E'
-  MOV   A, 0x2A         ;'0x00008F'
-  MOV   0x15, A         ;'0x000090'
-  RET                   ;'0x000091'
-  MOV   A, 0x12         ;'0x000092'
-  BANK  @0x0            ;'0x000093'
-  MOV   0x23, A         ;'0x000094'
-  MOV   A, 0x13         ;'0x000095'
-  MOV   0x24, A         ;'0x000096'
-  MOV   A, 0x14         ;'0x000097'
-  MOV   0x25, A         ;'0x000098'
-  MOV   A, 0x15         ;'0x000099'
-  MOV   0x26, A         ;'0x00009A'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 22)
-;unsigned int result =0;
-  CLR   0x22            ;'0x00009B'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 23)
-;result = ADDATA1H<<8;
-  BC    0x04, 7         ;'0x00009C'
-  MOV   A, 0x0C         ;'0x00009D'
-  MOV   0x12, A         ;'0x00009E'
-  CLR   0x12            ;'0x00009F'
-  MOV   A, 0x12         ;'0x0000A0'
-  MOV   0x22, A         ;'0x0000A1'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 24)
-;result = result + ADDATA1L;
-  MOV   A, 0x22         ;'0x0000A2'
-  ADD   A, 0x0D         ;'0x0000A3'
-  MOV   0x22, A         ;'0x0000A4'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 25)
+  MOV   A, 0x2E         ;'0x00007D'
+  MOV   0x12, A         ;'0x00007E'
+  MOV   A, 0x2F         ;'0x00007F'
+  MOV   0x13, A         ;'0x000080'
+  MOV   A, 0x30         ;'0x000081'
+  MOV   0x14, A         ;'0x000082'
+  MOV   A, 0x31         ;'0x000083'
+  MOV   0x15, A         ;'0x000084'
+  RET                   ;'0x000085'
+  MOV   A, 0x12         ;'0x000086'
+  BANK  @0x0            ;'0x000087'
+  MOV   0x2E, A         ;'0x000088'
+  MOV   A, 0x13         ;'0x000089'
+  MOV   0x2F, A         ;'0x00008A'
+  MOV   A, 0x14         ;'0x00008B'
+  MOV   0x30, A         ;'0x00008C'
+  MOV   A, 0x15         ;'0x00008D'
+  MOV   0x31, A         ;'0x00008E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 17)
+;if(flag == 1)
+  BANK  @0x1            ;'0x00008F'
+  MOV   A, 0x22         ;'0x000090'
+  XOR   A, @0x01        ;'0x000091'
+  JBS   0x03, 2         ;'0x000092'
+  JMP   0x09C           ;'0x000093'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 19)
+;flag = 0;
+  CLR   0x22            ;'0x000094'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 20)
+;IO_H_L(2,1);
+  MOV   A, @0x01        ;'0x000095'
+  BANK  @0x0            ;'0x000096'
+  MOV   0x27, A         ;'0x000097'
+  MOV   A, @0x02        ;'0x000098'
+  MOV   0x26, A         ;'0x000099'
+  CALL  0x0AF           ;'0x00009A'
+  JMP   0x0A5           ;'0x00009B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 25)
+;flag = 1;
+  MOV   A, @0x01        ;'0x00009C'
+  BANK  @0x1            ;'0x00009D'
+  MOV   0x22, A         ;'0x00009E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 26)
+;IO_H_L(2,0);
+  MOV   A, @0x00        ;'0x00009F'
+  BANK  @0x0            ;'0x0000A0'
+  MOV   0x27, A         ;'0x0000A1'
+  MOV   A, @0x02        ;'0x0000A2'
+  MOV   0x26, A         ;'0x0000A3'
+  CALL  0x0AF           ;'0x0000A4'
+;D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h (line 28)
+;}
+  BANK  @0x0            ;'0x0000A5'
+  MOV   A, 0x2E         ;'0x0000A6'
+  MOV   0x12, A         ;'0x0000A7'
+  MOV   A, 0x2F         ;'0x0000A8'
+  MOV   0x13, A         ;'0x0000A9'
+  MOV   A, 0x30         ;'0x0000AA'
+  MOV   0x14, A         ;'0x0000AB'
+  MOV   A, 0x31         ;'0x0000AC'
+  MOV   0x15, A         ;'0x0000AD'
+  RET                   ;'0x0000AE'
+  MOV   A, 0x12         ;'0x0000AF'
+  BANK  @0x0            ;'0x0000B0'
+  MOV   0x22, A         ;'0x0000B1'
+  MOV   A, 0x13         ;'0x0000B2'
+  MOV   0x23, A         ;'0x0000B3'
+  MOV   A, 0x14         ;'0x0000B4'
+  MOV   0x24, A         ;'0x0000B5'
+  MOV   A, 0x15         ;'0x0000B6'
+  MOV   0x25, A         ;'0x0000B7'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 267)
+;switch(ch)
+  MOV   A, 0x26         ;'0x0000B8'
+  MOV   0x12, A         ;'0x0000B9'
+  MOV   A, 0x12         ;'0x0000BA'
+  XOR   A, @0x02        ;'0x0000BB'
+  JBC   0x03, 2         ;'0x0000BC'
+  JMP   0x0CF           ;'0x0000BD'
+  MOV   A, 0x12         ;'0x0000BE'
+  XOR   A, @0x03        ;'0x0000BF'
+  JBC   0x03, 2         ;'0x0000C0'
+  JMP   0x0DA           ;'0x0000C1'
+  MOV   A, 0x12         ;'0x0000C2'
+  XOR   A, @0x04        ;'0x0000C3'
+  JBC   0x03, 2         ;'0x0000C4'
+  JMP   0x0E5           ;'0x0000C5'
+  MOV   A, 0x12         ;'0x0000C6'
+  XOR   A, @0x05        ;'0x0000C7'
+  JBC   0x03, 2         ;'0x0000C8'
+  JMP   0x0F0           ;'0x0000C9'
+  MOV   A, 0x12         ;'0x0000CA'
+  XOR   A, @0x06        ;'0x0000CB'
+  JBC   0x03, 2         ;'0x0000CC'
+  JMP   0x0FB           ;'0x0000CD'
+  JMP   0x105           ;'0x0000CE'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 269)
+;case 2: if(status==1)P55=1;
+  BANK  @0x0            ;'0x0000CF'
+  MOV   A, 0x27         ;'0x0000D0'
+  XOR   A, @0x01        ;'0x0000D1'
+  JBS   0x03, 2         ;'0x0000D2'
+  JMP   0x0D7           ;'0x0000D3'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 269)
+;case 2: if(status==1)P55=1;
+  BC    0x04, 7         ;'0x0000D4'
+  BS    0x05, 5         ;'0x0000D5'
+  JMP   0x105           ;'0x0000D6'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 270)
+;else P55=0;
+  BC    0x04, 7         ;'0x0000D7'
+  BC    0x05, 5         ;'0x0000D8'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 271)
+;break;
+  JMP   0x105           ;'0x0000D9'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 273)
+;case 3: if(status==1)P70=1;
+  BANK  @0x0            ;'0x0000DA'
+  MOV   A, 0x27         ;'0x0000DB'
+  XOR   A, @0x01        ;'0x0000DC'
+  JBS   0x03, 2         ;'0x0000DD'
+  JMP   0x0E2           ;'0x0000DE'
+  BC    0x04, 7         ;'0x0000DF'
+  BS    0x07, 0         ;'0x0000E0'
+  JMP   0x105           ;'0x0000E1'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 274)
+;else P70=0;
+  BC    0x04, 7         ;'0x0000E2'
+  BC    0x07, 0         ;'0x0000E3'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 275)
+;break;
+  JMP   0x105           ;'0x0000E4'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 276)
+;case 4: if(status==1)P71=1;
+  BANK  @0x0            ;'0x0000E5'
+  MOV   A, 0x27         ;'0x0000E6'
+  XOR   A, @0x01        ;'0x0000E7'
+  JBS   0x03, 2         ;'0x0000E8'
+  JMP   0x0ED           ;'0x0000E9'
+  BC    0x04, 7         ;'0x0000EA'
+  BS    0x07, 1         ;'0x0000EB'
+  JMP   0x105           ;'0x0000EC'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 277)
+;else P71=0;
+  BC    0x04, 7         ;'0x0000ED'
+  BC    0x07, 1         ;'0x0000EE'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 278)
+;break;
+  JMP   0x105           ;'0x0000EF'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 280)
+;case 5: if(status==1)P67=1;
+  BANK  @0x0            ;'0x0000F0'
+  MOV   A, 0x27         ;'0x0000F1'
+  XOR   A, @0x01        ;'0x0000F2'
+  JBS   0x03, 2         ;'0x0000F3'
+  JMP   0x0F8           ;'0x0000F4'
+  BC    0x04, 7         ;'0x0000F5'
+  BS    0x06, 7         ;'0x0000F6'
+  JMP   0x105           ;'0x0000F7'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 281)
+;else P67=0;
+  BC    0x04, 7         ;'0x0000F8'
+  BC    0x06, 7         ;'0x0000F9'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 282)
+;break;
+  JMP   0x105           ;'0x0000FA'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 283)
+;case 6: if(status==1)P51=1;
+  BANK  @0x0            ;'0x0000FB'
+  MOV   A, 0x27         ;'0x0000FC'
+  XOR   A, @0x01        ;'0x0000FD'
+  JBS   0x03, 2         ;'0x0000FE'
+  JMP   0x103           ;'0x0000FF'
+  BC    0x04, 7         ;'0x000100'
+  BS    0x05, 1         ;'0x000101'
+  JMP   0x105           ;'0x000102'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 284)
+;else P51=0;
+  BC    0x04, 7         ;'0x000103'
+  BC    0x05, 1         ;'0x000104'
+  BANK  @0x0            ;'0x000105'
+  MOV   A, 0x22         ;'0x000106'
+  MOV   0x12, A         ;'0x000107'
+  MOV   A, 0x23         ;'0x000108'
+  MOV   0x13, A         ;'0x000109'
+  MOV   A, 0x24         ;'0x00010A'
+  MOV   0x14, A         ;'0x00010B'
+  MOV   A, 0x25         ;'0x00010C'
+  MOV   0x15, A         ;'0x00010D'
+  RET                   ;'0x00010E'
+  MOV   A, 0x12         ;'0x00010F'
+  BANK  @0x0            ;'0x000110'
+  MOV   0x2A, A         ;'0x000111'
+  MOV   A, 0x13         ;'0x000112'
+  MOV   0x2B, A         ;'0x000113'
+  MOV   A, 0x14         ;'0x000114'
+  MOV   0x2C, A         ;'0x000115'
+  MOV   A, 0x15         ;'0x000116'
+  MOV   0x2D, A         ;'0x000117'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 42)
+;int result =0;
+  CLR   0x29            ;'0x000118'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 43)
+;result = ADDATA;
+  BC    0x04, 7         ;'0x000119'
+  MOV   A, 0x0B         ;'0x00011A'
+  MOV   0x29, A         ;'0x00011B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 44)
 ;return result;
-  MOV   A, 0x22         ;'0x0000A5'
-  MOV   0x11, A         ;'0x0000A6'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 26)
+  MOV   A, 0x29         ;'0x00011C'
+  MOV   0x11, A         ;'0x00011D'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 45)
 ;}
-  MOV   A, 0x23         ;'0x0000A7'
-  MOV   0x12, A         ;'0x0000A8'
-  MOV   A, 0x24         ;'0x0000A9'
-  MOV   0x13, A         ;'0x0000AA'
-  MOV   A, 0x25         ;'0x0000AB'
-  MOV   0x14, A         ;'0x0000AC'
-  MOV   A, 0x26         ;'0x0000AD'
-  MOV   0x15, A         ;'0x0000AE'
-  RET                   ;'0x0000AF'
+  MOV   A, 0x2A         ;'0x00011E'
+  MOV   0x12, A         ;'0x00011F'
+  MOV   A, 0x2B         ;'0x000120'
+  MOV   0x13, A         ;'0x000121'
+  MOV   A, 0x2C         ;'0x000122'
+  MOV   0x14, A         ;'0x000123'
+  MOV   A, 0x2D         ;'0x000124'
+  MOV   0x15, A         ;'0x000125'
+  RET                   ;'0x000126'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 22)
 ;MOV   	A,@0X10
-  MOV   A, @0x10        ;'0x0000B0'
+  MOV   A, @0x10        ;'0x000127'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 23)
 ;MOV   	RSR,A
-  MOV   0x04, A         ;'0x0000B1'
+  MOV   0x04, A         ;'0x000128'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 25)
 ;CLR   	R0
-  CLR   0x00            ;'0x0000B2'
+  CLR   0x00            ;'0x000129'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 26)
 ;INC   	RSR
-  INC   0x04            ;'0x0000B3'
+  INC   0x04            ;'0x00012A'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 27)
 ;JBC   	RSR,6
-  JBC   0x04, 6         ;'0x0000B4'
+  JBC   0x04, 6         ;'0x00012B'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 28)
 ;BS    	RSR,5
-  BS    0x04, 5         ;'0x0000B5'
+  BS    0x04, 5         ;'0x00012C'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 29)
 ;MOV		A,RSR
-  MOV   A, 0x04         ;'0x0000B6'
+  MOV   A, 0x04         ;'0x00012D'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 30)
 ;AND    	A,@0X7F
-  AND   A, @0x7F        ;'0x0000B7'
+  AND   A, @0x7F        ;'0x00012E'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 31)
 ;JBS		STATUS,2
-  JBS   0x03, 2         ;'0x0000B8'
+  JBS   0x03, 2         ;'0x00012F'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 32)
 ;JMP   	S_CLRLOOP
-  JMP   0x0B2           ;'0x0000B9'
+  JMP   0x129           ;'0x000130'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 34)
 ;}
-  RET                   ;'0x0000BA'
+  RET                   ;'0x000131'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 6)
 ;SYS_CON=0B01101111;		//选择主频模式运行  clock = 4MHz
-  MOV   A, @0x6F        ;'0x0000BB'
-  BS    0x04, 7         ;'0x0000BC'
-  MOV   0x0F, A         ;'0x0000BD'
+  MOV   A, @0x6F        ;'0x000132'
+  BS    0x04, 7         ;'0x000133'
+  MOV   0x0F, A         ;'0x000134'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 7)
 ;IOC50=0B00000001;
-  MOV   A, @0x01        ;'0x0000BE'
-  BC    0x03, 6         ;'0x0000BF'
-  IOW   0x5             ;'0x0000C0'
+  MOV   A, @0x01        ;'0x000135'
+  BC    0x03, 6         ;'0x000136'
+  IOW   0x5             ;'0x000137'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 8)
 ;PORT5=0B00000000;
-  BC    0x04, 7         ;'0x0000C1'
-  CLR   0x05            ;'0x0000C2'
+  BC    0x04, 7         ;'0x000138'
+  CLR   0x05            ;'0x000139'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 9)
 ;IOC60=0B00000000;
-  MOV   A, @0x00        ;'0x0000C3'
-  IOW   0x6             ;'0x0000C4'
+  MOV   A, @0x00        ;'0x00013A'
+  IOW   0x6             ;'0x00013B'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 10)
 ;PORT6=0B00000000;
-  CLR   0x06            ;'0x0000C5'
+  CLR   0x06            ;'0x00013C'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 11)
 ;IOC70=0B00000000;
-  MOV   A, @0x00        ;'0x0000C6'
-  IOW   0x7             ;'0x0000C7'
+  MOV   A, @0x00        ;'0x00013D'
+  IOW   0x7             ;'0x00013E'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 12)
 ;PORT7=0B00000000;
-  CLR   0x07            ;'0x0000C8'
+  CLR   0x07            ;'0x00013F'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h (line 13)
 ;}
-  RET                   ;'0x0000C9'
+  RET                   ;'0x000140'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 8)
-;_asm{mov a,@0b00001100
-  MOV   A, @0x0C        ;'0x0000CA'
+;_asm{mov a,@0b00001110
+  MOV   A, @0x0E        ;'0x000141'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 9)
 ;contw					//tcc 分频器，分频128
-  CONTW                 ;'0x0000CB'
+  CONTW                 ;'0x000142'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 11)
 ;TCC=0;
-  CLR   0x01            ;'0x0000CC'
+  CLR   0x01            ;'0x000143'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 12)
 ;RF=RF&0B11111110;		//清除TCC中断标志
-  MOV   A, @0xFE        ;'0x0000CD'
-  BC    0x04, 7         ;'0x0000CE'
-  AND   0x0F, A         ;'0x0000CF'
+  MOV   A, @0xFE        ;'0x000144'
+  BC    0x04, 7         ;'0x000145'
+  AND   0x0F, A         ;'0x000146'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 14)
 ;IOCF0|=0B00000001;		//允许TCC中断
-  BC    0x03, 6         ;'0x0000D0'
-  IOR   0xF             ;'0x0000D1'
-  OR    A, @0x01        ;'0x0000D2'
-  IOW   0xF             ;'0x0000D3'
+  BC    0x03, 6         ;'0x000147'
+  IOR   0xF             ;'0x000148'
+  OR    A, @0x01        ;'0x000149'
+  IOW   0xF             ;'0x00014A'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h (line 15)
 ;TCC=6;
-  MOV   A, @0x06        ;'0x0000D4'
-  MOV   0x01, A         ;'0x0000D5'
-  RET                   ;'0x0000D6'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 250)
-;SYS_CON=0B01101111;		//选择主频模式运行
-  MOV   A, @0x6F        ;'0x0000D7'
-  BS    0x04, 7         ;'0x0000D8'
-  MOV   0x0F, A         ;'0x0000D9'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 251)
-;IOC50=0B00000001;
-  MOV   A, @0x01        ;'0x0000DA'
-  BC    0x03, 6         ;'0x0000DB'
-  IOW   0x5             ;'0x0000DC'
+  MOV   A, @0x06        ;'0x00014B'
+  MOV   0x01, A         ;'0x00014C'
+  RET                   ;'0x00014D'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 252)
-;PORT5=0B00000000;
-  BC    0x04, 7         ;'0x0000DD'
-  CLR   0x05            ;'0x0000DE'
+;SYS_CON=0B01101111;		//选择主频模式运行
+  MOV   A, @0x6F        ;'0x00014E'
+  BS    0x04, 7         ;'0x00014F'
+  MOV   0x0F, A         ;'0x000150'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 253)
-;IOC60=0B00000000;
-  MOV   A, @0x00        ;'0x0000DF'
-  IOW   0x6             ;'0x0000E0'
+;IOC50=0B00000001;
+  MOV   A, @0x01        ;'0x000151'
+  BC    0x03, 6         ;'0x000152'
+  IOW   0x5             ;'0x000153'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 254)
-;PORT6=0B00000000;
-  CLR   0x06            ;'0x0000E1'
+;PORT5=0B00000000;
+  BC    0x04, 7         ;'0x000154'
+  CLR   0x05            ;'0x000155'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 255)
-;IOC70=0B00000000;
-  MOV   A, @0x00        ;'0x0000E2'
-  IOW   0x7             ;'0x0000E3'
+;IOC60=0B00000000;
+  MOV   A, @0x00        ;'0x000156'
+  IOW   0x6             ;'0x000157'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 256)
-;PORT7=0B00000000;
-  CLR   0x07            ;'0x0000E4'
+;PORT6=0B00000000;
+  CLR   0x06            ;'0x000158'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 257)
+;IOC70=0B00000000;
+  MOV   A, @0x00        ;'0x000159'
+  IOW   0x7             ;'0x00015A'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 258)
+;PORT7=0B00000000;
+  CLR   0x07            ;'0x00015B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 260)
 ;}
-  RET                   ;'0x0000E5'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 12)
-;AISR=0B00000100;		//enable p52 ad
-  MOV   A, @0x04        ;'0x0000E6'
-  BC    0x04, 7         ;'0x0000E7'
-  MOV   0x08, A         ;'0x0000E8'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 13)
-;ADCON=0B00001010;		//使能AD 非省电模式 by howie
-  MOV   A, @0x0A        ;'0x0000E9'
-  MOV   0x09, A         ;'0x0000EA'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 14)
-;ADOC=0B00000110;		//参考电压2V
-  MOV   A, @0x06        ;'0x0000EB'
-  MOV   0x0A, A         ;'0x0000EC'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 15)
-;RF=0B00000000;			//清除所有中断标志位
-  CLR   0x0F            ;'0x0000ED'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 16)
-;ADRUN=1;                //bit4 ADC开始转换
-  BS    0x09, 4         ;'0x0000EE'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 17)
-;IOCE0|=0B00100000;		//允许AD中断
-  BC    0x03, 6         ;'0x0000EF'
-  IOR   0xE             ;'0x0000F0'
-  OR    A, @0x20        ;'0x0000F1'
-  IOW   0xE             ;'0x0000F2'
-;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 18)
-;}
-  RET                   ;'0x0000F3'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 68)
-;IO_H_L(2,0);
-  MOV   A, @0x00        ;'0x0000F4'
-  BANK  @0x0            ;'0x0000F5'
-  MOV   0x3F, A         ;'0x0000F6'
-  MOV   A, @0x02        ;'0x0000F7'
-  MOV   0x3E, A         ;'0x0000F8'
-  CALL  0x113           ;'0x0000F9'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 69)
-;IO_H_L(3,0);
-  MOV   A, @0x00        ;'0x0000FA'
-  BANK  @0x0            ;'0x0000FB'
-  MOV   0x3F, A         ;'0x0000FC'
-  MOV   A, @0x03        ;'0x0000FD'
-  MOV   0x3E, A         ;'0x0000FE'
-  CALL  0x113           ;'0x0000FF'
+  RET                   ;'0x00015C'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 70)
-;IO_H_L(4,0);
-  MOV   A, @0x00        ;'0x000100'
-  BANK  @0x0            ;'0x000101'
-  MOV   0x3F, A         ;'0x000102'
-  MOV   A, @0x04        ;'0x000103'
-  MOV   0x3E, A         ;'0x000104'
-  CALL  0x113           ;'0x000105'
+;IO_H_L(2,0);
+  MOV   A, @0x00        ;'0x00015D'
+  BANK  @0x0            ;'0x00015E'
+  MOV   0x27, A         ;'0x00015F'
+  MOV   A, @0x02        ;'0x000160'
+  MOV   0x26, A         ;'0x000161'
+  CALL  0x0AF           ;'0x000162'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 71)
-;IO_H_L(5,0);
-  MOV   A, @0x00        ;'0x000106'
-  BANK  @0x0            ;'0x000107'
-  MOV   0x3F, A         ;'0x000108'
-  MOV   A, @0x05        ;'0x000109'
-  MOV   0x3E, A         ;'0x00010A'
-  CALL  0x113           ;'0x00010B'
+;IO_H_L(3,0);
+  MOV   A, @0x00        ;'0x000163'
+  BANK  @0x0            ;'0x000164'
+  MOV   0x27, A         ;'0x000165'
+  MOV   A, @0x03        ;'0x000166'
+  MOV   0x26, A         ;'0x000167'
+  CALL  0x0AF           ;'0x000168'
 ;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 72)
-;IO_H_L(6,1);
-  MOV   A, @0x01        ;'0x00010C'
-  BANK  @0x0            ;'0x00010D'
-  MOV   0x3F, A         ;'0x00010E'
-  MOV   A, @0x06        ;'0x00010F'
-  MOV   0x3E, A         ;'0x000110'
-  CALL  0x113           ;'0x000111'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 74)
-;}
-  RET                   ;'0x000112'
-  MOV   A, 0x12         ;'0x000113'
-  BANK  @0x0            ;'0x000114'
-  MOV   0x3D, A         ;'0x000115'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 265)
-;switch(ch)
-  MOV   A, 0x3E         ;'0x000116'
-  MOV   0x12, A         ;'0x000117'
-  MOV   A, 0x12         ;'0x000118'
-  XOR   A, @0x02        ;'0x000119'
-  JBC   0x03, 2         ;'0x00011A'
-  JMP   0x12D           ;'0x00011B'
-  MOV   A, 0x12         ;'0x00011C'
-  XOR   A, @0x03        ;'0x00011D'
-  JBC   0x03, 2         ;'0x00011E'
-  JMP   0x138           ;'0x00011F'
-  MOV   A, 0x12         ;'0x000120'
-  XOR   A, @0x04        ;'0x000121'
-  JBC   0x03, 2         ;'0x000122'
-  JMP   0x143           ;'0x000123'
-  MOV   A, 0x12         ;'0x000124'
-  XOR   A, @0x05        ;'0x000125'
-  JBC   0x03, 2         ;'0x000126'
-  JMP   0x14E           ;'0x000127'
-  MOV   A, 0x12         ;'0x000128'
-  XOR   A, @0x06        ;'0x000129'
-  JBC   0x03, 2         ;'0x00012A'
-  JMP   0x159           ;'0x00012B'
-  JMP   0x163           ;'0x00012C'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 267)
-;case 2: if(status==1)P55=1;
-  BANK  @0x0            ;'0x00012D'
-  MOV   A, 0x3F         ;'0x00012E'
-  XOR   A, @0x01        ;'0x00012F'
-  JBS   0x03, 2         ;'0x000130'
-  JMP   0x135           ;'0x000131'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 267)
-;case 2: if(status==1)P55=1;
-  BC    0x04, 7         ;'0x000132'
-  BS    0x05, 5         ;'0x000133'
-  JMP   0x163           ;'0x000134'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 268)
-;else P55=0;
-  BC    0x04, 7         ;'0x000135'
-  BC    0x05, 5         ;'0x000136'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 269)
-;break;
-  JMP   0x163           ;'0x000137'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 271)
-;case 3: if(status==1)P70=1;
-  BANK  @0x0            ;'0x000138'
-  MOV   A, 0x3F         ;'0x000139'
-  XOR   A, @0x01        ;'0x00013A'
-  JBS   0x03, 2         ;'0x00013B'
-  JMP   0x140           ;'0x00013C'
-  BC    0x04, 7         ;'0x00013D'
-  BS    0x07, 0         ;'0x00013E'
-  JMP   0x163           ;'0x00013F'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 272)
-;else P70=0;
-  BC    0x04, 7         ;'0x000140'
-  BC    0x07, 0         ;'0x000141'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 273)
-;break;
-  JMP   0x163           ;'0x000142'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 274)
-;case 4: if(status==1)P71=1;
-  BANK  @0x0            ;'0x000143'
-  MOV   A, 0x3F         ;'0x000144'
-  XOR   A, @0x01        ;'0x000145'
-  JBS   0x03, 2         ;'0x000146'
-  JMP   0x14B           ;'0x000147'
-  BC    0x04, 7         ;'0x000148'
-  BS    0x07, 1         ;'0x000149'
-  JMP   0x163           ;'0x00014A'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 275)
-;else P71=0;
-  BC    0x04, 7         ;'0x00014B'
-  BC    0x07, 1         ;'0x00014C'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 276)
-;break;
-  JMP   0x163           ;'0x00014D'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 278)
-;case 5: if(status==1)P67=1;
-  BANK  @0x0            ;'0x00014E'
-  MOV   A, 0x3F         ;'0x00014F'
-  XOR   A, @0x01        ;'0x000150'
-  JBS   0x03, 2         ;'0x000151'
-  JMP   0x156           ;'0x000152'
-  BC    0x04, 7         ;'0x000153'
-  BS    0x06, 7         ;'0x000154'
-  JMP   0x163           ;'0x000155'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 279)
-;else P67=0;
-  BC    0x04, 7         ;'0x000156'
-  BC    0x06, 7         ;'0x000157'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 280)
-;break;
-  JMP   0x163           ;'0x000158'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 281)
-;case 6: if(status==1)P51=1;
-  BANK  @0x0            ;'0x000159'
-  MOV   A, 0x3F         ;'0x00015A'
-  XOR   A, @0x01        ;'0x00015B'
-  JBS   0x03, 2         ;'0x00015C'
-  JMP   0x161           ;'0x00015D'
-  BC    0x04, 7         ;'0x00015E'
-  BS    0x05, 1         ;'0x00015F'
-  JMP   0x163           ;'0x000160'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 282)
-;else P51=0;
-  BC    0x04, 7         ;'0x000161'
-  BC    0x05, 1         ;'0x000162'
-  BANK  @0x0            ;'0x000163'
-  MOV   A, 0x3D         ;'0x000164'
-  MOV   0x12, A         ;'0x000165'
-  RET                   ;'0x000166'
-  MOV   A, 0x12         ;'0x000167'
-  BANK  @0x0            ;'0x000168'
-  MOV   0x21, A         ;'0x000169'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 81)
-;if(adc_value<=ADC_010V)
-  MOV   A, 0x3C         ;'0x00016A'
-  MOV   0x12, A         ;'0x00016B'
-  CLRA                  ;'0x00016C'
-  JBC   0x12, 7         ;'0x00016D'
-  MOV   A, @0xFF        ;'0x00016E'
-  XOR   A, @0x80        ;'0x00016F'
-  SUB   A, @0x83        ;'0x000170'
-  JBS   0x03, 2         ;'0x000171'
-  JMP   0x175           ;'0x000172'
-  MOV   A, 0x12         ;'0x000173'
-  SUB   A, @0x32        ;'0x000174'
-  JBS   0x03, 0         ;'0x000175'
-  JMP   0x179           ;'0x000176'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 83)
-;charger_half_hour_last();
-  CALL  0x19E           ;'0x000177'
-  JMP   0x19A           ;'0x000178'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 85)
-;else if(adc_value<=ADC_015V)
-  BANK  @0x0            ;'0x000179'
-  MOV   A, 0x3C         ;'0x00017A'
-  MOV   0x12, A         ;'0x00017B'
-  CLRA                  ;'0x00017C'
-  JBC   0x12, 7         ;'0x00017D'
-  MOV   A, @0xFF        ;'0x00017E'
-  XOR   A, @0x80        ;'0x00017F'
-  SUB   A, @0x84        ;'0x000180'
-  JBS   0x03, 2         ;'0x000181'
-  JMP   0x185           ;'0x000182'
-  MOV   A, 0x12         ;'0x000183'
-  SUB   A, @0xCC        ;'0x000184'
-  JBS   0x03, 0         ;'0x000185'
-  JMP   0x189           ;'0x000186'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 88)
-;charger_half_hour();
-  CALL  0x20B           ;'0x000187'
-  JMP   0x19A           ;'0x000188'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 90)
-;else if(adc_value<=ADC_020V)
-  BANK  @0x0            ;'0x000189'
-  MOV   A, 0x3C         ;'0x00018A'
-  MOV   0x12, A         ;'0x00018B'
-  CLRA                  ;'0x00018C'
-  JBC   0x12, 7         ;'0x00018D'
-  MOV   A, @0xFF        ;'0x00018E'
-  XOR   A, @0x80        ;'0x00018F'
-  SUB   A, @0x86        ;'0x000190'
-  JBS   0x03, 2         ;'0x000191'
-  JMP   0x195           ;'0x000192'
-  MOV   A, 0x12         ;'0x000193'
-  SUB   A, @0x64        ;'0x000194'
-  JBS   0x03, 0         ;'0x000195'
-  JMP   0x199           ;'0x000196'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 93)
-;charger_half_hour();
-  CALL  0x20B           ;'0x000197'
-  JMP   0x19A           ;'0x000198'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 98)
-;charger_eight_hours();
-  CALL  0x257           ;'0x000199'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 100)
-;}
-  BANK  @0x0            ;'0x00019A'
-  MOV   A, 0x21         ;'0x00019B'
-  MOV   0x12, A         ;'0x00019C'
-  RET                   ;'0x00019D'
-  MOV   A, 0x12         ;'0x00019E'
-  BANK  @0x1            ;'0x00019F'
-  MOV   0x24, A         ;'0x0001A0'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 160)
-;char exit_this = 0;
-  CLR   0x23            ;'0x0001A1'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 161)
-;timeout = 0;//半小时等于1800秒
-  BANK  @0x0            ;'0x0001A2'
-  CLR   0x3B            ;'0x0001A3'
-  JMP   0x1CC           ;'0x0001A4'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 164)
-;if(timeout == 1800)//时间到了,一小时等于1800秒
-  BANK  @0x0            ;'0x0001A5'
-  MOV   A, 0x3B         ;'0x0001A6'
-  MOV   0x12, A         ;'0x0001A7'
-  CLRA                  ;'0x0001A8'
-  JBC   0x12, 7         ;'0x0001A9'
-  MOV   A, @0xFF        ;'0x0001AA'
-  XOR   A, @0x07        ;'0x0001AB'
-  JBS   0x03, 2         ;'0x0001AC'
-  JMP   0x1B4           ;'0x0001AD'
-  MOV   A, 0x12         ;'0x0001AE'
-  XOR   A, @0x08        ;'0x0001AF'
-  JBS   0x03, 2         ;'0x0001B0'
-  JMP   0x1B4           ;'0x0001B1'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 166)
-;charger_floating_an_hour();
-  CALL  0x1D1           ;'0x0001B2'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 167)
-;break;
-  JMP   0x1CD           ;'0x0001B3'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 170)
-;IO_H_L(2,1);
-  MOV   A, @0x01        ;'0x0001B4'
-  BANK  @0x0            ;'0x0001B5'
-  MOV   0x3F, A         ;'0x0001B6'
-  MOV   A, @0x02        ;'0x0001B7'
-  MOV   0x3E, A         ;'0x0001B8'
-  CALL  0x113           ;'0x0001B9'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 171)
-;IO_H_L(3,0);
-  MOV   A, @0x00        ;'0x0001BA'
-  BANK  @0x0            ;'0x0001BB'
-  MOV   0x3F, A         ;'0x0001BC'
-  MOV   A, @0x03        ;'0x0001BD'
-  MOV   0x3E, A         ;'0x0001BE'
-  CALL  0x113           ;'0x0001BF'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 172)
-;IO_H_L(4,0);
-  MOV   A, @0x00        ;'0x0001C0'
-  BANK  @0x0            ;'0x0001C1'
-  MOV   0x3F, A         ;'0x0001C2'
-  MOV   A, @0x04        ;'0x0001C3'
-  MOV   0x3E, A         ;'0x0001C4'
-  CALL  0x113           ;'0x0001C5'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 173)
-;IO_H_L(5,1);
-  MOV   A, @0x01        ;'0x0001C6'
-  BANK  @0x0            ;'0x0001C7'
-  MOV   0x3F, A         ;'0x0001C8'
-  MOV   A, @0x05        ;'0x0001C9'
-  MOV   0x3E, A         ;'0x0001CA'
-  CALL  0x113           ;'0x0001CB'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 162)
-;while(1)
-  JMP   0x1A5           ;'0x0001CC'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 176)
-;}
-  BANK  @0x1            ;'0x0001CD'
-  MOV   A, 0x24         ;'0x0001CE'
-  MOV   0x12, A         ;'0x0001CF'
-  RET                   ;'0x0001D0'
-  MOV   A, 0x12         ;'0x0001D1'
-  BANK  @0x1            ;'0x0001D2'
-  MOV   0x28, A         ;'0x0001D3'
-  MOV   A, 0x13         ;'0x0001D4'
-  MOV   0x29, A         ;'0x0001D5'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 208)
-;timeout = 0;//一小时等于3600秒
-  BANK  @0x0            ;'0x0001D6'
-  CLR   0x3B            ;'0x0001D7'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 209)
-;while(1);
-  JMP   0x1D8           ;'0x0001D8'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 212)
-;if(adc_value>ADC_004V)
-  BANK  @0x0            ;'0x0001D9'
-  MOV   A, 0x3C         ;'0x0001DA'
-  SUB   A, @0x48        ;'0x0001DB'
-  JBC   0x03, 0         ;'0x0001DC'
-  JMP   0x1E3           ;'0x0001DD'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 214)
-;IO_H_L(5,1);
-  MOV   A, @0x01        ;'0x0001DE'
-  MOV   0x3F, A         ;'0x0001DF'
-  MOV   A, @0x05        ;'0x0001E0'
-  MOV   0x3E, A         ;'0x0001E1'
-  CALL  0x113           ;'0x0001E2'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 216)
-;if(adc_value<=ADC_004V)
-  BANK  @0x0            ;'0x0001E3'
-  MOV   A, 0x3C         ;'0x0001E4'
-  SUB   A, @0x48        ;'0x0001E5'
-  JBS   0x03, 0         ;'0x0001E6'
-  JMP   0x1ED           ;'0x0001E7'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 218)
+;IO_H_L(4,0);//floating
+  MOV   A, @0x00        ;'0x000169'
+  BANK  @0x0            ;'0x00016A'
+  MOV   0x27, A         ;'0x00016B'
+  MOV   A, @0x04        ;'0x00016C'
+  MOV   0x26, A         ;'0x00016D'
+  CALL  0x0AF           ;'0x00016E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 73)
 ;IO_H_L(5,0);
-  MOV   A, @0x00        ;'0x0001E8'
-  MOV   0x3F, A         ;'0x0001E9'
-  MOV   A, @0x05        ;'0x0001EA'
-  MOV   0x3E, A         ;'0x0001EB'
-  CALL  0x113           ;'0x0001EC'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 221)
-;if(timeout >=3600)
-  BANK  @0x0            ;'0x0001ED'
-  MOV   A, 0x3B         ;'0x0001EE'
-  MOV   0x12, A         ;'0x0001EF'
-  CLRA                  ;'0x0001F0'
-  JBC   0x12, 7         ;'0x0001F1'
-  MOV   A, @0xFF        ;'0x0001F2'
-  MOV   0x13, A         ;'0x0001F3'
-  MOV   A, @0x80        ;'0x0001F4'
-  XOR   A, 0x13         ;'0x0001F5'
-  MOV   0x16, A         ;'0x0001F6'
-  MOV   A, @0x8E        ;'0x0001F7'
-  SUB   A, 0x16         ;'0x0001F8'
-  JBS   0x03, 2         ;'0x0001F9'
-  JMP   0x1FD           ;'0x0001FA'
-  MOV   A, @0x10        ;'0x0001FB'
-  SUB   A, 0x12         ;'0x0001FC'
-  JBS   0x03, 0         ;'0x0001FD'
-  JMP   0x205           ;'0x0001FE'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 224)
-;IO_H_L(3,0);
-  MOV   A, @0x00        ;'0x0001FF'
-  BANK  @0x0            ;'0x000200'
-  MOV   0x3F, A         ;'0x000201'
-  MOV   A, @0x03        ;'0x000202'
-  MOV   0x3E, A         ;'0x000203'
-  CALL  0x113           ;'0x000204'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 228)
+  MOV   A, @0x00        ;'0x00016F'
+  BANK  @0x0            ;'0x000170'
+  MOV   0x27, A         ;'0x000171'
+  MOV   A, @0x05        ;'0x000172'
+  MOV   0x26, A         ;'0x000173'
+  CALL  0x0AF           ;'0x000174'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 74)
+;IO_H_L(6,1);
+  MOV   A, @0x01        ;'0x000175'
+  BANK  @0x0            ;'0x000176'
+  MOV   0x27, A         ;'0x000177'
+  MOV   A, @0x06        ;'0x000178'
+  MOV   0x26, A         ;'0x000179'
+  CALL  0x0AF           ;'0x00017A'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 76)
 ;}
-  BANK  @0x1            ;'0x000205'
-  MOV   A, 0x28         ;'0x000206'
-  MOV   0x12, A         ;'0x000207'
-  MOV   A, 0x29         ;'0x000208'
-  MOV   0x13, A         ;'0x000209'
-  RET                   ;'0x00020A'
-  MOV   A, 0x12         ;'0x00020B'
-  BANK  @0x1            ;'0x00020C'
-  MOV   0x21, A         ;'0x00020D'
-  MOV   A, 0x13         ;'0x00020E'
-  MOV   0x22, A         ;'0x00020F'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 134)
-;char exit_this = 0;
-  CLR   0x20            ;'0x000210'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 135)
-;timeout = 0;//半小时等于1800秒
-  BANK  @0x0            ;'0x000211'
-  CLR   0x3B            ;'0x000212'
-  JMP   0x24F           ;'0x000213'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 138)
-;if(adc_value < ADC_010V)
-  BANK  @0x0            ;'0x000214'
-  MOV   A, 0x3C         ;'0x000215'
-  MOV   0x12, A         ;'0x000216'
-  CLRA                  ;'0x000217'
-  JBC   0x12, 7         ;'0x000218'
-  MOV   A, @0xFF        ;'0x000219'
-  MOV   0x13, A         ;'0x00021A'
-  MOV   A, @0x80        ;'0x00021B'
-  XOR   A, 0x13         ;'0x00021C'
-  MOV   0x16, A         ;'0x00021D'
-  MOV   A, @0x83        ;'0x00021E'
-  SUB   A, 0x16         ;'0x00021F'
-  JBS   0x03, 2         ;'0x000220'
-  JMP   0x224           ;'0x000221'
-  MOV   A, @0x32        ;'0x000222'
-  SUB   A, 0x12         ;'0x000223'
-  JBC   0x03, 0         ;'0x000224'
-  JMP   0x229           ;'0x000225'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 141)
-;exit_this = 1;
-  MOV   A, @0x01        ;'0x000226'
-  BANK  @0x1            ;'0x000227'
-  MOV   0x20, A         ;'0x000228'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 143)
-;if(timeout == 1800)//时间到了,一小时等于1800秒
-  BANK  @0x0            ;'0x000229'
-  MOV   A, 0x3B         ;'0x00022A'
-  MOV   0x12, A         ;'0x00022B'
-  CLRA                  ;'0x00022C'
-  JBC   0x12, 7         ;'0x00022D'
-  MOV   A, @0xFF        ;'0x00022E'
-  XOR   A, @0x07        ;'0x00022F'
-  JBS   0x03, 2         ;'0x000230'
-  JMP   0x237           ;'0x000231'
-  MOV   A, 0x12         ;'0x000232'
-  XOR   A, @0x08        ;'0x000233'
-  JBS   0x03, 2         ;'0x000234'
-  JMP   0x237           ;'0x000235'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 145)
-;charger_floating_an_hour();
-  CALL  0x1D1           ;'0x000236'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 148)
-;IO_H_L(2,1);
-  MOV   A, @0x01        ;'0x000237'
-  BANK  @0x0            ;'0x000238'
-  MOV   0x3F, A         ;'0x000239'
-  MOV   A, @0x02        ;'0x00023A'
-  MOV   0x3E, A         ;'0x00023B'
-  CALL  0x113           ;'0x00023C'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 149)
-;IO_H_L(3,0);
-  MOV   A, @0x00        ;'0x00023D'
-  BANK  @0x0            ;'0x00023E'
-  MOV   0x3F, A         ;'0x00023F'
-  MOV   A, @0x03        ;'0x000240'
-  MOV   0x3E, A         ;'0x000241'
-  CALL  0x113           ;'0x000242'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 150)
-;IO_H_L(4,0);
-  MOV   A, @0x00        ;'0x000243'
-  BANK  @0x0            ;'0x000244'
-  MOV   0x3F, A         ;'0x000245'
-  MOV   A, @0x04        ;'0x000246'
-  MOV   0x3E, A         ;'0x000247'
-  CALL  0x113           ;'0x000248'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 151)
-;IO_H_L(5,1);
-  MOV   A, @0x01        ;'0x000249'
-  BANK  @0x0            ;'0x00024A'
-  MOV   0x3F, A         ;'0x00024B'
-  MOV   A, @0x05        ;'0x00024C'
-  MOV   0x3E, A         ;'0x00024D'
-  CALL  0x113           ;'0x00024E'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 136)
-;while(1)
-  JMP   0x214           ;'0x00024F'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 153)
+  RET                   ;'0x00017B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 32)
+;AISR=0B00000001;		//enable p50 ad
+  MOV   A, @0x01        ;'0x00017C'
+  BC    0x04, 7         ;'0x00017D'
+  MOV   0x08, A         ;'0x00017E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 33)
+;ADCON=0B00001000;		//使能AD 非省电模式 by howie
+  MOV   A, @0x08        ;'0x00017F'
+  MOV   0x09, A         ;'0x000180'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 34)
+;ADOC=0B00000110;		//参考电压2V
+  MOV   A, @0x06        ;'0x000181'
+  MOV   0x0A, A         ;'0x000182'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 36)
+;ADRUN=1;                //bit4 ADC开始转换
+  BS    0x09, 4         ;'0x000183'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 37)
+;IOCE0|=0B00100000;		//允许AD中断
+  BC    0x03, 6         ;'0x000184'
+  IOR   0xE             ;'0x000185'
+  OR    A, @0x20        ;'0x000186'
+  IOW   0xE             ;'0x000187'
+;D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h (line 38)
+;}
+  RET                   ;'0x000188'
+  MOV   A, 0x12         ;'0x000189'
+  BANK  @0x0            ;'0x00018A'
+  MOV   0x28, A         ;'0x00018B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 83)
+;if(adc_value<=ADC_010V)
+  BANK  @0x1            ;'0x00018C'
+  MOV   A, 0x24         ;'0x00018D'
+  MOV   0x12, A         ;'0x00018E'
+  CLRA                  ;'0x00018F'
+  JBC   0x12, 7         ;'0x000190'
+  MOV   A, @0xFF        ;'0x000191'
+  XOR   A, @0x80        ;'0x000192'
+  SUB   A, @0x83        ;'0x000193'
+  JBS   0x03, 2         ;'0x000194'
+  JMP   0x198           ;'0x000195'
+  MOV   A, 0x12         ;'0x000196'
+  SUB   A, @0x32        ;'0x000197'
+  JBS   0x03, 0         ;'0x000198'
+  JMP   0x19C           ;'0x000199'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 85)
 ;charger_half_hour_last();
-  CALL  0x19E           ;'0x000250'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 154)
-;}
-  BANK  @0x1            ;'0x000251'
-  MOV   A, 0x21         ;'0x000252'
-  MOV   0x12, A         ;'0x000253'
-  MOV   A, 0x22         ;'0x000254'
-  MOV   0x13, A         ;'0x000255'
-  RET                   ;'0x000256'
-  MOV   A, 0x12         ;'0x000257'
-  BANK  @0x1            ;'0x000258'
-  MOV   0x26, A         ;'0x000259'
-  MOV   A, 0x13         ;'0x00025A'
-  MOV   0x27, A         ;'0x00025B'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 182)
-;char exit_this = 0;
-  CLR   0x25            ;'0x00025C'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 183)
-;timeout = 0;//一小时等于3600秒
-  BANK  @0x0            ;'0x00025D'
-  CLR   0x3B            ;'0x00025E'
-  JMP   0x29D           ;'0x00025F'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 186)
-;if(adc_value < ADC_020V)
-  BANK  @0x0            ;'0x000260'
-  MOV   A, 0x3C         ;'0x000261'
-  MOV   0x12, A         ;'0x000262'
-  CLRA                  ;'0x000263'
-  JBC   0x12, 7         ;'0x000264'
-  MOV   A, @0xFF        ;'0x000265'
-  MOV   0x13, A         ;'0x000266'
-  MOV   A, @0x80        ;'0x000267'
-  XOR   A, 0x13         ;'0x000268'
-  MOV   0x16, A         ;'0x000269'
-  MOV   A, @0x86        ;'0x00026A'
-  SUB   A, 0x16         ;'0x00026B'
-  JBS   0x03, 2         ;'0x00026C'
-  JMP   0x270           ;'0x00026D'
-  MOV   A, @0x64        ;'0x00026E'
-  SUB   A, 0x12         ;'0x00026F'
-  JBC   0x03, 0         ;'0x000270'
-  JMP   0x277           ;'0x000271'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 189)
-;exit_this = 1;
-  MOV   A, @0x01        ;'0x000272'
-  BANK  @0x1            ;'0x000273'
-  MOV   0x25, A         ;'0x000274'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 190)
+  CALL  0x1C1           ;'0x00019A'
+  JMP   0x1BD           ;'0x00019B'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 87)
+;else if(adc_value<=ADC_015V)
+  BANK  @0x1            ;'0x00019C'
+  MOV   A, 0x24         ;'0x00019D'
+  MOV   0x12, A         ;'0x00019E'
+  CLRA                  ;'0x00019F'
+  JBC   0x12, 7         ;'0x0001A0'
+  MOV   A, @0xFF        ;'0x0001A1'
+  XOR   A, @0x80        ;'0x0001A2'
+  SUB   A, @0x84        ;'0x0001A3'
+  JBS   0x03, 2         ;'0x0001A4'
+  JMP   0x1A8           ;'0x0001A5'
+  MOV   A, 0x12         ;'0x0001A6'
+  SUB   A, @0xCC        ;'0x0001A7'
+  JBS   0x03, 0         ;'0x0001A8'
+  JMP   0x1AC           ;'0x0001A9'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 90)
 ;charger_half_hour();
-  CALL  0x20B           ;'0x000275'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 191)
-;break;
-  JMP   0x29E           ;'0x000276'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 193)
-;if(timeout == 3600*8)//时间到了,一小时等于3600秒
-  BANK  @0x0            ;'0x000277'
-  MOV   A, 0x3B         ;'0x000278'
-  MOV   0x12, A         ;'0x000279'
-  CLRA                  ;'0x00027A'
-  JBC   0x12, 7         ;'0x00027B'
-  MOV   A, @0xFF        ;'0x00027C'
-  XOR   A, @0x70        ;'0x00027D'
-  JBS   0x03, 2         ;'0x00027E'
-  JMP   0x285           ;'0x00027F'
-  MOV   A, 0x12         ;'0x000280'
-  XOR   A, @0x80        ;'0x000281'
-  JBS   0x03, 2         ;'0x000282'
-  JMP   0x285           ;'0x000283'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 195)
-;charger_floating_an_hour();
-  CALL  0x1D1           ;'0x000284'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 198)
-;IO_H_L(2,1);
-  MOV   A, @0x01        ;'0x000285'
-  BANK  @0x0            ;'0x000286'
-  MOV   0x3F, A         ;'0x000287'
-  MOV   A, @0x02        ;'0x000288'
-  MOV   0x3E, A         ;'0x000289'
-  CALL  0x113           ;'0x00028A'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 199)
-;IO_H_L(3,0);
-  MOV   A, @0x00        ;'0x00028B'
-  BANK  @0x0            ;'0x00028C'
-  MOV   0x3F, A         ;'0x00028D'
-  MOV   A, @0x03        ;'0x00028E'
-  MOV   0x3E, A         ;'0x00028F'
-  CALL  0x113           ;'0x000290'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 200)
-;IO_H_L(4,0);
-  MOV   A, @0x00        ;'0x000291'
-  BANK  @0x0            ;'0x000292'
-  MOV   0x3F, A         ;'0x000293'
-  MOV   A, @0x04        ;'0x000294'
-  MOV   0x3E, A         ;'0x000295'
-  CALL  0x113           ;'0x000296'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 201)
-;IO_H_L(5,1);
-  MOV   A, @0x01        ;'0x000297'
-  BANK  @0x0            ;'0x000298'
-  MOV   0x3F, A         ;'0x000299'
-  MOV   A, @0x05        ;'0x00029A'
-  MOV   0x3E, A         ;'0x00029B'
-  CALL  0x113           ;'0x00029C'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 184)
-;while(1)
-  JMP   0x260           ;'0x00029D'
-;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 204)
+  CALL  0x22E           ;'0x0001AA'
+  JMP   0x1BD           ;'0x0001AB'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 92)
+;else if(adc_value<=ADC_020V)
+  BANK  @0x1            ;'0x0001AC'
+  MOV   A, 0x24         ;'0x0001AD'
+  MOV   0x12, A         ;'0x0001AE'
+  CLRA                  ;'0x0001AF'
+  JBC   0x12, 7         ;'0x0001B0'
+  MOV   A, @0xFF        ;'0x0001B1'
+  XOR   A, @0x80        ;'0x0001B2'
+  SUB   A, @0x86        ;'0x0001B3'
+  JBS   0x03, 2         ;'0x0001B4'
+  JMP   0x1B8           ;'0x0001B5'
+  MOV   A, 0x12         ;'0x0001B6'
+  SUB   A, @0x64        ;'0x0001B7'
+  JBS   0x03, 0         ;'0x0001B8'
+  JMP   0x1BC           ;'0x0001B9'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 95)
+;charger_half_hour();
+  CALL  0x22E           ;'0x0001BA'
+  JMP   0x1BD           ;'0x0001BB'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 100)
+;charger_eight_hours();
+  CALL  0x279           ;'0x0001BC'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 102)
 ;}
-  BANK  @0x1            ;'0x00029E'
-  MOV   A, 0x26         ;'0x00029F'
-  MOV   0x12, A         ;'0x0002A0'
-  MOV   A, 0x27         ;'0x0002A1'
-  MOV   0x13, A         ;'0x0002A2'
-  RET                   ;'0x0002A3'
+  BANK  @0x0            ;'0x0001BD'
+  MOV   A, 0x28         ;'0x0001BE'
+  MOV   0x12, A         ;'0x0001BF'
+  RET                   ;'0x0001C0'
+  MOV   A, 0x12         ;'0x0001C1'
+  BANK  @0x1            ;'0x0001C2'
+  MOV   0x29, A         ;'0x0001C3'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 162)
+;char exit_this = 0;
+  CLR   0x28            ;'0x0001C4'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 163)
+;timeout = 0;//半小时等于1800秒
+  CLR   0x23            ;'0x0001C5'
+  JMP   0x1EE           ;'0x0001C6'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 166)
+;if(timeout == 1800)//时间到了,一小时等于1800秒
+  BANK  @0x1            ;'0x0001C7'
+  MOV   A, 0x23         ;'0x0001C8'
+  MOV   0x12, A         ;'0x0001C9'
+  CLRA                  ;'0x0001CA'
+  JBC   0x12, 7         ;'0x0001CB'
+  MOV   A, @0xFF        ;'0x0001CC'
+  XOR   A, @0x07        ;'0x0001CD'
+  JBS   0x03, 2         ;'0x0001CE'
+  JMP   0x1D6           ;'0x0001CF'
+  MOV   A, 0x12         ;'0x0001D0'
+  XOR   A, @0x08        ;'0x0001D1'
+  JBS   0x03, 2         ;'0x0001D2'
+  JMP   0x1D6           ;'0x0001D3'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 168)
+;charger_floating_an_hour();
+  CALL  0x1F3           ;'0x0001D4'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 169)
+;break;
+  JMP   0x1EF           ;'0x0001D5'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 172)
+;IO_H_L(2,1);
+  MOV   A, @0x01        ;'0x0001D6'
+  BANK  @0x0            ;'0x0001D7'
+  MOV   0x27, A         ;'0x0001D8'
+  MOV   A, @0x02        ;'0x0001D9'
+  MOV   0x26, A         ;'0x0001DA'
+  CALL  0x0AF           ;'0x0001DB'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 173)
+;IO_H_L(3,0);
+  MOV   A, @0x00        ;'0x0001DC'
+  BANK  @0x0            ;'0x0001DD'
+  MOV   0x27, A         ;'0x0001DE'
+  MOV   A, @0x03        ;'0x0001DF'
+  MOV   0x26, A         ;'0x0001E0'
+  CALL  0x0AF           ;'0x0001E1'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 174)
+;IO_H_L(4,0);
+  MOV   A, @0x00        ;'0x0001E2'
+  BANK  @0x0            ;'0x0001E3'
+  MOV   0x27, A         ;'0x0001E4'
+  MOV   A, @0x04        ;'0x0001E5'
+  MOV   0x26, A         ;'0x0001E6'
+  CALL  0x0AF           ;'0x0001E7'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 175)
+;IO_H_L(5,1);
+  MOV   A, @0x01        ;'0x0001E8'
+  BANK  @0x0            ;'0x0001E9'
+  MOV   0x27, A         ;'0x0001EA'
+  MOV   A, @0x05        ;'0x0001EB'
+  MOV   0x26, A         ;'0x0001EC'
+  CALL  0x0AF           ;'0x0001ED'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 164)
+;while(1)
+  JMP   0x1C7           ;'0x0001EE'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 178)
+;}
+  BANK  @0x1            ;'0x0001EF'
+  MOV   A, 0x29         ;'0x0001F0'
+  MOV   0x12, A         ;'0x0001F1'
+  RET                   ;'0x0001F2'
+  MOV   A, 0x12         ;'0x0001F3'
+  BANK  @0x1            ;'0x0001F4'
+  MOV   0x2D, A         ;'0x0001F5'
+  MOV   A, 0x13         ;'0x0001F6'
+  MOV   0x2E, A         ;'0x0001F7'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 210)
+;timeout = 0;//一小时等于3600秒
+  CLR   0x23            ;'0x0001F8'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 211)
+;while(1);
+  JMP   0x1F9           ;'0x0001F9'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 214)
+;if(adc_value>ADC_004V)
+  BANK  @0x1            ;'0x0001FA'
+  MOV   A, 0x24         ;'0x0001FB'
+  SUB   A, @0x48        ;'0x0001FC'
+  JBC   0x03, 0         ;'0x0001FD'
+  JMP   0x205           ;'0x0001FE'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 216)
+;IO_H_L(5,1);
+  MOV   A, @0x01        ;'0x0001FF'
+  BANK  @0x0            ;'0x000200'
+  MOV   0x27, A         ;'0x000201'
+  MOV   A, @0x05        ;'0x000202'
+  MOV   0x26, A         ;'0x000203'
+  CALL  0x0AF           ;'0x000204'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 218)
+;if(adc_value<=ADC_004V)
+  BANK  @0x1            ;'0x000205'
+  MOV   A, 0x24         ;'0x000206'
+  SUB   A, @0x48        ;'0x000207'
+  JBS   0x03, 0         ;'0x000208'
+  JMP   0x210           ;'0x000209'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 220)
+;IO_H_L(5,0);
+  MOV   A, @0x00        ;'0x00020A'
+  BANK  @0x0            ;'0x00020B'
+  MOV   0x27, A         ;'0x00020C'
+  MOV   A, @0x05        ;'0x00020D'
+  MOV   0x26, A         ;'0x00020E'
+  CALL  0x0AF           ;'0x00020F'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 223)
+;if(timeout >=3600)
+  BANK  @0x1            ;'0x000210'
+  MOV   A, 0x23         ;'0x000211'
+  MOV   0x12, A         ;'0x000212'
+  CLRA                  ;'0x000213'
+  JBC   0x12, 7         ;'0x000214'
+  MOV   A, @0xFF        ;'0x000215'
+  MOV   0x13, A         ;'0x000216'
+  MOV   A, @0x80        ;'0x000217'
+  XOR   A, 0x13         ;'0x000218'
+  MOV   0x16, A         ;'0x000219'
+  MOV   A, @0x8E        ;'0x00021A'
+  SUB   A, 0x16         ;'0x00021B'
+  JBS   0x03, 2         ;'0x00021C'
+  JMP   0x220           ;'0x00021D'
+  MOV   A, @0x10        ;'0x00021E'
+  SUB   A, 0x12         ;'0x00021F'
+  JBS   0x03, 0         ;'0x000220'
+  JMP   0x228           ;'0x000221'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 226)
+;IO_H_L(3,0);
+  MOV   A, @0x00        ;'0x000222'
+  BANK  @0x0            ;'0x000223'
+  MOV   0x27, A         ;'0x000224'
+  MOV   A, @0x03        ;'0x000225'
+  MOV   0x26, A         ;'0x000226'
+  CALL  0x0AF           ;'0x000227'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 230)
+;}
+  BANK  @0x1            ;'0x000228'
+  MOV   A, 0x2D         ;'0x000229'
+  MOV   0x12, A         ;'0x00022A'
+  MOV   A, 0x2E         ;'0x00022B'
+  MOV   0x13, A         ;'0x00022C'
+  RET                   ;'0x00022D'
+  MOV   A, 0x12         ;'0x00022E'
+  BANK  @0x1            ;'0x00022F'
+  MOV   0x26, A         ;'0x000230'
+  MOV   A, 0x13         ;'0x000231'
+  MOV   0x27, A         ;'0x000232'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 136)
+;char exit_this = 0;
+  CLR   0x25            ;'0x000233'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 137)
+;timeout = 0;//半小时等于1800秒
+  CLR   0x23            ;'0x000234'
+  JMP   0x271           ;'0x000235'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 140)
+;if(adc_value < ADC_010V)
+  BANK  @0x1            ;'0x000236'
+  MOV   A, 0x24         ;'0x000237'
+  MOV   0x12, A         ;'0x000238'
+  CLRA                  ;'0x000239'
+  JBC   0x12, 7         ;'0x00023A'
+  MOV   A, @0xFF        ;'0x00023B'
+  MOV   0x13, A         ;'0x00023C'
+  MOV   A, @0x80        ;'0x00023D'
+  XOR   A, 0x13         ;'0x00023E'
+  MOV   0x16, A         ;'0x00023F'
+  MOV   A, @0x83        ;'0x000240'
+  SUB   A, 0x16         ;'0x000241'
+  JBS   0x03, 2         ;'0x000242'
+  JMP   0x246           ;'0x000243'
+  MOV   A, @0x32        ;'0x000244'
+  SUB   A, 0x12         ;'0x000245'
+  JBC   0x03, 0         ;'0x000246'
+  JMP   0x24B           ;'0x000247'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 143)
+;exit_this = 1;
+  MOV   A, @0x01        ;'0x000248'
+  BANK  @0x1            ;'0x000249'
+  MOV   0x25, A         ;'0x00024A'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 145)
+;if(timeout == 1800)//时间到了,一小时等于1800秒
+  BANK  @0x1            ;'0x00024B'
+  MOV   A, 0x23         ;'0x00024C'
+  MOV   0x12, A         ;'0x00024D'
+  CLRA                  ;'0x00024E'
+  JBC   0x12, 7         ;'0x00024F'
+  MOV   A, @0xFF        ;'0x000250'
+  XOR   A, @0x07        ;'0x000251'
+  JBS   0x03, 2         ;'0x000252'
+  JMP   0x259           ;'0x000253'
+  MOV   A, 0x12         ;'0x000254'
+  XOR   A, @0x08        ;'0x000255'
+  JBS   0x03, 2         ;'0x000256'
+  JMP   0x259           ;'0x000257'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 147)
+;charger_floating_an_hour();
+  CALL  0x1F3           ;'0x000258'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 150)
+;IO_H_L(2,1);
+  MOV   A, @0x01        ;'0x000259'
+  BANK  @0x0            ;'0x00025A'
+  MOV   0x27, A         ;'0x00025B'
+  MOV   A, @0x02        ;'0x00025C'
+  MOV   0x26, A         ;'0x00025D'
+  CALL  0x0AF           ;'0x00025E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 151)
+;IO_H_L(3,0);
+  MOV   A, @0x00        ;'0x00025F'
+  BANK  @0x0            ;'0x000260'
+  MOV   0x27, A         ;'0x000261'
+  MOV   A, @0x03        ;'0x000262'
+  MOV   0x26, A         ;'0x000263'
+  CALL  0x0AF           ;'0x000264'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 152)
+;IO_H_L(4,0);
+  MOV   A, @0x00        ;'0x000265'
+  BANK  @0x0            ;'0x000266'
+  MOV   0x27, A         ;'0x000267'
+  MOV   A, @0x04        ;'0x000268'
+  MOV   0x26, A         ;'0x000269'
+  CALL  0x0AF           ;'0x00026A'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 153)
+;IO_H_L(5,1);
+  MOV   A, @0x01        ;'0x00026B'
+  BANK  @0x0            ;'0x00026C'
+  MOV   0x27, A         ;'0x00026D'
+  MOV   A, @0x05        ;'0x00026E'
+  MOV   0x26, A         ;'0x00026F'
+  CALL  0x0AF           ;'0x000270'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 138)
+;while(1)
+  JMP   0x236           ;'0x000271'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 155)
+;charger_half_hour_last();
+  CALL  0x1C1           ;'0x000272'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 156)
+;}
+  BANK  @0x1            ;'0x000273'
+  MOV   A, 0x26         ;'0x000274'
+  MOV   0x12, A         ;'0x000275'
+  MOV   A, 0x27         ;'0x000276'
+  MOV   0x13, A         ;'0x000277'
+  RET                   ;'0x000278'
+  MOV   A, 0x12         ;'0x000279'
+  BANK  @0x1            ;'0x00027A'
+  MOV   0x2B, A         ;'0x00027B'
+  MOV   A, 0x13         ;'0x00027C'
+  MOV   0x2C, A         ;'0x00027D'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 184)
+;char exit_this = 0;
+  CLR   0x2A            ;'0x00027E'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 185)
+;timeout = 0;//一小时等于3600秒
+  CLR   0x23            ;'0x00027F'
+  JMP   0x2BE           ;'0x000280'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 188)
+;if(adc_value < ADC_020V)
+  BANK  @0x1            ;'0x000281'
+  MOV   A, 0x24         ;'0x000282'
+  MOV   0x12, A         ;'0x000283'
+  CLRA                  ;'0x000284'
+  JBC   0x12, 7         ;'0x000285'
+  MOV   A, @0xFF        ;'0x000286'
+  MOV   0x13, A         ;'0x000287'
+  MOV   A, @0x80        ;'0x000288'
+  XOR   A, 0x13         ;'0x000289'
+  MOV   0x16, A         ;'0x00028A'
+  MOV   A, @0x86        ;'0x00028B'
+  SUB   A, 0x16         ;'0x00028C'
+  JBS   0x03, 2         ;'0x00028D'
+  JMP   0x291           ;'0x00028E'
+  MOV   A, @0x64        ;'0x00028F'
+  SUB   A, 0x12         ;'0x000290'
+  JBC   0x03, 0         ;'0x000291'
+  JMP   0x298           ;'0x000292'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 191)
+;exit_this = 1;
+  MOV   A, @0x01        ;'0x000293'
+  BANK  @0x1            ;'0x000294'
+  MOV   0x2A, A         ;'0x000295'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 192)
+;charger_half_hour();
+  CALL  0x22E           ;'0x000296'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 193)
+;break;
+  JMP   0x2BF           ;'0x000297'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 195)
+;if(timeout == 3600*8)//时间到了,一小时等于3600秒
+  BANK  @0x1            ;'0x000298'
+  MOV   A, 0x23         ;'0x000299'
+  MOV   0x12, A         ;'0x00029A'
+  CLRA                  ;'0x00029B'
+  JBC   0x12, 7         ;'0x00029C'
+  MOV   A, @0xFF        ;'0x00029D'
+  XOR   A, @0x70        ;'0x00029E'
+  JBS   0x03, 2         ;'0x00029F'
+  JMP   0x2A6           ;'0x0002A0'
+  MOV   A, 0x12         ;'0x0002A1'
+  XOR   A, @0x80        ;'0x0002A2'
+  JBS   0x03, 2         ;'0x0002A3'
+  JMP   0x2A6           ;'0x0002A4'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 197)
+;charger_floating_an_hour();
+  CALL  0x1F3           ;'0x0002A5'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 200)
+;IO_H_L(2,1);
+  MOV   A, @0x01        ;'0x0002A6'
+  BANK  @0x0            ;'0x0002A7'
+  MOV   0x27, A         ;'0x0002A8'
+  MOV   A, @0x02        ;'0x0002A9'
+  MOV   0x26, A         ;'0x0002AA'
+  CALL  0x0AF           ;'0x0002AB'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 201)
+;IO_H_L(3,0);
+  MOV   A, @0x00        ;'0x0002AC'
+  BANK  @0x0            ;'0x0002AD'
+  MOV   0x27, A         ;'0x0002AE'
+  MOV   A, @0x03        ;'0x0002AF'
+  MOV   0x26, A         ;'0x0002B0'
+  CALL  0x0AF           ;'0x0002B1'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 202)
+;IO_H_L(4,0);
+  MOV   A, @0x00        ;'0x0002B2'
+  BANK  @0x0            ;'0x0002B3'
+  MOV   0x27, A         ;'0x0002B4'
+  MOV   A, @0x04        ;'0x0002B5'
+  MOV   0x26, A         ;'0x0002B6'
+  CALL  0x0AF           ;'0x0002B7'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 203)
+;IO_H_L(5,1);
+  MOV   A, @0x01        ;'0x0002B8'
+  BANK  @0x0            ;'0x0002B9'
+  MOV   0x27, A         ;'0x0002BA'
+  MOV   A, @0x05        ;'0x0002BB'
+  MOV   0x26, A         ;'0x0002BC'
+  CALL  0x0AF           ;'0x0002BD'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 186)
+;while(1)
+  JMP   0x281           ;'0x0002BE'
+;D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c (line 206)
+;}
+  BANK  @0x1            ;'0x0002BF'
+  MOV   A, 0x2B         ;'0x0002C0'
+  MOV   0x12, A         ;'0x0002C1'
+  MOV   A, 0x2C         ;'0x0002C2'
+  MOV   0x13, A         ;'0x0002C3'
+  RET                   ;'0x0002C4'

@@ -5,13 +5,36 @@
 #include "user_comon_head.h"
 extern int timeout;
 extern int adc_value;
+extern void io_init(void);
 
+extern void IO_H_L(char ch,char status);
 int second_count = 0;
+int flag =0;
+
+void testcode_2(void);
+void testcode_2(void)
+{
+	if(flag == 1)
+	{
+		flag = 0;
+		IO_H_L(2,1);
+		
+	}
+	else
+	{
+		flag = 1;
+		IO_H_L(2,0);		
+	}
+}
+
+
+
 
 void timeout_handle(void);
 
 void timeout_handle(void)
 {
+#if 1
 	//一秒钟进入一次这个处理流程
 	if(second_count >= 125)
 	{
@@ -19,11 +42,9 @@ void timeout_handle(void)
 		timeout++;
 		//每秒钟启动一次ADC
 		ad_enable();
-		if(adc_value > ADC_020V)//整个过程中大于0,2V PWM嵌位于0.2 PWM是6脚
-		{
-			
-		}
+		testcode_2();
 	}
+#endif
 }
 
 extern int IntVecIdx; //occupied 0x10:rpage 0

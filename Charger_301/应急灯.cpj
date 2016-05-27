@@ -8,7 +8,8 @@ BlockNum=0
 [EEPROMBlock]
 BlockNum=0
 [BREAKPOINT]
-BP Num=0
+BP Num=1
+BP0=1,A,1699300,1,1699308,58,$\B16AD.c
 [CODEOPTION]
 Option Num=92
 Target Power=1
@@ -193,15 +194,13 @@ RF=0F
 [GlobalIO]
 [IOPage0]
 [Watch]
-Size#0=3
-0,0=reg_ad_temp_cnt
-0,1=reg_ad_calculate_cnt_cp
-0,2=reg_ad_calculate_cnt
+Size#0=1
+0,0=adc_value
 Size#1=0
 Size#2=0
 [ICEVOLTAGE SETTING]
 Voltage=1
 [$\interrupt_vector.h]
-Rectangle=0156 0156 1551 0574
+Rectangle=0786 0000 1572 0235
 Iconized=0
 Maximized=0

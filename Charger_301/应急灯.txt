@@ -1,0 +1,1235 @@
+Dump of file D:\外接项目\义隆单片机\Charger\Charger_301\应急灯.dbg
+
+Machine:0x0000 NumberOfSections:4 TimeDateStamp:0x00000000 PointerToSymbolTable:0x000021b0 NumberOfSymbols:856 SizeOfOptionalHeader:0 Characteristics:0x0000
+
+Relocation flags meanning:
+     0x0000: Reference is absolute, no relocation is necessary
+     0x0001: Direct 16-bit reference to the symbols virtual address
+     0x0002: PC-relative 16-bit reference to the symbols virtual address
+     0x0006: Direct 32-bit reference to the symbols virtual address
+     0x0007: Direct 32-bit reference to the symbols virtual address, base not included
+     0x0009: Direct 16-bit reference to the segment-selector bits of a 32-bit virtual address
+     0x000A: about secction
+     0x000B: about SECREL
+     0x0014: PC-relative 32-bit reference to the symbols virtual address
+.data Misc:0 VirtualAddress:0x00000000 SizeOfRawData:128 PointerToRawData: 0x00000000
+      PointerToRelocations:0x00000000 PointerToLinenumbers:0x00000000 NumberOfRelocations:0
+      NumberOfLinenumbers:0 Characteristics:0xc0000041
+.text Misc:0 VirtualAddress:0x00000000 SizeOfRawData:2048 PointerToRawData: 0x00000000
+      PointerToRelocations:0x00000000 PointerToLinenumbers:0x00000000 NumberOfRelocations:0
+      NumberOfLinenumbers:0 Characteristics:0x20000021
+.stab Misc:0 VirtualAddress:0x00000000 SizeOfRawData:5832 PointerToRawData: 0x00000138
+      PointerToRelocations:0x00000000 PointerToLinenumbers:0x00000000 NumberOfRelocations:0
+      NumberOfLinenumbers:0 Characteristics:0x00000000
+.stabstr Misc:0 VirtualAddress:0x00000000 SizeOfRawData:2478 PointerToRawData: 0x00001800
+      PointerToRelocations:0x00000000 PointerToLinenumbers:0x00000000 NumberOfRelocations:0
+      NumberOfLinenumbers:0 Characteristics:0x00000000
+
+.Symbol Table
+     Index  Value  SectionNumber  Type           StorageClass  NumberOfAuxSymbols  Name
+     -----  -----  -------------  ----           ------------  ------------------  ----
+      0  00000000             -2  NOAUX          FILE                           1  .file
+      2  00000000              2  NOAUX          EXTERNAL                       0  ProgramStart
+      3  00000000             -2  NOAUX          FILE                           1  .file
+      5  00000001              2  NOAUX          EQU                            0  EM78P301N
+      6  00000001              2  NOAUX          EQU                            0  _SIMPLE_RSR_
+      7  00000000             -2  NOAUX          FILE                           1  .file
+      9  00000000              2  NOAUX          EQU                            0  R0
+     10  00000002              2  NOAUX          EQU                            0  PC
+     11  00000003              2  NOAUX          EQU                            0  STATUS
+     12  00000000              2  NOAUX          EQU                            0  cf
+     13  00000002              2  NOAUX          EQU                            0  zf
+     14  00000004              2  NOAUX          EQU                            0  RSR
+     15  00000000              2  NOAUX          EQU                            0  ax
+     16  00000000              2  NOAUX          EQU                            0  al
+     17  00000000              2  NOAUX          EQU                            0  cx
+     18  00000000              2  NOAUX          EQU                            0  cl
+     19  00000000             -2  NOAUX          FILE                           1  .file
+     21  00000000              2  NOAUX          EQU                            0  ccounter
+     22  00000021              1  AUX:BANK:0     EXTERNAL                       1  _flag_ad
+     24  00000000              2  NOAUX          EXTERNAL                       0  _testcode_3
+     25  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  testcode_3_bp
+     27  00000008              2  NOAUX          STATIC                         0  L4
+     28  00000008              2  NOAUX          STATIC                         0  L5
+     29  00000008              2  NOAUX          STATIC                         0  L6
+     30  00000008              2  NOAUX          STATIC                         0  L7
+     31  00000013              2  NOAUX          STATIC                         0  L$2
+     32  0000000c              2  NOAUX          STATIC                         0  L8
+     33  0000000c              2  NOAUX          STATIC                         0  L9
+     34  0000000c              2  NOAUX          STATIC                         0  L10
+     35  0000000d              2  NOAUX          STATIC                         0  L11
+     36  00000026              1  AUX:STACKLABEL  EXTERNAL                       1  IO_H_L_bp
+     38  000000af              2  NOAUX          EXTERNAL                       0  _IO_H_L
+     39  00000012              2  NOAUX          STATIC                         0  L12
+     40  00000012              2  NOAUX          STATIC                         0  L13
+     41  0000001a              2  NOAUX          STATIC                         0  L$3
+     42  00000013              2  NOAUX          STATIC                         0  L14
+     43  00000013              2  NOAUX          STATIC                         0  L15
+     44  00000013              2  NOAUX          STATIC                         0  L16
+     45  00000015              2  NOAUX          STATIC                         0  L17
+     46  0000001a              2  NOAUX          STATIC                         0  L18
+     47  0000001a              2  NOAUX          STATIC                         0  L19
+     48  0000001a              2  NOAUX          STATIC                         0  L20
+     49  0000001a              2  NOAUX          STATIC                         0  L21
+     50  0000001a              2  NOAUX          STATIC                         0  L$1
+     51  0000017c              2  NOAUX          EXTERNAL                       0  _ad_init
+     52  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  ad_init_bp
+     54  0000017c              2  NOAUX          STATIC                         0  L23
+     55  0000017c              2  NOAUX          STATIC                         0  L24
+     56  0000017c              2  NOAUX          STATIC                         0  L25
+     57  00000008              1  AUX:REGISTER:0  STATIC                         1  _AISR
+     59  0000017f              2  NOAUX          STATIC                         0  L26
+     60  00000009              1  AUX:REGISTER:0  STATIC                         1  _ADCON
+     62  00000181              2  NOAUX          STATIC                         0  L27
+     63  0000000a              1  AUX:REGISTER:0  STATIC                         1  _ADOC
+     65  00000183              2  NOAUX          STATIC                         0  L28
+     66  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADRUN
+     68  00000184              2  NOAUX          STATIC                         0  L29
+     69  0000000e              1  AUX:IO:0       STATIC                         1  _IOCE0
+     71  00000188              2  NOAUX          STATIC                         0  L30
+     72  00000188              2  NOAUX          STATIC                         0  L31
+     73  00000188              2  NOAUX          STATIC                         0  L$22
+     74  0000010f              2  NOAUX          EXTERNAL                       0  _ad_read
+     75  0000002e              1  NOAUX          EXTERNAL                       1  ad_read_bp
+     77  00000118              2  NOAUX          STATIC                         0  L33
+     78  00000118              2  NOAUX          STATIC                         0  L34
+     79  00000118              2  NOAUX          STATIC                         0  L35
+     80  00000119              2  NOAUX          STATIC                         0  L36
+     81  0000000b              1  AUX:REGISTER:0  STATIC                         1  _ADDATA
+     83  0000011c              2  NOAUX          STATIC                         0  L37
+     84  0000011e              2  NOAUX          STATIC                         0  L38
+     85  0000011e              2  NOAUX          STATIC                         0  L39
+     86  0000011e              2  NOAUX          STATIC                         0  L$32
+     87  00000072              2  NOAUX          EXTERNAL                       0  _ad_enable
+     88  00000032              1  NOAUX          EXTERNAL                       1  ad_enable_bp
+     90  0000007b              2  NOAUX          STATIC                         0  L41
+     91  0000007b              2  NOAUX          STATIC                         0  L42
+     92  0000007b              2  NOAUX          STATIC                         0  L43
+     93  0000007d              2  NOAUX          STATIC                         0  L44
+     94  0000007d              2  NOAUX          STATIC                         0  L45
+     95  0000007d              2  NOAUX          STATIC                         0  L$40
+     96  00000000              2  NOAUX          EXTERNAL                       0  _ad_disable
+     97  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  ad_disable_bp
+     99  00000008              2  NOAUX          STATIC                         0  L47
+    100  00000008              2  NOAUX          STATIC                         0  L48
+    101  00000008              2  NOAUX          STATIC                         0  L49
+    102  00000008              2  NOAUX          STATIC                         0  L50
+    103  00000008              2  NOAUX          STATIC                         0  L$46
+    104  00000132              2  NOAUX          EXTERNAL                       0  _system_initial
+    105  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  system_initial_bp
+    107  00000132              2  NOAUX          STATIC                         0  L52
+    108  00000132              2  NOAUX          STATIC                         0  L53
+    109  00000132              2  NOAUX          STATIC                         0  L54
+    110  00000132              2  NOAUX          STATIC                         0  L55
+    111  0000002f              1  AUX:REGISTER:1  STATIC                         1  _SYS_CON
+    113  00000135              2  NOAUX          STATIC                         0  L56
+    114  00000005              1  AUX:IO:0       STATIC                         1  _IOC50
+    116  00000138              2  NOAUX          STATIC                         0  L57
+    117  00000005              1  AUX:REGISTER:0  STATIC                         1  _PORT5
+    119  0000013a              2  NOAUX          STATIC                         0  L58
+    120  00000006              1  AUX:IO:0       STATIC                         1  _IOC60
+    122  0000013c              2  NOAUX          STATIC                         0  L59
+    123  00000006              1  AUX:REGISTER:0  STATIC                         1  _PORT6
+    125  0000013d              2  NOAUX          STATIC                         0  L60
+    126  00000007              1  AUX:IO:0       STATIC                         1  _IOC70
+    128  0000013f              2  NOAUX          STATIC                         0  L61
+    129  00000007              1  AUX:REGISTER:0  STATIC                         1  _PORT7
+    131  00000140              2  NOAUX          STATIC                         0  L62
+    132  00000140              2  NOAUX          STATIC                         0  L63
+    133  00000140              2  NOAUX          STATIC                         0  L$51
+    134  00000127              2  NOAUX          EXTERNAL                       0  _clear_all_ram
+    135  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  clear_all_ram_bp
+    137  00000127              2  NOAUX          STATIC                         0  L65
+    138  00000127              2  NOAUX          STATIC                         0  L66
+    139  00000127              2  NOAUX          STATIC                         0  L67
+    140  00000128              2  NOAUX          STATIC                         0  L68
+    141  00000129              2  NOAUX          STATIC                         0  L69
+    142  00000129              2  NOAUX          STATIC                         0  S_CLRLOOP
+    143  00000129              2  NOAUX          STATIC                         0  L70
+    144  0000012a              2  NOAUX          STATIC                         0  L71
+    145  0000012b              2  NOAUX          STATIC                         0  L72
+    146  0000012c              2  NOAUX          STATIC                         0  L73
+    147  0000012d              2  NOAUX          STATIC                         0  L74
+    148  0000012e              2  NOAUX          STATIC                         0  L75
+    149  0000012f              2  NOAUX          STATIC                         0  L76
+    150  00000130              2  NOAUX          STATIC                         0  L77
+    151  00000131              2  NOAUX          STATIC                         0  L78
+    152  00000131              2  NOAUX          STATIC                         0  L79
+    153  00000131              2  NOAUX          STATIC                         0  L$64
+    154  00000141              2  NOAUX          EXTERNAL                       0  _time_tcc_pro
+    155  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  time_tcc_pro_bp
+    157  00000141              2  NOAUX          STATIC                         0  L81
+    158  00000141              2  NOAUX          STATIC                         0  L82
+    159  00000141              2  NOAUX          STATIC                         0  L83
+    160  00000141              2  NOAUX          STATIC                         0  L84
+    161  00000142              2  NOAUX          STATIC                         0  L85
+    162  00000143              2  NOAUX          STATIC                         0  L86
+    163  00000001              1  AUX:REGISTER:0  STATIC                         1  _TCC
+    165  00000144              2  NOAUX          STATIC                         0  L87
+    166  0000000f              1  AUX:REGISTER:0  STATIC                         1  _RF
+    168  00000147              2  NOAUX          STATIC                         0  L88
+    169  0000000f              1  AUX:IO:0       STATIC                         1  _IOCF0
+    171  0000014b              2  NOAUX          STATIC                         0  L89
+    172  0000014d              2  NOAUX          STATIC                         0  L90
+    173  0000014d              2  NOAUX          STATIC                         0  L91
+    174  0000014d              2  NOAUX          STATIC                         0  L$80
+    175  00000000              2  NOAUX          EXTERNAL                       0  _set_all_bit_ram
+    176  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  set_all_bit_ram_bp
+    178  00000008              2  NOAUX          STATIC                         0  L93
+    179  00000008              2  NOAUX          STATIC                         0  L94
+    180  00000008              2  NOAUX          STATIC                         0  L95
+    181  00000008              2  NOAUX          STATIC                         0  L96
+    182  00000020              1  AUX:BIT:BANK:0  EXTERNAL                       1  _bit_ad_interrupt
+    184  00000009              2  NOAUX          STATIC                         0  L97
+    185  00000020              1  AUX:BIT:BANK:0  EXTERNAL                       1  _bit_tcc_interrupt
+    187  0000000a              2  NOAUX          STATIC                         0  L98
+    188  00000020              1  AUX:BIT:BANK:0  EXTERNAL                       1  _bit_first_ad
+    190  0000000b              2  NOAUX          STATIC                         0  L99
+    191  00000020              1  AUX:BIT:BANK:0  EXTERNAL                       1  _bit_need_cmp
+    193  0000000c              2  NOAUX          STATIC                         0  L100
+    194  00000020              1  AUX:BIT:BANK:0  EXTERNAL                       1  _bit_need_output
+    196  0000000d              2  NOAUX          STATIC                         0  L101
+    197  00000032              1  AUX:BANK:0     EXTERNAL                       1  _reg_ad_temp_cnt
+    199  00000011              2  NOAUX          STATIC                         0  L102
+    200  00000036              1  AUX:BANK:0     EXTERNAL                       1  _reg_ad_calculate_cnt_cp
+    202  00000015              2  NOAUX          STATIC                         0  L103
+    203  0000003a              1  AUX:BANK:0     EXTERNAL                       1  _reg_ad_calculate_cnt
+    205  00000019              2  NOAUX          STATIC                         0  L104
+    206  0000003e              1  AUX:BANK:0     EXTERNAL                       1  _reg_ad_average_cnt
+    208  0000001a              2  NOAUX          STATIC                         0  L105
+    209  0000001a              2  NOAUX          STATIC                         0  L106
+    210  0000001a              2  NOAUX          STATIC                         0  L$92
+    211  00000000              2  NOAUX          EXTERNAL                       0  _out_put_pro
+    212  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  out_put_pro_bp
+    214  00000008              2  NOAUX          STATIC                         0  L114
+    215  00000008              2  NOAUX          STATIC                         0  L115
+    216  00000008              2  NOAUX          STATIC                         0  L116
+    217  00000008              2  NOAUX          STATIC                         0  L117
+    218  00000019              2  NOAUX          STATIC                         0  L$108
+    219  0000000a              2  NOAUX          STATIC                         0  L118
+    220  0000000a              2  NOAUX          STATIC                         0  L119
+    221  0000000a              2  NOAUX          STATIC                         0  L120
+    222  00000007              1  AUX:BIT:REGISTER:0  STATIC                         1  _P71
+    224  0000000b              2  NOAUX          STATIC                         0  L121
+    225  0000003f              1  AUX:BANK:0     EXTERNAL                       1  _reg_time_cnt
+    227  0000001a              2  NOAUX          STATIC                         0  L$109
+    228  00000010              2  NOAUX          STATIC                         0  L122
+    229  00000010              2  NOAUX          STATIC                         0  L123
+    230  00000010              2  NOAUX          STATIC                         0  L124
+    231  00000011              2  NOAUX          STATIC                         0  L125
+    232  00000040              1  AUX:BANK:0     EXTERNAL                       1  _reg_time_cnt1
+    234  00000016              2  NOAUX          STATIC                         0  L126
+    235  00000016              2  NOAUX          STATIC                         0  L127
+    236  00000016              2  NOAUX          STATIC                         0  L128
+    237  00000017              2  NOAUX          STATIC                         0  L129
+    238  00000018              2  NOAUX          STATIC                         0  L130
+    239  00000018              2  NOAUX          STATIC                         0  L131
+    240  00000018              2  NOAUX          STATIC                         0  L132
+    241  00000018              2  NOAUX          STATIC                         0  L133
+    242  00000018              2  NOAUX          STATIC                         0  L134
+    243  00000018              2  NOAUX          STATIC                         0  L135
+    244  00000019              2  NOAUX          STATIC                         0  L136
+    245  00000019              2  NOAUX          STATIC                         0  L137
+    246  00000019              2  NOAUX          STATIC                         0  L138
+    247  0000001a              2  NOAUX          STATIC                         0  L139
+    248  0000001a              2  NOAUX          STATIC                         0  L140
+    249  0000001a              2  NOAUX          STATIC                         0  L141
+    250  0000001a              2  NOAUX          STATIC                         0  L142
+    251  0000001a              2  NOAUX          STATIC                         0  L$107
+    252  00000041              1  AUX:BANK:0     EXTERNAL                       1  _second_count
+    254  00000042              1  AUX:BANK:0     EXTERNAL                       1  _flag
+    256  00000086              2  NOAUX          EXTERNAL                       0  _testcode_2
+    257  00000032              1  NOAUX          EXTERNAL                       1  testcode_2_bp
+    259  0000008f              2  NOAUX          STATIC                         0  L146
+    260  0000008f              2  NOAUX          STATIC                         0  L147
+    261  0000008f              2  NOAUX          STATIC                         0  L148
+    262  0000008f              2  NOAUX          STATIC                         0  L149
+    263  0000009c              2  NOAUX          STATIC                         0  L$144
+    264  00000094              2  NOAUX          STATIC                         0  L150
+    265  00000094              2  NOAUX          STATIC                         0  L151
+    266  00000094              2  NOAUX          STATIC                         0  L152
+    267  00000095              2  NOAUX          STATIC                         0  L153
+    268  0000009b              2  NOAUX          STATIC                         0  L154
+    269  0000009b              2  NOAUX          STATIC                         0  L155
+    270  000000a5              2  NOAUX          STATIC                         0  L$145
+    271  0000009c              2  NOAUX          STATIC                         0  L156
+    272  0000009c              2  NOAUX          STATIC                         0  L157
+    273  0000009c              2  NOAUX          STATIC                         0  L158
+    274  0000009f              2  NOAUX          STATIC                         0  L159
+    275  000000a5              2  NOAUX          STATIC                         0  L160
+    276  000000a5              2  NOAUX          STATIC                         0  L161
+    277  000000a5              2  NOAUX          STATIC                         0  L162
+    278  000000a5              2  NOAUX          STATIC                         0  L163
+    279  000000a5              2  NOAUX          STATIC                         0  L$143
+    280  00000053              2  NOAUX          EXTERNAL                       0  _timeout_handle
+    281  0000002d              1  NOAUX          EXTERNAL                       1  timeout_handle_bp
+    283  0000005c              2  NOAUX          STATIC                         0  L167
+    284  0000005c              2  NOAUX          STATIC                         0  L168
+    285  0000005c              2  NOAUX          STATIC                         0  L169
+    286  00000068              2  NOAUX          STATIC                         0  L$165
+    287  00000064              2  NOAUX          STATIC                         0  L170
+    288  00000064              2  NOAUX          STATIC                         0  L171
+    289  00000064              2  NOAUX          STATIC                         0  L172
+    290  00000065              2  NOAUX          STATIC                         0  L173
+    291  00000043              1  AUX:BANK:0     EXTERNAL                       1  _timeout
+    293  00000066              2  NOAUX          STATIC                         0  L174
+    294  00000067              2  NOAUX          STATIC                         0  L175
+    295  00000068              2  NOAUX          STATIC                         0  L176
+    296  00000068              2  NOAUX          STATIC                         0  L177
+    297  00000068              2  NOAUX          STATIC                         0  L178
+    298  00000068              2  NOAUX          STATIC                         0  L179
+    299  00000068              2  NOAUX          STATIC                         0  L$164
+    300  0000000e              2  NOAUX          EXTERNAL                       1  _ALLInt
+    302  0000000e              2  NOAUX          STATIC                         0  L185
+    303  0000000e              2  NOAUX          STATIC                         0  L186
+    304  0000000e              2  NOAUX          STATIC                         0  L187
+    305  00000021              2  NOAUX          STATIC                         0  L$183
+    306  0000002a              2  NOAUX          STATIC                         0  L$184
+    307  00000031              2  NOAUX          STATIC                         0  L$182
+    308  00000021              2  NOAUX          STATIC                         0  L188
+    309  00000021              2  NOAUX          STATIC                         0  L189
+    310  00000021              2  NOAUX          STATIC                         0  L190
+    311  00000023              2  NOAUX          STATIC                         0  L191
+    312  00000024              2  NOAUX          STATIC                         0  L192
+    313  00000027              2  NOAUX          STATIC                         0  L193
+    314  00000029              2  NOAUX          STATIC                         0  L194
+    315  0000002a              2  NOAUX          STATIC                         0  L195
+    316  00000044              1  AUX:BANK:0     EXTERNAL                       1  _adc_value
+    318  0000002e              2  NOAUX          STATIC                         0  L196
+    319  0000000e              1  AUX:REGISTER:0  STATIC                         1  _RE
+    321  00000031              2  NOAUX          STATIC                         0  L197
+    322  00000031              2  NOAUX          STATIC                         0  L198
+    323  00000031              2  NOAUX          STATIC                         0  L199
+    324  00000031              2  NOAUX          STATIC                         0  L200
+    325  00000031              2  NOAUX          STATIC                         0  L201
+    326  00000031              2  NOAUX          STATIC                         0  L202
+    327  00000031              2  NOAUX          STATIC                         0  L$180
+    328  00000009              2  NOAUX          EXTERNAL                       1  _TCC_l
+    330  00000009              2  NOAUX          STATIC                         0  L204
+    331  00000009              2  NOAUX          STATIC                         0  L205
+    332  00000009              2  NOAUX          STATIC                         0  L206
+    333  0000000a              2  NOAUX          STATIC                         0  L207
+    334  0000000a              2  NOAUX          STATIC                         0  L208
+    335  0000000a              2  NOAUX          STATIC                         0  L209
+    336  0000000a              2  NOAUX          STATIC                         0  L$203
+    337  0000000c              2  NOAUX          EXTERNAL                       1  _ADC_l
+    339  0000000c              2  NOAUX          STATIC                         0  L211
+    340  0000000c              2  NOAUX          STATIC                         0  L212
+    341  0000000c              2  NOAUX          STATIC                         0  L213
+    342  0000000d              2  NOAUX          STATIC                         0  L214
+    343  0000000d              2  NOAUX          STATIC                         0  L215
+    344  0000000d              2  NOAUX          STATIC                         0  L216
+    345  0000000d              2  NOAUX          STATIC                         0  L$210
+    346  00000000              2  NOAUX          EXTERNAL                       0  _pwm2_init
+    347  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  pwm2_init_bp
+    349  00000008              2  NOAUX          STATIC                         0  L218
+    350  00000008              2  NOAUX          STATIC                         0  L219
+    351  00000008              2  NOAUX          STATIC                         0  L220
+    352  00000008              2  NOAUX          STATIC                         0  L221
+    353  00000027              1  AUX:REGISTER:1  STATIC                         1  _PWMCON
+    355  0000000a              2  NOAUX          STATIC                         0  L222
+    356  0000002a              1  AUX:REGISTER:1  STATIC                         1  _PRD2
+    358  0000000c              2  NOAUX          STATIC                         0  L223
+    359  0000002c              1  AUX:REGISTER:1  STATIC                         1  _DT2
+    361  0000000e              2  NOAUX          STATIC                         0  L224
+    362  00000028              1  AUX:REGISTER:1  STATIC                         1  _TMRCON
+    364  00000010              2  NOAUX          STATIC                         0  L225
+    365  00000010              2  NOAUX          STATIC                         0  L226
+    366  00000010              2  NOAUX          STATIC                         0  L$217
+    367  00000000              2  NOAUX          EXTERNAL                       0  _pwm2_increase
+    368  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  pwm2_increase_bp
+    370  00000008              2  NOAUX          STATIC                         0  L228
+    371  00000008              2  NOAUX          STATIC                         0  L229
+    372  00000008              2  NOAUX          STATIC                         0  L230
+    373  00000008              2  NOAUX          STATIC                         0  L231
+    374  00000008              2  NOAUX          STATIC                         0  L$227
+    375  00000000              2  NOAUX          EXTERNAL                       0  _pwm2_devrease
+    376  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  pwm2_devrease_bp
+    378  00000008              2  NOAUX          STATIC                         0  L233
+    379  00000008              2  NOAUX          STATIC                         0  L234
+    380  00000008              2  NOAUX          STATIC                         0  L235
+    381  00000008              2  NOAUX          STATIC                         0  L236
+    382  00000008              2  NOAUX          STATIC                         0  L$232
+    383  00000039              2  NOAUX          EXTERNAL                       0  _main
+    384  00000039              2  NOAUX          STATIC                         0  L246
+    385  00000039              2  NOAUX          STATIC                         0  L247
+    386  00000039              2  NOAUX          STATIC                         0  L248
+    387  00000041              2  NOAUX          STATIC                         0  L249
+    388  00000042              2  NOAUX          STATIC                         0  L250
+    389  00000043              2  NOAUX          STATIC                         0  L251
+    390  0000014e              2  NOAUX          EXTERNAL                       0  _io_init
+    391  00000044              2  NOAUX          STATIC                         0  L252
+    392  00000045              2  NOAUX          STATIC                         0  L253
+    393  00000046              2  NOAUX          STATIC                         0  L254
+    394  0000015d              2  NOAUX          EXTERNAL                       0  _b16ad_init
+    395  00000047              2  NOAUX          STATIC                         0  L255
+    396  00000051              2  NOAUX          STATIC                         0  L$239
+    397  00000049              2  NOAUX          STATIC                         0  L256
+    398  00000049              2  NOAUX          STATIC                         0  L257
+    399  00000049              2  NOAUX          STATIC                         0  L$241
+    400  00000049              2  NOAUX          STATIC                         0  L258
+    401  00000049              2  NOAUX          STATIC                         0  L259
+    402  00000049              2  NOAUX          STATIC                         0  L260
+    403  0000004a              2  NOAUX          STATIC                         0  L261
+    404  00000050              2  NOAUX          STATIC                         0  L$244
+    405  0000004f              2  NOAUX          STATIC                         0  L262
+    406  0000004f              2  NOAUX          STATIC                         0  L263
+    407  0000004f              2  NOAUX          STATIC                         0  L264
+    408  00000189              2  NOAUX          EXTERNAL                       0  _Charger
+    409  00000050              2  NOAUX          STATIC                         0  L265
+    410  00000050              2  NOAUX          STATIC                         0  L266
+    411  00000050              2  NOAUX          STATIC                         0  L267
+    412  00000050              2  NOAUX          STATIC                         0  L268
+    413  00000050              2  NOAUX          STATIC                         0  L$242
+    414  00000050              2  NOAUX          STATIC                         0  L269
+    415  00000051              2  NOAUX          STATIC                         0  L270
+    416  00000051              2  NOAUX          STATIC                         0  L271
+    417  00000051              2  NOAUX          STATIC                         0  L272
+    418  00000052              2  NOAUX          STATIC                         0  L273
+    419  00000052              2  NOAUX          STATIC                         0  L274
+    420  00000052              2  NOAUX          STATIC                         0  L$237
+    421  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  b16ad_init_bp
+    423  0000015d              2  NOAUX          STATIC                         0  L276
+    424  0000015d              2  NOAUX          STATIC                         0  L277
+    425  0000015d              2  NOAUX          STATIC                         0  L278
+    426  00000163              2  NOAUX          STATIC                         0  L279
+    427  00000169              2  NOAUX          STATIC                         0  L280
+    428  0000016f              2  NOAUX          STATIC                         0  L281
+    429  00000175              2  NOAUX          STATIC                         0  L282
+    430  0000017b              2  NOAUX          STATIC                         0  L283
+    431  0000017b              2  NOAUX          STATIC                         0  L284
+    432  0000017b              2  NOAUX          STATIC                         0  L$275
+    433  00000029              1  AUX:STACKLABEL  EXTERNAL                       1  Charger_bp
+    435  0000018c              2  NOAUX          STATIC                         0  L292
+    436  0000018c              2  NOAUX          STATIC                         0  L293
+    437  0000018c              2  NOAUX          STATIC                         0  L294
+    438  00000198              2  NOAUX          STATIC                         0  ___0012__
+    439  0000019c              2  NOAUX          STATIC                         0  L$286
+    440  0000019a              2  NOAUX          STATIC                         0  L295
+    441  0000019a              2  NOAUX          STATIC                         0  L296
+    442  0000019a              2  NOAUX          STATIC                         0  L297
+    443  000001c1              2  NOAUX          EXTERNAL                       0  _charger_half_hour_last
+    444  0000019b              2  NOAUX          STATIC                         0  L298
+    445  0000019b              2  NOAUX          STATIC                         0  L299
+    446  000001bd              2  NOAUX          STATIC                         0  L$287
+    447  0000019c              2  NOAUX          STATIC                         0  L300
+    448  000001a8              2  NOAUX          STATIC                         0  ___0017__
+    449  000001ac              2  NOAUX          STATIC                         0  L$288
+    450  000001aa              2  NOAUX          STATIC                         0  L301
+    451  000001aa              2  NOAUX          STATIC                         0  L302
+    452  000001aa              2  NOAUX          STATIC                         0  L303
+    453  0000022e              2  NOAUX          EXTERNAL                       0  _charger_half_hour
+    454  000001ab              2  NOAUX          STATIC                         0  L304
+    455  000001ab              2  NOAUX          STATIC                         0  L305
+    456  000001bd              2  NOAUX          STATIC                         0  L$289
+    457  000001ac              2  NOAUX          STATIC                         0  L306
+    458  000001b8              2  NOAUX          STATIC                         0  ___001C__
+    459  000001bc              2  NOAUX          STATIC                         0  L$290
+    460  000001ba              2  NOAUX          STATIC                         0  L307
+    461  000001ba              2  NOAUX          STATIC                         0  L308
+    462  000001ba              2  NOAUX          STATIC                         0  L309
+    463  000001bb              2  NOAUX          STATIC                         0  L310
+    464  000001bb              2  NOAUX          STATIC                         0  L311
+    465  000001bd              2  NOAUX          STATIC                         0  L$291
+    466  000001bc              2  NOAUX          STATIC                         0  L312
+    467  000001bc              2  NOAUX          STATIC                         0  L313
+    468  000001bc              2  NOAUX          STATIC                         0  L314
+    469  00000279              2  NOAUX          EXTERNAL                       0  _charger_eight_hours
+    470  000001bd              2  NOAUX          STATIC                         0  L315
+    471  000001bd              2  NOAUX          STATIC                         0  L316
+    472  000001bd              2  NOAUX          STATIC                         0  L317
+    473  000001bd              2  NOAUX          STATIC                         0  L318
+    474  000001bd              2  NOAUX          STATIC                         0  L$285
+    475  00000000              2  NOAUX          EXTERNAL                       0  _charger_an_hour
+    476  00000000              1  AUX:STACKLABEL  EXTERNAL                       1  charger_an_hour_bp
+    478  00000008              2  NOAUX          STATIC                         0  L327
+    479  00000008              2  NOAUX          STATIC                         0  L328
+    480  00000008              2  NOAUX          STATIC                         0  L329
+    481  00000009              2  NOAUX          STATIC                         0  L330
+    482  00000040              2  NOAUX          STATIC                         0  L$321
+    483  0000000b              2  NOAUX          STATIC                         0  L$320
+    484  0000000b              2  NOAUX          STATIC                         0  L331
+    485  0000000b              2  NOAUX          STATIC                         0  L332
+    486  0000000b              2  NOAUX          STATIC                         0  L333
+    487  0000001a              2  NOAUX          STATIC                         0  ___0021__
+    488  0000001f              2  NOAUX          STATIC                         0  L$323
+    489  0000001c              2  NOAUX          STATIC                         0  L334
+    490  0000001c              2  NOAUX          STATIC                         0  L335
+    491  0000001c              2  NOAUX          STATIC                         0  L336
+    492  0000001e              2  NOAUX          STATIC                         0  L337
+    493  00000041              2  NOAUX          STATIC                         0  L$322
+    494  0000001f              2  NOAUX          STATIC                         0  L338
+    495  0000001f              2  NOAUX          STATIC                         0  L339
+    496  0000001f              2  NOAUX          STATIC                         0  L340
+    497  0000002c              2  NOAUX          STATIC                         0  L$325
+    498  0000002b              2  NOAUX          STATIC                         0  L341
+    499  0000002b              2  NOAUX          STATIC                         0  L342
+    500  0000002b              2  NOAUX          STATIC                         0  L343
+    501  000001f3              2  NOAUX          EXTERNAL                       0  _charger_floating_an_hour
+    502  0000002c              2  NOAUX          STATIC                         0  L344
+    503  0000002c              2  NOAUX          STATIC                         0  L345
+    504  0000002c              2  NOAUX          STATIC                         0  L346
+    505  00000031              2  NOAUX          STATIC                         0  L347
+    506  00000036              2  NOAUX          STATIC                         0  L348
+    507  0000003b              2  NOAUX          STATIC                         0  L349
+    508  00000040              2  NOAUX          STATIC                         0  L350
+    509  00000040              2  NOAUX          STATIC                         0  L351
+    510  00000040              2  NOAUX          STATIC                         0  L352
+    511  00000041              2  NOAUX          STATIC                         0  L353
+    512  00000042              2  NOAUX          STATIC                         0  L354
+    513  00000042              2  NOAUX          STATIC                         0  L355
+    514  00000042              2  NOAUX          STATIC                         0  L$319
+    515  00000048              1  AUX:STACKLABEL  EXTERNAL                       1  charger_half_hour_bp
+    517  00000233              2  NOAUX          STATIC                         0  L364
+    518  00000233              2  NOAUX          STATIC                         0  L365
+    519  00000233              2  NOAUX          STATIC                         0  L366
+    520  00000234              2  NOAUX          STATIC                         0  L367
+    521  00000271              2  NOAUX          STATIC                         0  L$358
+    522  00000236              2  NOAUX          STATIC                         0  L$357
+    523  00000236              2  NOAUX          STATIC                         0  L368
+    524  00000236              2  NOAUX          STATIC                         0  L369
+    525  00000236              2  NOAUX          STATIC                         0  L370
+    526  00000246              2  NOAUX          STATIC                         0  ___002A__
+    527  0000024b              2  NOAUX          STATIC                         0  L$360
+    528  00000248              2  NOAUX          STATIC                         0  L371
+    529  00000248              2  NOAUX          STATIC                         0  L372
+    530  00000248              2  NOAUX          STATIC                         0  L373
+    531  0000024b              2  NOAUX          STATIC                         0  L374
+    532  0000024b              2  NOAUX          STATIC                         0  L375
+    533  0000024b              2  NOAUX          STATIC                         0  L376
+    534  00000259              2  NOAUX          STATIC                         0  L$362
+    535  00000258              2  NOAUX          STATIC                         0  L377
+    536  00000258              2  NOAUX          STATIC                         0  L378
+    537  00000258              2  NOAUX          STATIC                         0  L379
+    538  00000259              2  NOAUX          STATIC                         0  L380
+    539  00000259              2  NOAUX          STATIC                         0  L381
+    540  00000259              2  NOAUX          STATIC                         0  L382
+    541  0000025f              2  NOAUX          STATIC                         0  L383
+    542  00000265              2  NOAUX          STATIC                         0  L384
+    543  0000026b              2  NOAUX          STATIC                         0  L385
+    544  00000271              2  NOAUX          STATIC                         0  L386
+    545  00000271              2  NOAUX          STATIC                         0  L387
+    546  00000271              2  NOAUX          STATIC                         0  L388
+    547  00000272              2  NOAUX          STATIC                         0  L389
+    548  00000273              2  NOAUX          STATIC                         0  L390
+    549  00000273              2  NOAUX          STATIC                         0  L391
+    550  00000273              2  NOAUX          STATIC                         0  L$356
+    551  0000004a              1  AUX:STACKLABEL  EXTERNAL                       1  charger_half_hour_last_bp
+    553  000001c4              2  NOAUX          STATIC                         0  L398
+    554  000001c4              2  NOAUX          STATIC                         0  L399
+    555  000001c4              2  NOAUX          STATIC                         0  L400
+    556  000001c5              2  NOAUX          STATIC                         0  L401
+    557  000001ee              2  NOAUX          STATIC                         0  L$394
+    558  000001c7              2  NOAUX          STATIC                         0  L$393
+    559  000001c7              2  NOAUX          STATIC                         0  L402
+    560  000001c7              2  NOAUX          STATIC                         0  L403
+    561  000001c7              2  NOAUX          STATIC                         0  L404
+    562  000001d6              2  NOAUX          STATIC                         0  L$396
+    563  000001d4              2  NOAUX          STATIC                         0  L405
+    564  000001d4              2  NOAUX          STATIC                         0  L406
+    565  000001d4              2  NOAUX          STATIC                         0  L407
+    566  000001d5              2  NOAUX          STATIC                         0  L408
+    567  000001ef              2  NOAUX          STATIC                         0  L$395
+    568  000001d6              2  NOAUX          STATIC                         0  L409
+    569  000001d6              2  NOAUX          STATIC                         0  L410
+    570  000001d6              2  NOAUX          STATIC                         0  L411
+    571  000001dc              2  NOAUX          STATIC                         0  L412
+    572  000001e2              2  NOAUX          STATIC                         0  L413
+    573  000001e8              2  NOAUX          STATIC                         0  L414
+    574  000001ee              2  NOAUX          STATIC                         0  L415
+    575  000001ee              2  NOAUX          STATIC                         0  L416
+    576  000001ee              2  NOAUX          STATIC                         0  L417
+    577  000001ef              2  NOAUX          STATIC                         0  L418
+    578  000001ef              2  NOAUX          STATIC                         0  L419
+    579  000001ef              2  NOAUX          STATIC                         0  L$392
+    580  0000004d              1  AUX:STACKLABEL  EXTERNAL                       1  charger_eight_hours_bp
+    582  0000027e              2  NOAUX          STATIC                         0  L428
+    583  0000027e              2  NOAUX          STATIC                         0  L429
+    584  0000027e              2  NOAUX          STATIC                         0  L430
+    585  0000027f              2  NOAUX          STATIC                         0  L431
+    586  000002be              2  NOAUX          STATIC                         0  L$422
+    587  00000281              2  NOAUX          STATIC                         0  L$421
+    588  00000281              2  NOAUX          STATIC                         0  L432
+    589  00000281              2  NOAUX          STATIC                         0  L433
+    590  00000281              2  NOAUX          STATIC                         0  L434
+    591  00000291              2  NOAUX          STATIC                         0  ___0037__
+    592  00000298              2  NOAUX          STATIC                         0  L$424
+    593  00000293              2  NOAUX          STATIC                         0  L435
+    594  00000293              2  NOAUX          STATIC                         0  L436
+    595  00000293              2  NOAUX          STATIC                         0  L437
+    596  00000296              2  NOAUX          STATIC                         0  L438
+    597  00000297              2  NOAUX          STATIC                         0  L439
+    598  000002bf              2  NOAUX          STATIC                         0  L$423
+    599  00000298              2  NOAUX          STATIC                         0  L440
+    600  00000298              2  NOAUX          STATIC                         0  L441
+    601  00000298              2  NOAUX          STATIC                         0  L442
+    602  000002a6              2  NOAUX          STATIC                         0  L$426
+    603  000002a5              2  NOAUX          STATIC                         0  L443
+    604  000002a5              2  NOAUX          STATIC                         0  L444
+    605  000002a5              2  NOAUX          STATIC                         0  L445
+    606  000002a6              2  NOAUX          STATIC                         0  L446
+    607  000002a6              2  NOAUX          STATIC                         0  L447
+    608  000002a6              2  NOAUX          STATIC                         0  L448
+    609  000002ac              2  NOAUX          STATIC                         0  L449
+    610  000002b2              2  NOAUX          STATIC                         0  L450
+    611  000002b8              2  NOAUX          STATIC                         0  L451
+    612  000002be              2  NOAUX          STATIC                         0  L452
+    613  000002be              2  NOAUX          STATIC                         0  L453
+    614  000002be              2  NOAUX          STATIC                         0  L454
+    615  000002bf              2  NOAUX          STATIC                         0  L455
+    616  000002bf              2  NOAUX          STATIC                         0  L456
+    617  000002bf              2  NOAUX          STATIC                         0  L$420
+    618  0000004f              1  AUX:STACKLABEL  EXTERNAL                       1  charger_floating_an_hour_bp
+    620  000001f8              2  NOAUX          STATIC                         0  L467
+    621  000001f8              2  NOAUX          STATIC                         0  L468
+    622  000001f8              2  NOAUX          STATIC                         0  L469
+    623  000001f9              2  NOAUX          STATIC                         0  L$458
+    624  000001f9              2  NOAUX          STATIC                         0  L470
+    625  000001f9              2  NOAUX          STATIC                         0  L$459
+    626  000001f9              2  NOAUX          STATIC                         0  L471
+    627  000001fa              2  NOAUX          STATIC                         0  L472
+    628  000001fa              2  NOAUX          STATIC                         0  L473
+    629  000001fa              2  NOAUX          STATIC                         0  L474
+    630  00000205              2  NOAUX          STATIC                         0  L$461
+    631  000001ff              2  NOAUX          STATIC                         0  L475
+    632  000001ff              2  NOAUX          STATIC                         0  L476
+    633  000001ff              2  NOAUX          STATIC                         0  L477
+    634  00000205              2  NOAUX          STATIC                         0  L478
+    635  00000205              2  NOAUX          STATIC                         0  L479
+    636  00000205              2  NOAUX          STATIC                         0  L480
+    637  00000210              2  NOAUX          STATIC                         0  L$463
+    638  0000020a              2  NOAUX          STATIC                         0  L481
+    639  0000020a              2  NOAUX          STATIC                         0  L482
+    640  0000020a              2  NOAUX          STATIC                         0  L483
+    641  00000210              2  NOAUX          STATIC                         0  L484
+    642  00000210              2  NOAUX          STATIC                         0  L485
+    643  00000210              2  NOAUX          STATIC                         0  L486
+    644  00000220              2  NOAUX          STATIC                         0  ___0044__
+    645  00000228              2  NOAUX          STATIC                         0  L$465
+    646  00000222              2  NOAUX          STATIC                         0  L487
+    647  00000222              2  NOAUX          STATIC                         0  L488
+    648  00000222              2  NOAUX          STATIC                         0  L489
+    649  00000228              2  NOAUX          STATIC                         0  L490
+    650  00000228              2  NOAUX          STATIC                         0  L491
+    651  00000228              2  NOAUX          STATIC                         0  L492
+    652  00000228              2  NOAUX          STATIC                         0  L493
+    653  00000228              2  NOAUX          STATIC                         0  L494
+    654  00000228              2  NOAUX          STATIC                         0  L495
+    655  00000228              2  NOAUX          STATIC                         0  L$457
+    656  00000028              1  AUX:STACKLABEL  EXTERNAL                       1  io_init_bp
+    658  0000014e              2  NOAUX          STATIC                         0  L497
+    659  0000014e              2  NOAUX          STATIC                         0  L498
+    660  0000014e              2  NOAUX          STATIC                         0  L499
+    661  00000151              2  NOAUX          STATIC                         0  L500
+    662  00000154              2  NOAUX          STATIC                         0  L501
+    663  00000156              2  NOAUX          STATIC                         0  L502
+    664  00000158              2  NOAUX          STATIC                         0  L503
+    665  00000159              2  NOAUX          STATIC                         0  L504
+    666  0000015b              2  NOAUX          STATIC                         0  L505
+    667  0000015c              2  NOAUX          STATIC                         0  L506
+    668  0000015c              2  NOAUX          STATIC                         0  L507
+    669  0000015c              2  NOAUX          STATIC                         0  L$496
+    670  000000b8              2  NOAUX          STATIC                         0  L526
+    671  000000b8              2  NOAUX          STATIC                         0  L527
+    672  000000b8              2  NOAUX          STATIC                         0  L528
+    673  000000cf              2  NOAUX          STATIC                         0  L$511
+    674  000000da              2  NOAUX          STATIC                         0  L$514
+    675  000000e5              2  NOAUX          STATIC                         0  L$517
+    676  000000f0              2  NOAUX          STATIC                         0  L$520
+    677  000000fb              2  NOAUX          STATIC                         0  L$523
+    678  00000105              2  NOAUX          STATIC                         0  L$510
+    679  000000cf              2  NOAUX          STATIC                         0  L529
+    680  000000cf              2  NOAUX          STATIC                         0  L530
+    681  000000cf              2  NOAUX          STATIC                         0  L531
+    682  000000d7              2  NOAUX          STATIC                         0  L$512
+    683  000000d4              2  NOAUX          STATIC                         0  L532
+    684  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P55
+    686  000000d7              2  NOAUX          STATIC                         0  L533
+    687  000000d9              2  NOAUX          STATIC                         0  L534
+    688  000000da              2  NOAUX          STATIC                         0  L535
+    689  000000e2              2  NOAUX          STATIC                         0  L$515
+    690  000000df              2  NOAUX          STATIC                         0  L536
+    691  00000007              1  AUX:BIT:REGISTER:0  STATIC                         1  _P70
+    693  000000e2              2  NOAUX          STATIC                         0  L537
+    694  000000e4              2  NOAUX          STATIC                         0  L538
+    695  000000e5              2  NOAUX          STATIC                         0  L539
+    696  000000ed              2  NOAUX          STATIC                         0  L$518
+    697  000000ea              2  NOAUX          STATIC                         0  L540
+    698  000000ed              2  NOAUX          STATIC                         0  L541
+    699  000000ef              2  NOAUX          STATIC                         0  L542
+    700  000000f0              2  NOAUX          STATIC                         0  L543
+    701  000000f8              2  NOAUX          STATIC                         0  L$521
+    702  000000f5              2  NOAUX          STATIC                         0  L544
+    703  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P67
+    705  000000f8              2  NOAUX          STATIC                         0  L545
+    706  000000fa              2  NOAUX          STATIC                         0  L546
+    707  000000fb              2  NOAUX          STATIC                         0  L547
+    708  00000103              2  NOAUX          STATIC                         0  L$524
+    709  00000100              2  NOAUX          STATIC                         0  L548
+    710  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P51
+    712  00000103              2  NOAUX          STATIC                         0  L549
+    713  00000105              2  NOAUX          STATIC                         0  L550
+    714  00000105              2  NOAUX          STATIC                         0  L551
+    715  00000105              2  NOAUX          STATIC                         0  L552
+    716  00000105              2  NOAUX          STATIC                         0  L553
+    717  00000105              2  NOAUX          STATIC                         0  L554
+    718  00000105              2  NOAUX          STATIC                         0  L555
+    719  00000105              2  NOAUX          STATIC                         0  L$508
+    720  0000000f              1  AUX:BIT:REGISTER:0  STATIC                         1  _TCIF
+    722  0000000f              1  AUX:BIT:REGISTER:0  STATIC                         1  _ICIF
+    724  0000000f              1  AUX:BIT:REGISTER:0  STATIC                         1  _EXIF
+    726  0000000a              1  AUX:BIT:REGISTER:0  STATIC                         1  _SIGN
+    728  0000000a              1  AUX:BIT:REGISTER:0  STATIC                         1  _CALI
+    730  0000000e              1  AUX:BIT:REGISTER:0  STATIC                         1  _ICWE
+    732  0000000e              1  AUX:BIT:REGISTER:0  STATIC                         1  _CMPWE
+    734  0000000e              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADWE
+    736  0000000e              1  AUX:BIT:REGISTER:0  STATIC                         1  _CMPIF
+    738  0000000e              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADIF
+    740  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADIS0
+    742  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADIS1
+    744  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADIS2
+    746  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _ADPD
+    748  00000009              1  AUX:BIT:REGISTER:0  STATIC                         1  _VREFS
+    750  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P60
+    752  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P61
+    754  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P62
+    756  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P63
+    758  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P64
+    760  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P65
+    762  00000006              1  AUX:BIT:REGISTER:0  STATIC                         1  _P66
+    764  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P50
+    766  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P52
+    768  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P53
+    770  00000005              1  AUX:BIT:REGISTER:0  STATIC                         1  _P54
+    772  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _C
+    774  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _DC
+    776  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _Z
+    778  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _P
+    780  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _T
+    782  00000003              1  AUX:BIT:REGISTER:0  STATIC                         1  _RST
+    784  0000001f              1  AUX:IO:1       STATIC                         1  _IOCF1
+    786  00000018              1  AUX:IO:1       STATIC                         1  _IOC81
+    788  00000017              1  AUX:IO:1       STATIC                         1  _IOC71
+    790  00000016              1  AUX:IO:1       STATIC                         1  _IOC61
+    792  00000015              1  AUX:IO:1       STATIC                         1  _IOC51
+    794  0000000d              1  AUX:IO:0       STATIC                         1  _IOCD0
+    796  0000000c              1  AUX:IO:0       STATIC                         1  _IOCC0
+    798  0000000b              1  AUX:IO:0       STATIC                         1  _IOCB0
+    800  0000000a              1  AUX:IO:0       STATIC                         1  _IOCA0
+    802  00000009              1  AUX:IO:0       STATIC                         1  _IOC90
+    804  00000008              1  AUX:IO:0       STATIC                         1  _IOC80
+    806  0000002e              1  AUX:REGISTER:1  STATIC                         1  _LVD_I_W
+    808  0000002d              1  AUX:REGISTER:1  STATIC                         1  _PWM_T_D
+    810  0000002b              1  AUX:REGISTER:1  STATIC                         1  _DT1
+    812  00000029              1  AUX:REGISTER:1  STATIC                         1  _PRD1
+    814  00000026              1  AUX:REGISTER:1  STATIC                         1  _TBLP
+    816  00000025              1  AUX:REGISTER:1  STATIC                         1  _TBHP
+    818  0000000f              1  AUX:REGISTER:0  STATIC                         1  _ISR
+    820  0000000d              1  AUX:REGISTER:0  STATIC                         1  _ADDATA1L
+    822  0000000d              1  AUX:REGISTER:0  STATIC                         1  _RD
+    824  0000000c              1  AUX:REGISTER:0  STATIC                         1  _ADDATA1H
+    826  0000000c              1  AUX:REGISTER:0  STATIC                         1  _RC
+    828  0000000b              1  AUX:REGISTER:0  STATIC                         1  _RB
+    830  0000000a              1  AUX:REGISTER:0  STATIC                         1  _RA
+    832  00000009              1  AUX:REGISTER:0  STATIC                         1  _R9
+    834  00000008              1  AUX:REGISTER:0  STATIC                         1  _R8
+    836  00000004              1  AUX:REGISTER:0  STATIC                         1  _R4
+    838  00000003              1  AUX:REGISTER:0  STATIC                         1  _STATUS
+    840  00000002              1  AUX:REGISTER:0  STATIC                         1  _PC
+    842  00000000              1  AUX:REGISTER:0  STATIC                         1  _R0
+    844  00000000             -2  NOAUX          FILE                           1  .file
+    846  00000011              1  AUX:REGISTER:0  EXTERNAL                       1  eax
+    848  00000012              1  AUX:REGISTER:0  EXTERNAL                       1  ecx
+    850  00000008              1  AUX:REGISTER:0  EXTERNAL                       1  pr0
+    852  00000016              1  AUX:REGISTER:0  EXTERNAL                       1  pr1
+    854  00000010              1  AUX:REGISTER:0  EXTERNAL                       1  _IntVecIdx
+
+.stabs
+   Index  type    other   desc      value  Name
+   -----  ----    -----   ---- ----------  ----
+      0  N_OPT        0      0 0x00000000  icc_compiled.
+      1  N_SO         0      3 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c
+      2  N_LSYM       0      0 0x00000000  int:t1=r1;-128;127;
+      3  N_LSYM       0      0 0x00000000  char:t2=r2;-128;127;
+      4  N_LSYM       0      0 0x00000000  double:t3=r1;3;0;
+      5  N_LSYM       0      0 0x00000000  float:t4=r1;3;0;
+      6  N_LSYM       0      0 0x00000000  long double:t5=r1;3;0;
+      7  N_LSYM       0      0 0x00000000  long:t6=r1;-2147483648;2147483647;
+      8  N_LSYM       0      0 0x00000000  long long:t7=r1;-2147483648;2147483647;
+      9  N_LSYM       0      0 0x00000000  short:t8=r1;-32768;32767;
+     10  N_LSYM       0      0 0x00000000  signed char:t9=r1;-128;127;
+     11  N_LSYM       0      0 0x00000000  unsigned char:t10=r1;0;255;
+     12  N_LSYM       0      0 0x00000000  unsigned long:t11=r1;0;4294967295;
+     13  N_LSYM       0      0 0x00000000  unsigned long long:t12=r1;0;4294967295;
+     14  N_LSYM       0      0 0x00000000  unsigned short:t13=r1;0;65535;
+     15  N_LSYM       0      0 0x00000000  unsigned int:t14=r1;0;255;
+     16  N_LSYM       0      0 0x00000000  void:t15=15
+     17  N_LSYM       0      0 0x00000000  bit:t16=r16;0;1;
+     18  N_GSYM       0      0 0x00000021  flag_ad:G1
+     19  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\user_ad.h
+     20  N_FUN        0      0 0x0000017c  ad_init:F15
+     21  N_LBRAC      0      0 0x0000017c
+     22  N_SLINE      0     31 0x0000017c
+     23  N_SLINE      0     32 0x0000017c
+     24  N_SLINE      0     33 0x0000017f
+     25  N_SLINE      0     34 0x00000181
+     26  N_SLINE      0     36 0x00000183
+     27  N_SLINE      0     37 0x00000184
+     28  N_SLINE      0     38 0x00000188
+     29  N_RBRAC      0      0 0x00000188
+     30  N_FUN        0      0 0x0000010f  ad_read:F1
+     31  N_LSYM       0      0 0x00000029  result:1
+     32  N_LBRAC      0      0 0x00000118
+     33  N_SLINE      0     41 0x00000118
+     34  N_SLINE      0     42 0x00000118
+     35  N_SLINE      0     43 0x00000119
+     36  N_SLINE      0     44 0x0000011c
+     37  N_SLINE      0     45 0x0000011e
+     38  N_RBRAC      0      0 0x0000011e
+     39  N_FUN        0      0 0x00000072  ad_enable:F15
+     40  N_LBRAC      0      0 0x0000007b
+     41  N_SLINE      0     48 0x0000007b
+     42  N_SLINE      0     49 0x0000007b
+     43  N_SLINE      0     50 0x0000007d
+     44  N_RBRAC      0      0 0x0000007d
+     45  N_FUN        0      0 0x00000132  system_initial:F15
+     46  N_LBRAC      0      0 0x00000132
+     47  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\user_system_initial.h
+     48  N_SLINE      0      5 0x00000132
+     49  N_SLINE      0      6 0x00000132
+     50  N_SLINE      0      7 0x00000135
+     51  N_SLINE      0      8 0x00000138
+     52  N_SLINE      0      9 0x0000013a
+     53  N_SLINE      0     10 0x0000013c
+     54  N_SLINE      0     11 0x0000013d
+     55  N_SLINE      0     12 0x0000013f
+     56  N_SLINE      0     13 0x00000140
+     57  N_RBRAC      0      0 0x00000140
+     58  N_FUN        0      0 0x00000127  clear_all_ram:F15
+     59  N_LBRAC      0      0 0x00000127
+     60  N_SLINE      0     19 0x00000127
+     61  N_SLINE      0     22 0x00000127
+     62  N_SLINE      0     23 0x00000128
+     63  N_SLINE      0     24 0x00000129
+     64  N_SLINE      0     25 0x00000129
+     65  N_SLINE      0     26 0x0000012a
+     66  N_SLINE      0     27 0x0000012b
+     67  N_SLINE      0     28 0x0000012c
+     68  N_SLINE      0     29 0x0000012d
+     69  N_SLINE      0     30 0x0000012e
+     70  N_SLINE      0     31 0x0000012f
+     71  N_SLINE      0     32 0x00000130
+     72  N_SLINE      0     34 0x00000131
+     73  N_RBRAC      0      0 0x00000131
+     74  N_FUN        0      0 0x00000141  time_tcc_pro:F15
+     75  N_LBRAC      0      0 0x00000141
+     76  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\user_tcc.h
+     77  N_SLINE      0      7 0x00000141
+     78  N_SLINE      0      8 0x00000141
+     79  N_SLINE      0      9 0x00000142
+     80  N_SLINE      0     11 0x00000143
+     81  N_SLINE      0     12 0x00000144
+     82  N_SLINE      0     14 0x00000147
+     83  N_SLINE      0     15 0x0000014b
+     84  N_SLINE      0     16 0x0000014d
+     85  N_RBRAC      0      0 0x0000014d
+     86  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\user_bit.h
+     87  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\user_output.h
+     88  N_GSYM       0      0 0x00000041  second_count:G1
+     89  N_GSYM       0      0 0x00000042  flag:G1
+     90  N_FUN        0      0 0x00000086  testcode_2:F15
+     91  N_LBRAC      0      0 0x0000008f
+     92  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\interrupt_vector.h
+     93  N_SLINE      0     16 0x0000008f
+     94  N_SLINE      0     17 0x0000008f
+     95  N_LBRAC      0      1 0x00000094
+     96  N_SLINE      0     18 0x00000094
+     97  N_SLINE      0     19 0x00000094
+     98  N_SLINE      0     20 0x00000095
+     99  N_SLINE      0     22 0x0000009b
+    100  N_RBRAC      0      1 0x0000009b
+    101  N_LBRAC      0      1 0x0000009c
+    102  N_SLINE      0     24 0x0000009c
+    103  N_SLINE      0     25 0x0000009c
+    104  N_SLINE      0     26 0x0000009f
+    105  N_SLINE      0     27 0x000000a5
+    106  N_RBRAC      0      1 0x000000a5
+    107  N_SLINE      0     28 0x000000a5
+    108  N_RBRAC      0      0 0x000000a5
+    109  N_FUN        0      0 0x00000053  timeout_handle:F15
+    110  N_LBRAC      0      0 0x0000005c
+    111  N_SLINE      0     36 0x0000005c
+    112  N_SLINE      0     39 0x0000005c
+    113  N_LBRAC      0      1 0x00000064
+    114  N_SLINE      0     40 0x00000064
+    115  N_SLINE      0     41 0x00000064
+    116  N_SLINE      0     42 0x00000065
+    117  N_SLINE      0     44 0x00000066
+    118  N_SLINE      0     45 0x00000067
+    119  N_SLINE      0     46 0x00000068
+    120  N_RBRAC      0      1 0x00000068
+    121  N_SLINE      0     48 0x00000068
+    122  N_RBRAC      0      0 0x00000068
+    123  N_FUN        0      0 0x0000000e  ALLInt:F15
+    124  N_LBRAC      0      0 0x0000000e
+    125  N_SLINE      0     52 0x0000000e
+    126  N_SLINE      0     53 0x0000000e
+    127  N_LBRAC      0      1 0x00000021
+    128  N_SLINE      0     54 0x00000021
+    129  N_SLINE      0     57 0x00000021
+    130  N_SLINE      0     58 0x00000023
+    131  N_SLINE      0     59 0x00000024
+    132  N_SLINE      0     60 0x00000027
+    133  N_SLINE      0     61 0x00000029
+    134  N_SLINE      0     64 0x0000002a
+    135  N_SLINE      0     65 0x0000002e
+    136  N_SLINE      0     66 0x00000031
+    137  N_SLINE      0     69 0x00000031
+    138  N_SLINE      0     70 0x00000031
+    139  N_RBRAC      0      1 0x00000031
+    140  N_SLINE      0     71 0x00000031
+    141  N_RBRAC      0      0 0x00000031
+    142  N_FUN        0      0 0x00000009  TCC_l:F15
+    143  N_LBRAC      0      0 0x00000009
+    144  N_SLINE      0     84 0x00000009
+    145  N_SLINE      0     85 0x00000009
+    146  N_SLINE      0     85 0x0000000a
+    147  N_SLINE      0     86 0x0000000a
+    148  N_RBRAC      0      0 0x0000000a
+    149  N_FUN        0      0 0x0000000c  ADC_l:F15
+    150  N_LBRAC      0      0 0x0000000c
+    151  N_SLINE      0     89 0x0000000c
+    152  N_SLINE      0     90 0x0000000c
+    153  N_SLINE      0     90 0x0000000d
+    154  N_SLINE      0     91 0x0000000d
+    155  N_RBRAC      0      0 0x0000000d
+    156  N_SOL        0      0 0x00000000  D:\外接项目\义隆单片机\Charger\Charger_301\B16AD.c
+    157  N_GSYM       0      0 0x00000043  timeout:G1
+    158  N_FUN        0      0 0x00000039  main:F15
+    159  N_LBRAC      0      0 0x00000039
+    160  N_SLINE      0     41 0x00000039
+    161  N_SLINE      0     42 0x00000039
+    162  N_SLINE      0     43 0x00000041
+    163  N_SLINE      0     44 0x00000042
+    164  N_SLINE      0     45 0x00000043
+    165  N_SLINE      0     46 0x00000044
+    166  N_SLINE      0     47 0x00000045
+    167  N_SLINE      0     48 0x00000046
+    168  N_SLINE      0     50 0x00000047
+    169  N_LBRAC      0      1 0x00000049
+    170  N_SLINE      0     52 0x00000049
+    171  N_LBRAC      0      2 0x00000049
+    172  N_SLINE      0     54 0x00000049
+    173  N_SLINE      0     56 0x00000049
+    174  N_SLINE      0     57 0x0000004a
+    175  N_LBRAC      0      3 0x0000004f
+    176  N_SLINE      0     58 0x0000004f
+    177  N_SLINE      0     59 0x0000004f
+    178  N_SLINE      0     60 0x00000050
+    179  N_RBRAC      0      3 0x00000050
+    180  N_SLINE      0     61 0x00000050
+    181  N_RBRAC      0      2 0x00000050
+    182  N_SLINE      0     53 0x00000050
+    183  N_SLINE      0     62 0x00000051
+    184  N_RBRAC      0      1 0x00000051
+    185  N_SLINE      0     51 0x00000051
+    186  N_SLINE      0     63 0x00000052
+    187  N_RBRAC      0      0 0x00000052
+    188  N_FUN        0      0 0x0000015d  b16ad_init:F15
+    189  N_LBRAC      0      0 0x0000015d
+    190  N_SLINE      0     67 0x0000015d
+    191  N_SLINE      0     70 0x0000015d
+    192  N_SLINE      0     71 0x00000163
+    193  N_SLINE      0     72 0x00000169
+    194  N_SLINE      0     73 0x0000016f
+    195  N_SLINE      0     74 0x00000175
+    196  N_SLINE      0     76 0x0000017b
+    197  N_RBRAC      0      0 0x0000017b
+    198  N_FUN        0      0 0x00000189  Charger:F15
+    199  N_LBRAC      0      0 0x0000018c
+    200  N_SLINE      0     82 0x0000018c
+    201  N_SLINE      0     83 0x0000018c
+    202  N_LBRAC      0      1 0x0000019a
+    203  N_SLINE      0     84 0x0000019a
+    204  N_SLINE      0     85 0x0000019a
+    205  N_SLINE      0     86 0x0000019b
+    206  N_RBRAC      0      1 0x0000019b
+    207  N_SLINE      0     87 0x0000019c
+    208  N_LBRAC      0      1 0x000001aa
+    209  N_SLINE      0     88 0x000001aa
+    210  N_SLINE      0     90 0x000001aa
+    211  N_SLINE      0     91 0x000001ab
+    212  N_RBRAC      0      1 0x000001ab
+    213  N_SLINE      0     92 0x000001ac
+    214  N_LBRAC      0      1 0x000001ba
+    215  N_SLINE      0     93 0x000001ba
+    216  N_SLINE      0     95 0x000001ba
+    217  N_SLINE      0     96 0x000001bb
+    218  N_RBRAC      0      1 0x000001bb
+    219  N_LBRAC      0      1 0x000001bc
+    220  N_SLINE      0     98 0x000001bc
+    221  N_SLINE      0    100 0x000001bc
+    222  N_SLINE      0    101 0x000001bd
+    223  N_RBRAC      0      1 0x000001bd
+    224  N_SLINE      0    102 0x000001bd
+    225  N_RBRAC      0      0 0x000001bd
+    226  N_FUN        0      0 0x0000022e  charger_half_hour:F15
+    227  N_LSYM       0      0 0x00000045  exit_this:2
+    228  N_LBRAC      0      0 0x00000233
+    229  N_SLINE      0    133 0x00000233
+    230  N_SLINE      0    136 0x00000233
+    231  N_SLINE      0    137 0x00000234
+    232  N_LBRAC      0      1 0x00000236
+    233  N_SLINE      0    139 0x00000236
+    234  N_SLINE      0    140 0x00000236
+    235  N_LBRAC      0      2 0x00000248
+    236  N_SLINE      0    141 0x00000248
+    237  N_SLINE      0    143 0x00000248
+    238  N_SLINE      0    144 0x0000024b
+    239  N_RBRAC      0      2 0x0000024b
+    240  N_SLINE      0    145 0x0000024b
+    241  N_LBRAC      0      2 0x00000258
+    242  N_SLINE      0    146 0x00000258
+    243  N_SLINE      0    147 0x00000258
+    244  N_SLINE      0    148 0x00000259
+    245  N_RBRAC      0      2 0x00000259
+    246  N_SLINE      0    150 0x00000259
+    247  N_SLINE      0    151 0x0000025f
+    248  N_SLINE      0    152 0x00000265
+    249  N_SLINE      0    153 0x0000026b
+    250  N_SLINE      0    154 0x00000271
+    251  N_RBRAC      0      1 0x00000271
+    252  N_SLINE      0    138 0x00000271
+    253  N_SLINE      0    155 0x00000272
+    254  N_SLINE      0    156 0x00000273
+    255  N_RBRAC      0      0 0x00000273
+    256  N_FUN        0      0 0x000001c1  charger_half_hour_last:F15
+    257  N_LSYM       0      0 0x00000048  exit_this:2
+    258  N_LBRAC      0      0 0x000001c4
+    259  N_SLINE      0    159 0x000001c4
+    260  N_SLINE      0    162 0x000001c4
+    261  N_SLINE      0    163 0x000001c5
+    262  N_LBRAC      0      1 0x000001c7
+    263  N_SLINE      0    165 0x000001c7
+    264  N_SLINE      0    166 0x000001c7
+    265  N_LBRAC      0      2 0x000001d4
+    266  N_SLINE      0    167 0x000001d4
+    267  N_SLINE      0    168 0x000001d4
+    268  N_SLINE      0    169 0x000001d5
+    269  N_SLINE      0    170 0x000001d6
+    270  N_RBRAC      0      2 0x000001d6
+    271  N_SLINE      0    172 0x000001d6
+    272  N_SLINE      0    173 0x000001dc
+    273  N_SLINE      0    174 0x000001e2
+    274  N_SLINE      0    175 0x000001e8
+    275  N_SLINE      0    176 0x000001ee
+    276  N_RBRAC      0      1 0x000001ee
+    277  N_SLINE      0    164 0x000001ee
+    278  N_SLINE      0    178 0x000001ef
+    279  N_RBRAC      0      0 0x000001ef
+    280  N_FUN        0      0 0x00000279  charger_eight_hours:F15
+    281  N_LSYM       0      0 0x0000004a  exit_this:2
+    282  N_LBRAC      0      0 0x0000027e
+    283  N_SLINE      0    181 0x0000027e
+    284  N_SLINE      0    184 0x0000027e
+    285  N_SLINE      0    185 0x0000027f
+    286  N_LBRAC      0      1 0x00000281
+    287  N_SLINE      0    187 0x00000281
+    288  N_SLINE      0    188 0x00000281
+    289  N_LBRAC      0      2 0x00000293
+    290  N_SLINE      0    189 0x00000293
+    291  N_SLINE      0    191 0x00000293
+    292  N_SLINE      0    192 0x00000296
+    293  N_SLINE      0    193 0x00000297
+    294  N_SLINE      0    194 0x00000298
+    295  N_RBRAC      0      2 0x00000298
+    296  N_SLINE      0    195 0x00000298
+    297  N_LBRAC      0      2 0x000002a5
+    298  N_SLINE      0    196 0x000002a5
+    299  N_SLINE      0    197 0x000002a5
+    300  N_SLINE      0    198 0x000002a6
+    301  N_RBRAC      0      2 0x000002a6
+    302  N_SLINE      0    200 0x000002a6
+    303  N_SLINE      0    201 0x000002ac
+    304  N_SLINE      0    202 0x000002b2
+    305  N_SLINE      0    203 0x000002b8
+    306  N_SLINE      0    204 0x000002be
+    307  N_RBRAC      0      1 0x000002be
+    308  N_SLINE      0    186 0x000002be
+    309  N_SLINE      0    206 0x000002bf
+    310  N_RBRAC      0      0 0x000002bf
+    311  N_FUN        0      0 0x000001f3  charger_floating_an_hour:F15
+    312  N_LBRAC      0      0 0x000001f8
+    313  N_SLINE      0    209 0x000001f8
+    314  N_SLINE      0    210 0x000001f8
+    315  N_SLINE      0    211 0x000001f9
+    316  N_SLINE      0    211 0x000001f9
+    317  N_LBRAC      0      1 0x000001fa
+    318  N_SLINE      0    212 0x000001fa
+    319  N_SLINE      0    214 0x000001fa
+    320  N_LBRAC      0      2 0x000001ff
+    321  N_SLINE      0    215 0x000001ff
+    322  N_SLINE      0    216 0x000001ff
+    323  N_SLINE      0    217 0x00000205
+    324  N_RBRAC      0      2 0x00000205
+    325  N_SLINE      0    218 0x00000205
+    326  N_LBRAC      0      2 0x0000020a
+    327  N_SLINE      0    219 0x0000020a
+    328  N_SLINE      0    220 0x0000020a
+    329  N_SLINE      0    221 0x00000210
+    330  N_RBRAC      0      2 0x00000210
+    331  N_SLINE      0    223 0x00000210
+    332  N_LBRAC      0      2 0x00000222
+    333  N_SLINE      0    224 0x00000222
+    334  N_SLINE      0    226 0x00000222
+    335  N_SLINE      0    228 0x00000228
+    336  N_RBRAC      0      2 0x00000228
+    337  N_SLINE      0    229 0x00000228
+    338  N_RBRAC      0      1 0x00000228
+    339  N_SLINE      0    230 0x00000228
+    340  N_RBRAC      0      0 0x00000228
+    341  N_FUN        0      0 0x0000014e  io_init:F15
+    342  N_LBRAC      0      0 0x0000014e
+    343  N_SLINE      0    239 0x0000014e
+    344  N_SLINE      0    252 0x0000014e
+    345  N_SLINE      0    253 0x00000151
+    346  N_SLINE      0    254 0x00000154
+    347  N_SLINE      0    255 0x00000156
+    348  N_SLINE      0    256 0x00000158
+    349  N_SLINE      0    257 0x00000159
+    350  N_SLINE      0    258 0x0000015b
+    351  N_SLINE      0    260 0x0000015c
+    352  N_RBRAC      0      0 0x0000015c
+    353  N_FUN        0      0 0x000000af  IO_H_L:F15
+    354  N_PSYM       0      0 0x00000026  ch:2
+    355  N_PSYM       0      0 0x00000027  status:2
+    356  N_LBRAC      0      0 0x000000b8
+    357  N_SLINE      0    265 0x000000b8
+    358  N_SLINE      0    267 0x000000b8
+    359  N_LBRAC      0      1 0x000000cf
+    360  N_SLINE      0    268 0x000000cf
+    361  N_SLINE      0    269 0x000000cf
+    362  N_SLINE      0    269 0x000000d4
+    363  N_SLINE      0    270 0x000000d7
+    364  N_SLINE      0    271 0x000000d9
+    365  N_SLINE      0    273 0x000000da
+    366  N_SLINE      0    273 0x000000df
+    367  N_SLINE      0    274 0x000000e2
+    368  N_SLINE      0    275 0x000000e4
+    369  N_SLINE      0    276 0x000000e5
+    370  N_SLINE      0    276 0x000000ea
+    371  N_SLINE      0    277 0x000000ed
+    372  N_SLINE      0    278 0x000000ef
+    373  N_SLINE      0    280 0x000000f0
+    374  N_SLINE      0    280 0x000000f5
+    375  N_SLINE      0    281 0x000000f8
+    376  N_SLINE      0    282 0x000000fa
+    377  N_SLINE      0    283 0x000000fb
+    378  N_SLINE      0    283 0x00000100
+    379  N_SLINE      0    284 0x00000103
+    380  N_SLINE      0    285 0x00000105
+    381  N_SLINE      0    286 0x00000105
+    382  N_SLINE      0    288 0x00000105
+    383  N_RBRAC      0      1 0x00000105
+    384  N_SLINE      0    291 0x00000105
+    385  N_RBRAC      0      0 0x00000105
+    386  N_GSYM       0      0 0x00000044  adc_value:G1
+    387  N_GSYM       0      0 0x00000040  reg_time_cnt1:G10
+    388  N_GSYM       0      0 0x0000003f  reg_time_cnt:G10
+    389  N_GSYM       0      0 0x0000003e  reg_ad_average_cnt:G10
+    390  N_GSYM       0      0 0x0000003a  reg_ad_calculate_cnt:G11
+    391  N_GSYM       0      0 0x00000036  reg_ad_calculate_cnt_cp:G11
+    392  N_GSYM       0      0 0x00000032  reg_ad_temp_cnt:G11
+    393  N_GSYM       0      0 0x04000020  bit_need_output:G16
+    394  N_GSYM       0      0 0x03000020  bit_need_cmp:G16
+    395  N_GSYM       0      0 0x02000020  bit_first_ad:G16
+    396  N_GSYM       0      0 0x01000020  bit_tcc_interrupt:G16
+    397  N_GSYM       0      0 0x00000020  bit_ad_interrupt:G16
+    398  N_LCSYM      0      0 0x0000000f  TCIF:S16
+    399  N_LCSYM      0      0 0x0100000f  ICIF:S16
+    400  N_LCSYM      0      0 0x0200000f  EXIF:S16
+    401  N_LCSYM      0      0 0x0600000a  SIGN:S16
+    402  N_LCSYM      0      0 0x0700000a  CALI:S16
+    403  N_LCSYM      0      0 0x0100000e  ICWE:S16
+    404  N_LCSYM      0      0 0x0200000e  CMPWE:S16
+    405  N_LCSYM      0      0 0x0300000e  ADWE:S16
+    406  N_LCSYM      0      0 0x0400000e  CMPIF:S16
+    407  N_LCSYM      0      0 0x0500000e  ADIF:S16
+    408  N_LCSYM      0      0 0x00000009  ADIS0:S16
+    409  N_LCSYM      0      0 0x01000009  ADIS1:S16
+    410  N_LCSYM      0      0 0x02000009  ADIS2:S16
+    411  N_LCSYM      0      0 0x03000009  ADPD:S16
+    412  N_LCSYM      0      0 0x04000009  ADRUN:S16
+    413  N_LCSYM      0      0 0x07000009  VREFS:S16
+    414  N_LCSYM      0      0 0x01000007  P71:S16
+    415  N_LCSYM      0      0 0x00000007  P70:S16
+    416  N_LCSYM      0      0 0x00000006  P60:S16
+    417  N_LCSYM      0      0 0x01000006  P61:S16
+    418  N_LCSYM      0      0 0x02000006  P62:S16
+    419  N_LCSYM      0      0 0x03000006  P63:S16
+    420  N_LCSYM      0      0 0x04000006  P64:S16
+    421  N_LCSYM      0      0 0x05000006  P65:S16
+    422  N_LCSYM      0      0 0x06000006  P66:S16
+    423  N_LCSYM      0      0 0x07000006  P67:S16
+    424  N_LCSYM      0      0 0x00000005  P50:S16
+    425  N_LCSYM      0      0 0x01000005  P51:S16
+    426  N_LCSYM      0      0 0x02000005  P52:S16
+    427  N_LCSYM      0      0 0x03000005  P53:S16
+    428  N_LCSYM      0      0 0x04000005  P54:S16
+    429  N_LCSYM      0      0 0x05000005  P55:S16
+    430  N_LCSYM      0      0 0x00000003  C:S16
+    431  N_LCSYM      0      0 0x01000003  DC:S16
+    432  N_LCSYM      0      0 0x02000003  Z:S16
+    433  N_LCSYM      0      0 0x03000003  P:S16
+    434  N_LCSYM      0      0 0x04000003  T:S16
+    435  N_LCSYM      0      0 0x07000003  RST:S16
+    436  N_LCSYM      0      0 0x0000001f  IOCF1:S14
+    437  N_LCSYM      0      0 0x00000018  IOC81:S14
+    438  N_LCSYM      0      0 0x00000017  IOC71:S14
+    439  N_LCSYM      0      0 0x00000016  IOC61:S14
+    440  N_LCSYM      0      0 0x00000015  IOC51:S14
+    441  N_LCSYM      0      0 0x0000000f  IOCF0:S14
+    442  N_LCSYM      0      0 0x0000000e  IOCE0:S14
+    443  N_LCSYM      0      0 0x0000000d  IOCD0:S14
+    444  N_LCSYM      0      0 0x0000000c  IOCC0:S14
+    445  N_LCSYM      0      0 0x0000000b  IOCB0:S14
+    446  N_LCSYM      0      0 0x0000000a  IOCA0:S14
+    447  N_LCSYM      0      0 0x00000009  IOC90:S14
+    448  N_LCSYM      0      0 0x00000008  IOC80:S14
+    449  N_LCSYM      0      0 0x00000007  IOC70:S14
+    450  N_LCSYM      0      0 0x00000006  IOC60:S14
+    451  N_LCSYM      0      0 0x00000005  IOC50:S14
+    452  N_LCSYM      0      0 0x0000002f  SYS_CON:S14
+    453  N_LCSYM      0      0 0x0000002e  LVD_I_W:S14
+    454  N_LCSYM      0      0 0x0000002d  PWM_T_D:S14
+    455  N_LCSYM      0      0 0x0000002c  DT2:S14
+    456  N_LCSYM      0      0 0x0000002b  DT1:S14
+    457  N_LCSYM      0      0 0x0000002a  PRD2:S14
+    458  N_LCSYM      0      0 0x00000029  PRD1:S14
+    459  N_LCSYM      0      0 0x00000028  TMRCON:S14
+    460  N_LCSYM      0      0 0x00000027  PWMCON:S14
+    461  N_LCSYM      0      0 0x00000026  TBLP:S14
+    462  N_LCSYM      0      0 0x00000025  TBHP:S14
+    463  N_LCSYM      0      0 0x0000000f  RF:S14
+    464  N_LCSYM      0      0 0x0000000f  ISR:S14
+    465  N_LCSYM      0      0 0x0000000e  RE:S14
+    466  N_LCSYM      0      0 0x0000000d  ADDATA1L:S14
+    467  N_LCSYM      0      0 0x0000000d  RD:S14
+    468  N_LCSYM      0      0 0x0000000c  ADDATA1H:S14
+    469  N_LCSYM      0      0 0x0000000c  RC:S14
+    470  N_LCSYM      0      0 0x0000000b  ADDATA:S14
+    471  N_LCSYM      0      0 0x0000000b  RB:S14
+    472  N_LCSYM      0      0 0x0000000a  ADOC:S14
+    473  N_LCSYM      0      0 0x0000000a  RA:S14
+    474  N_LCSYM      0      0 0x00000009  ADCON:S14
+    475  N_LCSYM      0      0 0x00000009  R9:S14
+    476  N_LCSYM      0      0 0x00000008  AISR:S14
+    477  N_LCSYM      0      0 0x00000008  R8:S14
+    478  N_LCSYM      0      0 0x00000007  PORT7:S14
+    479  N_LCSYM      0      0 0x00000006  PORT6:S14
+    480  N_LCSYM      0      0 0x00000005  PORT5:S14
+    481  N_LCSYM      0      0 0x00000004  R4:S14
+    482  N_LCSYM      0      0 0x00000003  STATUS:S14
+    483  N_LCSYM      0      0 0x00000002  PC:S14
+    484  N_LCSYM      0      0 0x00000001  TCC:S14
+    485  N_LCSYM      0      0 0x00000000  R0:S14

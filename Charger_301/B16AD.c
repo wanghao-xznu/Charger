@@ -43,14 +43,16 @@ void main(void)
 	system_initial();		//system init
 	time_tcc_pro();			//8ms
 	io_init(); 				//seems ok
+	_asm{eni}  // enable global interrupt by howie
+	_asm{wdtc} //watch dog interrupt clear by howie£¬clear watch dog in while
+	b16ad_init();
+	
 	ad_init(); 				// adc init by howie.
 	while(1)
 	{
-		_asm{eni}  // enable global interrupt by howie
-		_asm{wdtc} //watch dog interrupt clear by howie£¬clear watch dog in while
 		while(1)
 		{
-			PORT7=0B00000010;//setting P71 floating
+			//PORT7=0B00000010;//setting P71 floating
 			b16ad_init();
 			if(adc_value >= ADC_004V)
 			{
@@ -67,7 +69,7 @@ void b16ad_init(void)
 	//2½ÅµÍ3½ÅµÍ4½ÅµÍ5½ÅµÍ6
 	IO_H_L(2,0);
 	IO_H_L(3,0);
-	IO_H_L(4,0);
+	IO_H_L(4,0);//floating
 	IO_H_L(5,0);
 	IO_H_L(6,1);
 	
