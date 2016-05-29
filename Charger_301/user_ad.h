@@ -40,6 +40,7 @@ void	ad_init(void)
  int ad_read(void)		//AD处理程序
 {
 	int result =0;
+	//testcode_3();//测试使用，可以注释掉
 	result = ADDATA;
 	return result;
 }	

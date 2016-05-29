@@ -9,7 +9,7 @@ BlockNum=0
 BlockNum=0
 [BREAKPOINT]
 BP Num=1
-BP0=1,A,1699300,1,1699308,58,$\B16AD.c
+BP0=1,A,24324460,1,0,44,$\user_ad.h
 [CODEOPTION]
 Option Num=92
 Target Power=1
@@ -147,60 +147,15 @@ TRACELOG_FREQUENCY=4.000000
 ENABLE=0
 [INSTRUCTION_PERIOD]
 INSTRUCTION_PERIOD=2
-[GlobalRegister]
-R1/TCC=01
-R2/PC=02
-R3=03
-R4=04
-R5=05
-R6=06
-R7=07
-R8=08
-R9=09
-RA=0A
-RB=0B
-RC=0C
-RD=0D
-RE=0E
-RF=0F
-R10=10
-R11=11
-R12=12
-R13=13
-R14=14
-R15=15
-R16=16
-R17=17
-R18=18
-R19=19
-R1A=1A
-R1B=1B
-R1C=1C
-R1D=1D
-R1E=1E
-R1F=1F
-[RPage0]
-R5=05
-R6=06
-R7=07
-R8=08
-R9=09
-RA=0A
-RB=0B
-RC=0C
-RD=0D
-RE=0E
-RF=0F
-[GlobalIO]
-[IOPage0]
 [Watch]
-Size#0=1
+Size#0=2
 0,0=adc_value
+0,1=result
 Size#1=0
 Size#2=0
 [ICEVOLTAGE SETTING]
 Voltage=1
 [$\interrupt_vector.h]
-Rectangle=0786 0000 1572 0235
+Rectangle=0498 0000 0996 0157
 Iconized=0
 Maximized=0

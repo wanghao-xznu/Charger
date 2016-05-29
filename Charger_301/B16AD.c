@@ -17,11 +17,11 @@ void charger_floating_an_hour(void);
 
 void pwm2_init(void)//µÚÁù½Å
 {
-	PWMCON=0B01100000;
-	PRD2=0B00001100;
-	DT2=0B00000010;
-	TMRCON=0X88;
-	//CMPCON=0X03;
+	PWMCON=0B00000010;
+	PRD2=0B11111111;
+	DT2= 0B01111111;
+	TMRCON=0B10111000;
+	//PWM_T_D=0B11001100;
 	
 }
 void pwm2_increase(void)
@@ -33,7 +33,7 @@ void pwm2_devrease(void)
 }
 
 int adc_value;
-int timeout =0 ;
+unsigned short timeout =0 ;
 
 
 
@@ -46,8 +46,9 @@ void main(void)
 	_asm{eni}  // enable global interrupt by howie
 	_asm{wdtc} //watch dog interrupt clear by howie£¬clear watch dog in while
 	b16ad_init();
-	
 	ad_init(); 				// adc init by howie.
+	//pwm2_init();
+	//while(1);
 	while(1)
 	{
 		while(1)

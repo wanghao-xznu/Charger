@@ -3,7 +3,7 @@
 
 /* You can remove marks, if you want using any interrupt funcitons.	*/
 #include "user_comon_head.h"
-extern int timeout;
+extern unsigned short timeout;
 extern int adc_value;
 extern void io_init(void);
 
@@ -42,7 +42,7 @@ void timeout_handle(void)
 		timeout++;
 		//每秒钟启动一次ADC
 		ad_enable();
-		testcode_2();
+		//testcode_2();//实验使用，可以注释掉
 	}
 #endif
 }
