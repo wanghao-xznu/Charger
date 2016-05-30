@@ -15,6 +15,8 @@ void charger_half_hour_last(void);
 void charger_eight_hours(void);
 void charger_floating_an_hour(void);
 
+unsigned int duty = 0B01111111;
+
 void pwm2_init(void)//第六脚
 {
 	PWMCON=0B00000010;
@@ -26,10 +28,12 @@ void pwm2_init(void)//第六脚
 }
 void pwm2_increase(void)
 {
-}
-void pwm2_devrease(void)
-{
 
+}
+void pwm2_decrease(void)
+{
+	duty = duty -5;
+	DT2= duty;
 }
 
 int adc_value;
@@ -53,8 +57,8 @@ void main(void)
 	{
 		while(1)
 		{
-			//PORT7=0B00000010;//setting P71 floating
-			b16ad_init();
+			IOC70|=0B00000010;//setting P71 floating 设置4脚浮空
+			b16ad_init();//输出初始化电平状态
 			if(adc_value >= ADC_004V)
 			{
 				Charger();
@@ -117,7 +121,7 @@ void charger_an_hour(void)
 			exit_this = 1;
 			break;
 		}
-		if(timeout == 3600)//时间到了,一小时等于3600秒
+		if(timeout >= 3600)//时间到了,一小时等于3600秒
 		{
 			charger_floating_an_hour();
 		}
@@ -143,7 +147,7 @@ void charger_half_hour(void)
 			//退出此循环，调用charger_half_hour();
 			exit_this = 1;
 		}
-		if(timeout == 1800)//时间到了,一小时等于1800秒
+		if(timeout >= 1800)//时间到了,一小时等于1800秒
 		{
 			charger_floating_an_hour();
 		}
@@ -164,7 +168,7 @@ void charger_half_hour_last(void)
 	timeout = 0;//半小时等于1800秒
 	while(1)
 	{
-		if(timeout == 1800)//时间到了,一小时等于1800秒
+		if(timeout >= 1800)//时间到了,一小时等于1800秒
 		{
 			charger_floating_an_hour();
 			break;
@@ -189,11 +193,13 @@ void charger_eight_hours(void)
 		if(adc_value < ADC_020V)
 		{
 			//退出此循环，调用charger_half_hour();
-			exit_this = 1;
-			charger_half_hour();
+			exit_this = 1;			
+			PWMCON=0B00000000;
+			IO_H_L(6,1);
 			break;
 		}
-		if(timeout == 3600*8)//时间到了,一小时等于3600秒
+
+		if(timeout >= 3600*8)//时间到了,一小时等于3600秒
 		{
 			charger_floating_an_hour();
 		}
@@ -203,13 +209,14 @@ void charger_eight_hours(void)
 		IO_H_L(4,0);
 		IO_H_L(5,1);
 	}
+	charger_half_hour();
 
 }
 
 void charger_floating_an_hour(void)
 {
 	timeout = 0;//一小时等于3600秒
-	while(1);
+	while(1)
 	{
 		//设置浮充状态
 		if(adc_value>ADC_004V)
@@ -219,12 +226,14 @@ void charger_floating_an_hour(void)
 		if(adc_value<=ADC_004V)
 		{
 			IO_H_L(5,0);
+			//设置2脚悬空
+			IOC50|=0B00100000;//setting P55 floating 设置2脚浮空
 		}
 		
 		if(timeout >=3600)
 		{
 			//关机状态
-			IO_H_L(3,0);
+			IO_H_L(3,1);
 			//断电复位
 		}
 	}

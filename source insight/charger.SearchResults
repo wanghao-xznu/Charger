@@ -1,13 +1,8 @@
----- adc_value Matches (12 in 2 files) ----
-B16AD.c:long int adc_value;
-B16AD.c:			if(adc_value >= ADC_004V)
-B16AD.c:	if(adc_value<=ADC_010V)
-B16AD.c:	else if(adc_value<=ADC_015V)
-B16AD.c:	else if(adc_value<=ADC_020V)
-B16AD.c:		if(adc_value < ADC_015V)
-B16AD.c:		if(adc_value < ADC_010V)
-B16AD.c:		if(adc_value < ADC_020V)
-B16AD.c:		if(adc_value>ADC_004V)
-B16AD.c:		if(adc_value<=ADC_004V)
-Interrupt_vector.h:extern int adc_value;
-Interrupt_vector.h:    adc_value = ad_read();
+---- exit_this Matches (7 in 1 files) ----
+B16AD.c:	char exit_this = 0;//网上说义隆不适合使用局部变量，可能需要修改，实际情况定
+B16AD.c:			exit_this = 1;
+B16AD.c:	char exit_this = 0;
+B16AD.c:			exit_this = 1;
+B16AD.c:	char exit_this = 0;
+B16AD.c:	char exit_this = 0;
+B16AD.c:			exit_this = 1;
