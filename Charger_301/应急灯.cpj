@@ -8,8 +8,12 @@ BlockNum=0
 [EEPROMBlock]
 BlockNum=0
 [BREAKPOINT]
-BP Num=1
-BP0=1,A,24324460,1,0,44,$\user_ad.h
+BP Num=5
+BP0=1,A,1702092,1,1702100,85,$\B16AD.c
+BP1=1,A,1702092,1,1702100,90,$\B16AD.c
+BP2=1,A,1702092,1,1702100,95,$\B16AD.c
+BP3=1,A,1702092,1,1702100,100,$\B16AD.c
+BP4=1,A,1702092,1,1702100,196,$\B16AD.c
 [CODEOPTION]
 Option Num=92
 Target Power=1
@@ -119,7 +123,8 @@ AGENT=0
 [LibraryProject]
 LibraryProject=0
 [LastOpenFiles]
-File Num=0
+File0=$\Ó¦¼±µÆ_bp.dt
+File Num=1
 [Source Files]
 File Num=1
 File0=$\B16AD.c
@@ -147,15 +152,58 @@ TRACELOG_FREQUENCY=4.000000
 ENABLE=0
 [INSTRUCTION_PERIOD]
 INSTRUCTION_PERIOD=2
+[GlobalRegister]
+R1/TCC=01
+R2/PC=02
+R3=03
+R4=04
+R5=05
+R6=06
+R7=07
+R8=08
+R9=09
+RA=0A
+RB=0B
+RC=0C
+RD=0D
+RE=0E
+RF=0F
+R10=10
+R11=11
+R12=12
+R13=13
+R14=14
+R15=15
+R16=16
+R17=17
+R18=18
+R19=19
+R1A=1A
+R1B=1B
+R1C=1C
+R1D=1D
+R1E=1E
+R1F=1F
+[RPage0]
+R5=05
+R6=06
+R7=07
+R8=08
+R9=09
+RA=0A
+RB=0B
+RC=0C
+RD=0D
+RE=0E
+RF=0F
+[GlobalIO]
+[IOPage0]
 [Watch]
-Size#0=2
+Size#0=3
 0,0=adc_value
 0,1=result
+0,2=timeout
 Size#1=0
 Size#2=0
 [ICEVOLTAGE SETTING]
 Voltage=1
-[$\interrupt_vector.h]
-Rectangle=0498 0000 0996 0157
-Iconized=0
-Maximized=0
